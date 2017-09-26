@@ -37,80 +37,112 @@ public class RPII {
         Atos print = geral[0];
         System.out.println(print.desc);
         //primeira parte
-        while (resp != -1) {
-            System.out.println("\nDigite a proxima opção");
-            if (print.proxcod.get(1 - 1) != 0) {
-                System.out.println(print.proxcod.get(1 - 1) + "- OPCAO");
-            }
-            if (print.proxcod.get(2 - 1) != 0) {
-                System.out.println(print.proxcod.get(2 - 1) + "- OPCAO");
-            }
-            if (print.proxcod.get(3 - 1) != 0) {
-                System.out.println(print.proxcod.get(3 - 1) + "- OPCAO");
-            }
-            if (print.proxcod.get(4 - 1) != 0) {
-                System.out.println(print.proxcod.get(4 - 1) + "- OPCAO");
-            }
-            if (print.proxcod.get(5 - 1) != 0) {
-                System.out.println(print.proxcod.get(5 - 1) + "- OPCAO");
-            }
-            resp = e.nextInt();
+        System.out.println("\nDigite a proxima opção");
+        if (print.proxcod.get(0) != 0) {
+            System.out.println(print.proxcod.get(0) + "- OPCAO");
         }
-        //compara
-        Atos parcial = j.compara(geral[resp - 1]);
-        System.out.println(parcial.desc);
+        if (print.proxcod.get(1) != 0) {
+            System.out.println(print.proxcod.get(1) + "- OPCAO");
+        }
+        if (print.proxcod.get(2) != 0) {
+            System.out.println(print.proxcod.get(2) + "- OPCAO");
+        }
+        if (print.proxcod.get(3) != 0) {
+            System.out.println(print.proxcod.get(3) + "- OPCAO");
+        }
+        if (print.proxcod.get(4) != 0) {
+            System.out.println(print.proxcod.get(4) + "- OPCAO");
+        }
+        resp = e.nextInt();
+        while (resp != print.proxcod.get(0) || resp != print.proxcod.get(1) || resp != print.proxcod.get(2) || resp != print.proxcod.get(3) || resp != print.proxcod.get(4)) {
+            if (resp == print.proxcod.get(0)) {
+                int proximo = print.getProxcodigo(0);
+                print = j.compara(geral[proximo]);
+                System.out.println(print.desc);
+                break;
+            }
+            if (resp == print.proxcod.get(1)) {
+                int proximo = print.getProxcodigo(1);
+                print = j.compara(geral[proximo]);
+                System.out.println(print.desc);
+                break;
+            }
+            if (resp == print.proxcod.get(2)) {
+                int proximo = print.getProxcodigo(2);
+                print = j.compara(geral[proximo]);
+                System.out.println(print.desc);
+                break;
+            }
+            if (resp == print.proxcod.get(3)) {
+                int proximo = print.getProxcodigo(3);
+                print = j.compara(geral[proximo]);
+                System.out.println(print.desc);
+                break;
+            }
+            if (resp == print.proxcod.get(4)) {
+                int proximo = print.getProxcodigo(4);
+                print = j.compara(geral[proximo]);
+                System.out.println(print.desc);
+                break;
+            }
+            System.out.println("Numero Inválido, Tente novamente!");
+            resp = e.nextInt();
+        }  
         //segunda parte
+        //INICIO DO LOOP DO MOTOR
         while (resp != -1) {
-            System.out.println("\nDigite a proxima opção");
-            if (parcial.proxcod.get(1 - 1) != 0) {
-                System.out.println(parcial.proxcod.get(1 - 1) + "- OPCAO");
+             Atos parcial = j.compara(geral[resp]);
+             System.out.println(parcial.desc);
+            System.out.println("\nDigite a proxima opção!!!");
+            if (parcial.proxcod.get(0) != 0) {
+                System.out.println(parcial.proxcod.get(0) + "- OPCAO");
             }
-            if (parcial.proxcod.get(2 - 1) != 0) {
-                System.out.println(parcial.proxcod.get(2 - 1) + "- OPCAO");
+            if (parcial.proxcod.get(1) != 0) {
+                System.out.println(parcial.proxcod.get(1) + "- OPCAO");
             }
-            if (parcial.proxcod.get(3 - 1) != 0) {
-                System.out.println(parcial.proxcod.get(3 - 1) + "- OPCAO");
+            if (parcial.proxcod.get(2) != 0) {
+                System.out.println(parcial.proxcod.get(2) + "- OPCAO");
             }
-            if (parcial.proxcod.get(4 - 1) != 0) {
-                System.out.println(parcial.proxcod.get(4 - 1) + "- OPCAO");
+            if (parcial.proxcod.get(3) != 0) {
+                System.out.println(parcial.proxcod.get(3) + "- OPCAO");
             }
-            if (parcial.proxcod.get(5 - 1) != 0) {
-                System.out.println(parcial.proxcod.get(5 - 1) + "- OPCAO");
+            if (parcial.proxcod.get(4) != 0) {
+                System.out.println(parcial.proxcod.get(4) + "- OPCAO");
             }
             resp = e.nextInt();
             //Seleciona a opção
-            while (resp != parcial.proxcod.get(1 - 1) || resp != parcial.proxcod.get(2 - 1) || resp != parcial.proxcod.get(3 - 1) || resp != parcial.proxcod.get(4 - 1) || resp != parcial.proxcod.get(5 - 1)) {
-                if (resp == parcial.proxcod.get(1 - 1)) {
-                    int proximo = parcial.getProxcodigo(1 - 1);
+            while (resp != parcial.proxcod.get(0) || resp != parcial.proxcod.get(1) || resp != parcial.proxcod.get(2) || resp != parcial.proxcod.get(3) || resp != parcial.proxcod.get(4)) {
+                if (resp == parcial.proxcod.get(0)) {
+                    int proximo = parcial.getProxcodigo(0);
                     parcial = j.compara(geral[proximo]);
                     System.out.println(parcial.desc);
                     break;
                 }
-                if (resp == parcial.proxcod.get(2 - 1)) {
-                    int proximo = parcial.getProxcodigo(1 - 1);
+                if (resp == parcial.proxcod.get(1)) {
+                    int proximo = parcial.getProxcodigo(1);
                     parcial = j.compara(geral[proximo]);
                     System.out.println(parcial.desc);
                     break;
                 }
-                if (resp == parcial.proxcod.get(3 - 1)) {
-                    int proximo = parcial.getProxcodigo(1 - 1);
+                if (resp == parcial.proxcod.get(2)) {
+                    int proximo = parcial.getProxcodigo(2);
                     parcial = j.compara(geral[proximo]);
                     System.out.println(parcial.desc);
                     break;
                 }
-                if (resp == parcial.proxcod.get(4 - 1)) {
-                    int proximo = parcial.getProxcodigo(1 - 1);
+                if (resp == parcial.proxcod.get(3)) {
+                    int proximo = parcial.getProxcodigo(3);
                     parcial = j.compara(geral[proximo]);
                     System.out.println(parcial.desc);
                     break;
                 }
-                if (resp == parcial.proxcod.get(5 - 1)) {
-                    int proximo = parcial.getProxcodigo(1 - 1);
+                if (resp == parcial.proxcod.get(4)) {
+                    int proximo = parcial.getProxcodigo(4);
                     parcial = j.compara(geral[proximo]);
                     System.out.println(parcial.desc);
                     break;
                 }
-                System.out.println("Numero Inválido, Tente novamente");
+                System.out.println("Numero Inválido, Tente novamente!");
                 resp = e.nextInt();
             }
         }
