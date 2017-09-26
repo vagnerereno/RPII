@@ -39,19 +39,19 @@ public class RPII {
         //primeira parte
         System.out.println("\nDigite a proxima opção");
         if (print.proxcod.get(0) != 0) {
-            System.out.println(print.proxcod.get(0) + "- OPCAO");
+            System.out.println(print.proxcod.get(0) + " -P/ 1ª OPCAO");
         }
         if (print.proxcod.get(1) != 0) {
-            System.out.println(print.proxcod.get(1) + "- OPCAO");
+            System.out.println(print.proxcod.get(1) + " -P/ 2ª OPCAO");
         }
         if (print.proxcod.get(2) != 0) {
-            System.out.println(print.proxcod.get(2) + "- OPCAO");
+            System.out.println(print.proxcod.get(2) + " -P/ 3ª OPCAO");
         }
         if (print.proxcod.get(3) != 0) {
-            System.out.println(print.proxcod.get(3) + "- OPCAO");
+            System.out.println(print.proxcod.get(3) + " -P/ 4ª OPCAO");
         }
         if (print.proxcod.get(4) != 0) {
-            System.out.println(print.proxcod.get(4) + "- OPCAO");
+            System.out.println(print.proxcod.get(4) + " -P/ 5ª OPCAO");
         }
         resp = e.nextInt();
         while (resp != print.proxcod.get(0) || resp != print.proxcod.get(1) || resp != print.proxcod.get(2) || resp != print.proxcod.get(3) || resp != print.proxcod.get(4)) {
@@ -95,19 +95,19 @@ public class RPII {
              System.out.println(parcial.desc);
             System.out.println("\nDigite a proxima opção!!!");
             if (parcial.proxcod.get(0) != 0) {
-                System.out.println(parcial.proxcod.get(0) + "- OPCAO");
+                System.out.println(parcial.proxcod.get(0) + " - P/ 1ª OPCAO");
             }
             if (parcial.proxcod.get(1) != 0) {
-                System.out.println(parcial.proxcod.get(1) + "- OPCAO");
+                System.out.println(parcial.proxcod.get(1) + " - P/ 2ª OPCAO");
             }
             if (parcial.proxcod.get(2) != 0) {
-                System.out.println(parcial.proxcod.get(2) + "- OPCAO");
+                System.out.println(parcial.proxcod.get(2) + " - P/ 3ª OPCAO");
             }
             if (parcial.proxcod.get(3) != 0) {
-                System.out.println(parcial.proxcod.get(3) + "- OPCAO");
+                System.out.println(parcial.proxcod.get(3) + " - P/ 4ª OPCAO");
             }
             if (parcial.proxcod.get(4) != 0) {
-                System.out.println(parcial.proxcod.get(4) + "- OPCAO");
+                System.out.println(parcial.proxcod.get(4) + " - P/ 5ª OPCAO");
             }
             resp = e.nextInt();
             //Seleciona a opção
