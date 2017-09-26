@@ -32,6 +32,7 @@ public abstract class Raca {
         this.arma = classeJogador.getArma();
         this.classeJogador = classeJogador;
         this.inventario = new Inventario(30);
+        this.bVidaAtual = bVida;
     }
 
     public abstract int Atacar();

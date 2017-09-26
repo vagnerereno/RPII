@@ -1,5 +1,6 @@
 package atos;
 
+import ItemJogo.Comida;
 import audio.Som;
 import static audio.Som.parar;
 import java.util.Scanner;
@@ -20,7 +21,6 @@ import rpii.Raca;
 
 public class Ato1 {
 
-
     private Raca jogador;
     private Raca jogadorTeste;
     private Inventario dispensa;
@@ -29,6 +29,8 @@ public class Ato1 {
     public Ato1(Raca jogador) {
         this.jogador = jogador;
         inicializarJogador();
+        // Ato0 atinho = new Ato0();
+        // this.jogador = atinho.criarJogador();
         // abrirInventario(getDispensa(), "dispensa");
     }
 
@@ -142,7 +144,7 @@ public class Ato1 {
                 + "um arrepio percorre todo o seu corpo, você encara-se no velho espelho e contempla sua triste feição\n"
                 + "trazendo flashes das lembranças de seu passado de mercenário, tempos de matança em prol do atual reino.\n"
                 + "Voltando a si, ainda contemplando sua face no reflexo:\n");
-               /* + "Qual será sua classe?\n"
+        /* + "Qual será sua classe?\n"
                 + "1-HUMANO   2-ELFO   3-ORC   4-ANAO   5-UNDEAD");
         resp = e.nextInt();
         while (resp != 1 || resp != 2 || resp == 3 || resp == 4 || resp == 5) {
@@ -208,8 +210,9 @@ public class Ato1 {
         while (resp != 1 || resp != 2) {
             if (resp == 1) {
                 abrirInventario(getDispensa(), "dispensa");
-                // coletaDeItens(getDispensa());
-                System.out.println(jogador.getNome() + " percebendo a pouca quantia de alimento em sua dispensa decide ir caçar na floresta");
+                System.out.println(jogador + " percebendo a pouca quantia de alimento em sua dispensa decide ir caçar na floresta");
+                System.out.println("Mochila!");
+                abrirMochila(jogadorTeste.getInventario(), "mochila");
                 break;
             }
             if (resp == 2) {
@@ -422,7 +425,7 @@ public class Ato1 {
         resp = e.nextInt();
         while (resp != 1 || resp != 2) {
             if (resp == 1) {
-               // abrirMochila(jogadorTeste.getInventario, "MOchila");
+                // abrirMochila(jogadorTeste.getInventario, "MOchila");
                 fase2();
                 break;
             }
@@ -829,7 +832,7 @@ public class Ato1 {
                 abrirInventario(loot, "Goblin");
                 break;
             }
-            
+
             if (resp == 2) {
                 Som.corre();
                 break;
@@ -1763,21 +1766,61 @@ public class Ato1 {
         System.out.println("Selecione uma ação: ");
         System.out.println("0 - Fechar");
         System.out.println("1 - Pegar itens");
+        System.out.println("2 - Comer alimento");
         Scanner selecionar = new Scanner(System.in);
         int acao = selecionar.nextInt();
-        if (acao > 0) {
+        if (acao == 1) {
             coletaDeItens(inventario);
+        } else if (acao == 2) {
+            System.out.println("Digite o número do alimento que deseja comer: ");
+            Scanner alimento = new Scanner(System.in);
+            int numAlimento = alimento.nextInt();
+            Item comida = inventario.pegarItem(numAlimento);
+            try {
+                jogadorTeste.comer((Comida) comida);
+                System.out.println("Yummmm...");
+                System.out.println("Sua vida atual é: " + jogadorTeste.getbVidaAtual() + "/" + jogadorTeste.getbVida());
+                abrirInventario(inventario, descricao);
+            } catch (Exception e) {
+                System.out.println("Não foi possível comer o item.");
+                inventario.adicionarItem(comida);
+                abrirInventario(inventario, descricao);
+            }
+
         }
+
     }
-    
+
     private void abrirMochila(Inventario inventario, String descricao) {
-        descricao.toUpperCase();
         System.out.println("------------------");
-        System.out.println("---" + descricao + "---");
+        System.out.println("---" + descricao.toUpperCase() + "---");
         System.out.println("------------------");
 
         for (int i = 0; i < inventario.verTodosItens().size(); i++) {
             System.out.println("[" + i + "] - " + inventario.verItem(i).getDescricao());
+        }
+        System.out.println("------------------");
+        System.out.println("Selecione uma ação: ");
+        System.out.println("0 - Fechar");
+        System.out.println("1 - Comer item");
+        Scanner selecao = new Scanner(System.in);
+        int acao1 = selecao.nextInt();
+        if (acao1 == 1) {
+            System.out.println("Digite o número do alimento que deseja comer: ");
+            Scanner alimento = new Scanner(System.in);
+            int numAlimento = alimento.nextInt();
+            Item comida = inventario.pegarItem(numAlimento);
+            try {
+                jogadorTeste.comer((Comida) comida);
+                System.out.println("Yummmm...");
+                System.out.println("Sua vida atual é: " + jogadorTeste.getbVidaAtual() + "/" + jogadorTeste.getbVida());
+                abrirMochila(inventario, descricao);
+            } catch (Exception e) {
+                System.out.println("Não foi possível comer o item.");
+                inventario.adicionarItem(comida);
+                abrirMochila(inventario, descricao);
+            }
+
         }
     }
 
