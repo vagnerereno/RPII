@@ -5,7 +5,15 @@
  */
 package inimigos;
 
+import itens.armas.Arco;
+import itens.armas.Armas;
+import itens.armas.Cajado;
+import itens.armas.Espada;
+import java.util.Random;
+import rpii.Arqueiro;
 import rpii.Especialidade;
+import rpii.Guerreiro;
+import rpii.Mago;
 
 /**
  *
@@ -21,31 +29,71 @@ public abstract class Inimigo {
     protected int agilidade;
     protected int destreza;
     protected int bVida;
+    private Armas arma;
     private Especialidade classeInimigo;
 
-    public Inimigo(String nome, int inteligencia, int resistencia, int forca, int agilidade, int destreza, int bVida, Especialidade classeInimigo) {
+    public Inimigo(String nome, Especialidade classeInimigo) {
         this.nome = nome;
         this.level = 1;
-        this.inteligencia = inteligencia;
-        this.resistencia = resistencia;
-        this.forca = forca;
-        this.agilidade = agilidade;
-        this.destreza = destreza;
-        this.bVida = bVida;
+        this.inteligencia = classeInimigo.getInteligencia();
+        this.resistencia = classeInimigo.getResistencia();
+        this.forca = classeInimigo.getForca();
+        this.agilidade = classeInimigo.getAgilidade();
+        this.destreza = classeInimigo.getDestreza();
+        this.bVida = classeInimigo.getbVida();
+        this.arma = classeInimigo.getArma();
         this.classeInimigo = classeInimigo;
     }
 
-    public abstract void Atacar();
+    public int atacar() {
+        if (this.getClasseInimigo() instanceof Guerreiro) {
+            return (getArma().getDano() * this.getForca()) / 2;
+        } else if (this.getClasseInimigo() instanceof Mago) {
+            return (getArma().getDano() * this.getInteligencia()) / 2;
+        } else if (this.getClasseInimigo() instanceof Arqueiro) {
+            return (getArma().getDano() * this.getDestreza()) / 2;
+        } else {
+            return 0;
+        }
+    }
 
-    public abstract void Defender();
+    public void defender(int dano) {
+        int x = this.getResistencia() - dano;
+        if (x > 0) {
+            this.setResistencia(x);
+        } else {
+            x = x * -1;
+            this.setbVida(this.getbVida() - x);
+        }
+    }
 
-    public abstract void Desviar();
+    public int especial() {
+        if (this.getClasseInimigo() instanceof Guerreiro) {
+            return getArma().getDano() * this.getForca();
+        } else if (this.getClasseInimigo() instanceof Mago) {
+            return getArma().getDano() * this.getInteligencia();
+        } else if (this.getClasseInimigo() instanceof Arqueiro) {
+            return getArma().getDano() * this.getDestreza();
+        } else {
+            return 0;
+        }
+    }
 
-    public abstract void ReducaoVida();
+    public boolean desviar() {
+        Random x = new Random();
+        if (x.nextDouble() < 0.25) {
+            return true;
+        }
+        return false;
+    }
 
-    public abstract void AumentoVida();
+    public Armas getArma() {
+        return arma;
+    }
 
-    public abstract void Especial();
+    public void setArma(Armas arma) {
+        this.arma = arma;
+    }
 
     public Especialidade getClasseInimigo() {
         return classeInimigo;
@@ -118,7 +166,5 @@ public abstract class Inimigo {
     public void setbVida(int bVida) {
         this.bVida = bVida;
     }
-
-  
 
 }

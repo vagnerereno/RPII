@@ -30,11 +30,26 @@ public class Combate {
         while (jogador.getbVida() > 0 && inimigo.getbVida() > 0) {
             System.out.println(jogador.getNome() + "Qual a sua ação?");
             System.out.println("1 - Atacar - ");
-            System.out.println("2 - Curar -");
+            System.out.println("2 - Especial - ");
+            System.out.println("3 - Curar -");
+            System.out.println("4 - Status da batalha - ");
             int esc = 0;
             esc = input.nextInt();
             switch(esc){
-                case 1: inimigo.Defender();
+                case 1: inimigo.defender(jogador.atacar());
+                        jogador.defender(inimigo.atacar());
+                        System.out.println("Sua vida: " + jogador.getbVida());
+                        break;
+                case 2: inimigo.defender(jogador.especial());
+                        jogador.defender(inimigo.especial());
+                        System.out.println("Sua vida: " + jogador.getbVida());
+                        break;
+                case 3: jogador.aumentoVida(10);
+                        System.out.println("Sua vida: " + jogador.getbVida());
+                        break;
+                case 4: System.out.println("Vida atual: " + jogador.getbVida() + "\n" + "Vida do Inimigo: " + inimigo.getbVida());
+                        break;
+                default: System.out.println("Comando inválido!");
             }
         }
         Object esc = null;

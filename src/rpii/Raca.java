@@ -4,6 +4,7 @@ import ItemJogo.Comida;
 import ItemJogo.Inventario;
 import ItemJogo.Item;
 import itens.armas.Armas;
+import java.util.Random;
 
 public abstract class Raca {
 
@@ -32,18 +33,68 @@ public abstract class Raca {
         this.arma = classeJogador.getArma();
         this.classeJogador = classeJogador;
         this.inventario = new Inventario(30);
-        this.bVidaAtual = bVida;
     }
 
-    public abstract int Atacar();
+    public int atacar() {
+        if (this.getClasseJogador() instanceof Guerreiro) {
+            return (getArma().getDano() * this.getForca()) / 2;
+        } else if (this.getClasseJogador() instanceof Mago) {
+            return (getArma().getDano() * this.getInteligencia()) / 2;
+        } else if (this.getClasseJogador() instanceof Arqueiro) {
+            return (getArma().getDano() * this.getDestreza()) / 2;
+        } else {
+            return 0;
+        }
+    }
 
-    public abstract void Defender(int dano);
+    public void defender(int dano) {
+        int x = this.getResistencia() - dano;
+        if (x > 0) {
+            this.setResistencia(x);
+        } else {
+            x = x * -1;
+            this.setbVida(this.getbVida() - x);
+        }
+    }
 
-    public abstract boolean Desviar();
+    public int especial() {
+        if (this.getClasseJogador() instanceof Guerreiro) {
+            return getArma().getDano() * this.getForca();
+        } else if (this.getClasseJogador() instanceof Mago) {
+            return getArma().getDano() * this.getInteligencia();
+        } else if (this.getClasseJogador() instanceof Arqueiro) {
+            return getArma().getDano() * this.getDestreza();
+        } else {
+            return 0;
+        }
+    }
 
-    public abstract void AumentoVida(int aumento);
+    public boolean desviar() {
+        Random x = new Random();
+        if (x.nextDouble() < 0.25) {
+            return true;
+        }
+        return false;
+    }
 
-    public abstract String Status();
+    public void aumentoVida(int aumento) {
+        this.setbVidaAtual(this.getbVidaAtual() + aumento);
+    }
+
+    public String status() {
+        String status = "---------------------------------"
+                + "Nome: " + this.getNome() + "\n"
+                + "Level: " + this.getLevel() + "\n"
+                + "Inteligência: " + this.getInteligencia() + "\n"
+                + "Resistência: " + this.getResistencia() + "\n"
+                + "Força: " + this.getForca() + "\n"
+                + "Agilidade: " + this.getAgilidade() + "\n"
+                + "Destreza: " + this.getDestreza() + "\n"
+                + "Vida: " + this.getbVidaAtual() + "\n"
+                + "---------------------------------";
+
+        return status;
+    }
 
     public boolean adicionarItem(Item item) {
         if (inventario.adicionarItem(item)) {
