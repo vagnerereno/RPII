@@ -423,18 +423,21 @@ public class Ato1 {
         System.out.println("PARABENS! voce acaba de concluir a primeira fase do Ato1.\n"
                 + "1-INICIAR FASE 2");
         resp = e.nextInt();
-        while (resp != 1 || resp != 2) {
+         while (resp != 1 || resp != 2) {
             if (resp == 1) {
-                // abrirMochila(jogadorTeste.getInventario, "MOchila");
+                System.out.println("Mochila!");
+                abrirMochila(jogadorTeste.getInventario(), "mochila");
                 fase2();
                 break;
             }
             if (resp == 2) {
+                System.out.println("Mochila!");
+                abrirMochila(jogadorTeste.getInventario(), "mochila");
                 System.out.println("MOSTRAR STATUS");
                 break;
             }
             System.out.println("Numero invalido, tente novamente\n"
-                    + "1-INICIAR ATO 2");
+                    + "1-INICIAR ATO 2   2-VERIFICAR STATUS");
             resp = e.nextInt();
         }
         System.gc();
