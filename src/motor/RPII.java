@@ -87,12 +87,12 @@ public class RPII {
             }
             System.out.println("Numero Inválido, Tente novamente!");
             resp = e.nextInt();
-        }  
+        }
         //segunda parte
         //INICIO DO LOOP DO MOTOR
         while (resp != -1) {
-             Atos parcial = j.compara(geral[resp]);
-             System.out.println(parcial.desc);
+            Atos parcial = j.compara(geral[resp]);
+            System.out.println(parcial.desc);
             System.out.println("\nDigite a proxima opção!!!");
             if (parcial.proxcod.get(0) != 0) {
                 System.out.println(parcial.proxcod.get(0) + " - P/ 1ª OPCAO");
@@ -109,42 +109,24 @@ public class RPII {
             if (parcial.proxcod.get(4) != 0) {
                 System.out.println(parcial.proxcod.get(4) + " - P/ 5ª OPCAO");
             }
-            resp = e.nextInt();
+            // resp = e.nextInt();
             //Seleciona a opção
-            while (resp != parcial.proxcod.get(0) || resp != parcial.proxcod.get(1) || resp != parcial.proxcod.get(2) || resp != parcial.proxcod.get(3) || resp != parcial.proxcod.get(4)) {
-                if (resp == parcial.proxcod.get(0)) {
-                    int proximo = parcial.getProxcodigo(0);
-                    parcial = j.compara(geral[proximo]);
-                    System.out.println(parcial.desc);
-                    break;
-                }
-                if (resp == parcial.proxcod.get(1)) {
-                    int proximo = parcial.getProxcodigo(1);
-                    parcial = j.compara(geral[proximo]);
-                    System.out.println(parcial.desc);
-                    break;
-                }
-                if (resp == parcial.proxcod.get(2)) {
-                    int proximo = parcial.getProxcodigo(2);
-                    parcial = j.compara(geral[proximo]);
-                    System.out.println(parcial.desc);
-                    break;
-                }
-                if (resp == parcial.proxcod.get(3)) {
-                    int proximo = parcial.getProxcodigo(3);
-                    parcial = j.compara(geral[proximo]);
-                    System.out.println(parcial.desc);
-                    break;
-                }
-                if (resp == parcial.proxcod.get(4)) {
-                    int proximo = parcial.getProxcodigo(4);
-                    parcial = j.compara(geral[proximo]);
-                    System.out.println(parcial.desc);
-                    break;
-                }
-                System.out.println("Numero Inválido, Tente novamente!");
+            boolean valido = false;
+            do {
                 resp = e.nextInt();
-            }
+                for (int cod = 0; cod <= 4; cod++) {
+                    if (resp == parcial.proxcod.get(cod)) {
+                        int proximo = parcial.getProxcodigo(cod);
+                        parcial = j.compara(geral[proximo]);
+                        System.out.println(parcial.desc);
+                        valido = true;
+                        break;
+                    }
+                }
+                if (!valido) {
+                    System.out.println("Numero Inválido, Tente novamente!");
+                }
+            } while (!valido);
         }
     }
 }
