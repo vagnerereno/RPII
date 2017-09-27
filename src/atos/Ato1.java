@@ -525,7 +525,7 @@ public class Ato1 {
 
         System.out.println("você começa a descarnar o animal, coletando o conteudo da caçada.");
         Som.esfolar();
-        AnaoIA javaliLeste = new AnaoIA("Javali", 12, 5, 2, 3, 5, 5, new Guerreiro());
+        AnaoIA javaliLeste = new AnaoIA("Javali", new Guerreiro());
         Inventario loot = javaliLeste(javaliLeste.getClasseInimigo());
         abrirInventario(loot, "Javali");
         return 1;
@@ -626,7 +626,7 @@ public class Ato1 {
                         }
                         System.out.println("Você começa a descarnar o animal, coletando o conteudo da caçada.");
                         Som.esfolar();
-                        AnaoIA cervoNorte = new AnaoIA("Cervo", 12, 5, 2, 3, 5, 5, new Guerreiro());
+                        AnaoIA cervoNorte = new AnaoIA("Cervo", new Guerreiro());
                         Inventario loot = cervoNorte(cervoNorte.getClasseInimigo());
                         abrirInventario(loot, "Cervo");
                         System.out.println("Apos a tarefa voce percebe que grande parte do dia já se passou e é sabio retornar antes que a noite caia sobre Lavitan, apesar desta parte ser apenas sua borda ainda assim, varios perigos podem surgir.");
@@ -830,7 +830,7 @@ public class Ato1 {
                 Som.lutasoco();
                 System.out.println("Com a criatura estirada ao chao na sua frente voce ainda com o sangue quente da pequena luta, espera que mais deles aparecam para lhe enfrentarem\n"
                         + "pois estas criaturas sempre atacam em bando. Apesar do pequeno momento de espera mais inimigos não aparecem");
-                AnaoIA globinFase2 = new AnaoIA("Globlin", 12, 5, 2, 3, 5, 5, new Guerreiro());
+                AnaoIA globinFase2 = new AnaoIA("Globlin", new Guerreiro());
                 Inventario loot = globinFase2(globinFase2.getClasseInimigo());
                 abrirInventario(loot, "Goblin");
                 break;

@@ -13,32 +13,8 @@ import rpii.Especialidade;
  */
 public class AnaoIA extends Inimigo{
     
-    public AnaoIA(String nome, int inteligencia, int resistencia, int forca, int agilidade, int destreza, int bVida, Especialidade classeInimigo) {
-        super(nome, inteligencia, resistencia, forca, agilidade, destreza, bVida, classeInimigo);
-    }
-
-    @Override
-    public void Atacar() {
-    }
-
-    @Override
-    public void Defender() {
-    }
-
-    @Override
-    public void Desviar() {
-    }
-
-    @Override
-    public void ReducaoVida() {
-    }
-
-    @Override
-    public void AumentoVida() {
-    }
-
-    @Override
-    public void Especial() {
+    public AnaoIA(String nome, Especialidade classeInimigo) {
+        super(nome, classeInimigo);
     }
 
     public String getNome() {
