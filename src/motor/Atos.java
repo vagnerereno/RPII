@@ -22,7 +22,7 @@ public class Atos {
         proxcod.add(g);
     }
 
-    public Atos[] carregar(Atos[] vazio) {
+    public Atos[] carregar(Atos[] vazio) throws Exception {
         Carga c = new Carga();
         Atos[] carregado = c.carga(vazio);
         return carregado;
