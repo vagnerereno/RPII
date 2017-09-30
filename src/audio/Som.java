@@ -106,12 +106,12 @@ public class Som {
         return audio;
     }
 
-    /*public static AudioStream fogo() throws Exception {
+    public static AudioStream fogo() throws Exception {
         //mudar o caminho para cada maquina
-        AudioStream audio = new AudioStream(new FileInputStream("E:\\RPII_1BACUPDALICENCA\\src\\audio\\fogo.wav"));
+        AudioStream audio = new AudioStream(new FileInputStream(System.getProperty("user.dir")+File.separator + "src"+ File.separator + "audio"+ File.separator + "fogo.wav"));
         AudioPlayer.player.start(audio);
         return audio;
-    }*/
+    }
 
     public static AudioStream galinha() throws Exception {
         //mudar o caminho para cada maquina
