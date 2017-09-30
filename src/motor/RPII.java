@@ -17,7 +17,7 @@ import sun.audio.AudioStream;
 public class RPII {
 
     public static void main(String args[]) throws Exception {
-
+        Som.fase1();
         Scanner e = new Scanner(System.in);
         int resp = 0;
         System.out.println("Bem vindo ao MUD, Oque deseja fazer? ");
