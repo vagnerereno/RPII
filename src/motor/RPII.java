@@ -3,21 +3,12 @@ package motor;
 import atos.Ato0;
 import audio.Som;
 import atos.Ato1;
-import atos.Ato2;
 import java.util.Scanner;
-import motor.Atos;
-import motor.Engine;
-import raca.Anao;
-import raca.Elfo;
-import raca.Humano;
-import raca.Orc;
-import raca.Undead;
-import sun.audio.AudioStream;
 
 public class RPII {
 
     public static void main(String args[]) throws Exception {
-
+        Som.fase1();
         Scanner e = new Scanner(System.in);
         int resp = 0;
         System.out.println("Bem vindo ao MUD, Oque deseja fazer? ");

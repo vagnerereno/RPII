@@ -1,6 +1,6 @@
 package motor;
 
-import java.util.ArrayList;
+import audio.Som;
 
 /**
  *
@@ -8,50 +8,27 @@ import java.util.ArrayList;
  */
 public class Carga {
 
-    public Atos[] carga(Atos[] c) {
+    public Atos[] carga(Atos[] c) throws Exception {
         Atos a = new Atos(0, "Pois bem, então parte em sua longa jornada.\n"
                 + "Nos arredores da vila Kenko, você descança, sem abrir os olhos voce pensa: acordo ou durmo mais um pouco?\n"
                 + "SEGUIR DORMINDO ou ACORDAR?", 1, 2, 0, 0, 0);
         c[0] = a;
         Atos b = new Atos(1, "As galinhas cacarejam enlouquecidamente anunciando o novo dia, por vezes você sente vontade de dar cabo delas \n"
                 + "devido a irritação sonora recorrente. Agora desperta por completo.\n"
-                + "LEVANTAR", 2, 0, 0, 0, 0);
+                + "LEVANTAR" + Som.galinha(), 2, 0, 0, 0, 0);
         c[1] = b;
-        Atos d = new Atos(2, "Abrindo os olhos, ainda meio confuso, percebe que esqueceu de apagar a vela, e agora o cheiro de cera invade o recinto.\\n\"\n"
-                + "                + \"░▒░░░░░░░░░░░░░▒░░░░░░░▒░░░░░░░░░░░░░░\\n\"\n"
-                + "                + \"░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░▒░░▒\\n\"\n"
-                + "                + \"░▒░░░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░░░▒░░░░░░░░\\n\"\n"
-                + "                + \"░▒░░▒░▒░▒░▒░▒░▒░▒▒▒▒▒░▒░▒▒▒░▒░▒░░░░░░░\\n\"\n"
-                + "                + \"░▒░▒▒▒░▒░▒▒▒░▒▒▒▒▒▒▒▒▒▒▒░▒░▒░▒▒▒░▒░░░▒\\n\"\n"
-                + "                + \"░▒░░▒░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░▒░▒▒▒░▒░░░░▒\\n\"\n"
-                + "                + \"░▒░▒░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░▒░▒░░░▒\\n\"\n"
-                + "                + \"░▒▒░▒░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░▒░▒░░▒\\n\"\n"
-                + "                + \"░▒░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▒▒▒▒▒▒▒▒▒▒▒░▒░▒░▒\\n\"\n"
-                + "                + \"░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓██▓▒▒▒▒▒▒▒▒▒░▒▒▒░▒▒\\n\"\n"
-                + "                + \"░▒░▒░▒▒▒▒▒▒▒▒▒▒▒▒▓███▓▒▒▒▒▒▒▒▒▒▒▒▒░▒░▒\\n\"\n"
-                + "                + \"░▒░░▒░▒▒▒▒▒▒▒▒▒▒▒▒▓██▒▒▒▒▒▒▒▒▒▒▒▒░▒░▒▒\\n\"\n"
-                + "                + \"░▒░▒▒▒▒▒▒▒▒▒▒▒▒▒▒░▓█▓▒▒▒▒▒▒▒▒▒▒▒▒▒░▒░▒\\n\"\n"
-                + "                + \"░▒▒░▒░▒▒▒▒▒▒▒▒▒▒░▓████░▒▒▒▒▒▒▒▒▒▒░▒░▒▒\\n\"\n"
-                + "                + \"░▒░▒░▒▒▒▒▒▒▒▒▒▒▒░█████░▒▒▒▒▒▒▒░▒░▒▒▒░▒\\n\"\n"
-                + "                + \"░▒▒░░░▒░▒▒▒▒▒▒▒▒░████▓░▒▒▒▒▒▒▒▒▒▒░▒░░▒\\n\"\n"
-                + "                + \"░▒░░░▒░▒▒▒▒▒▒▒▒▒░████▓░▒▒▒▒▒▒▒▒▒▒▒░▒░▒\\n\"\n"
-                + "                + \"░▒░░▒░▒▒▒░▒░▒▒▒░░██▓▓▓░░▒▒▒▒▒▒▒▒▒░▒░▒▒\\n\"\n"
-                + "                + \"░▒░▒░▒░▒▒▒▒▒▒▒▒░░██▓▓▓░▒▒▒▒▒▒▒▒▒▒▒░░░▒\\n\"\n"
-                + "                + \"░▒░░▒░▒░▒░▒░▒▒▒░░██▓▓▒░▒▒▒▒▒▒▒▒░▒░▒░░▒\\n\"\n"
-                + "                + \"░▒░░░▒░▒▒▒░▒▒▒▒▒░██▓▓▒░▒▒▒▒▒▒▒▒▒░▒░▒░▒\\n\"\n"
-                + "                + \"░▒░░░░▒░▒░▒▒▒▒▒░░▓█▓▓▒░▒▒▒▒▒▒░▒▒▒▒▒░▒▒\\n\"\n"
-                + "                + \"░▒░▒░▒▒▒░▒▒▒▒▒▒▒░██▓▓▒░▒▒▒▒▒▒▒▒▒░▒░▒░▒\\n\"\n"
-                + "                + \"░▒▒░▒░▒░▒▒▒▒▒▒▒░░▓█▓▓▒░▒▒▒▒▒▒▒▒▒▒░▒░▒▒\\n\"\n"
-                + "                + \"░▒░▒░░░░░░░▒░░▒░░██▓▒▒░▒▒▒▒▒▒▒▒▒▒▒░▒░▒\\n\"\n"
-                + "                + \"░▒░░░░▒▒▒▒▒▒▒▒▒▒▒██▓▓▒▒▒▒▒▒▒▒▒▒░░░▒░▒▒\\n\"\n"
-                + "                + \" ░░░░▒▒▒▒░░▒▒▒▒▒░░░░░░░░░░░░     ░░░░░\\n\"\n"
-                + "                + \"░░░░░░▒▒▒░                   ░▒▒▒▒░░░░\\n\"\n"
-                + "                + \"▓█████▓▓▒▒▒                 ▒▒▒▒▓▓████\\n\"\n"
-                + "                + \"██████████████████████████████████████\"\n"
-                + "                + \n"
-                + "APAGAR VELA ou IR AO BANHEIRO? ", 3, 4, 0, 0, 0);
-        c[2] = d;
-        Atos e = new Atos(3, "\n"
+        Atos d = new Atos(2, "Abrindo os olhos, ainda meio confuso, percebe que esqueceu de apagar a vela, e agora o cheiro de cera invade o recinto.\n"
+                + "░▒░░░░░░░░░░░░░▒░░░░░░░▒░░░░░░░░░░░░░░\n"
+                + "░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░▒░░▒\n"
+                + "░▒░░░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░░░▒░░░░░░░░\n"
+                + "░▒░░▒░▒░▒░▒░▒░▒░▒▒▒▒▒░▒░▒▒▒░▒░▒░░░░░░░\n"
+                + "░▒░▒▒▒░▒░▒▒▒░▒▒▒▒▒▒▒▒▒▒▒░▒░▒░▒▒▒░▒░░░▒\n"
+                + "░▒░░▒░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░▒░▒▒▒░▒░░░░▒\n"
+                + "░▒░▒░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░▒░▒░░░▒\n"
+                + "░▒▒░▒░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░▒░▒░░▒\n"
+                + "░▒░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▒▒▒▒▒▒▒▒▒▒▒░▒░▒░▒\n"
+                + "░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓██▓▒▒▒▒▒▒▒▒▒░▒▒▒░▒▒\n"
+                + "░▒░▒░▒▒▒▒▒▒▒▒▒▒▒▒▓███▓▒▒▒▒▒▒▒▒▒▒▒▒░▒░▒\n"
                 + "░▒░░▒░▒▒▒▒▒▒▒▒▒▒▒▒▓██▒▒▒▒▒▒▒▒▒▒▒▒░▒░▒▒\n"
                 + "░▒░▒▒▒▒▒▒▒▒▒▒▒▒▒▒░▓█▓▒▒▒▒▒▒▒▒▒▒▒▒▒░▒░▒\n"
                 + "░▒▒░▒░▒▒▒▒▒▒▒▒▒▒░▓████░▒▒▒▒▒▒▒▒▒▒░▒░▒▒\n"
@@ -71,7 +48,38 @@ public class Carga {
                 + "░░░░░░▒▒▒░                   ░▒▒▒▒░░░░\n"
                 + "▓█████▓▓▒▒▒                 ▒▒▒▒▓▓████\n"
                 + "██████████████████████████████████████"
-                + "\n A vela foi apagada!\n"
+                + "\n"
+                + "APAGAR VELA ou IR AO BANHEIRO", 3, 4, 0, 0, 0);
+        c[2] = d;
+        Atos e = new Atos(3, "\n"
+                + "░▒░░░░░░░░░░░░░▒░░░░░░░▒░░░░░░░░░░░░░░\n"
+                + "░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░▒░░▒\n"
+                + "░▒░░░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░░░▒░░░░░░░░\n"
+                + "░▒░░▒░▒░▒░▒░▒░▒░▒▒▒▒▒░▒░▒▒▒░▒░▒░░░░░░░\n"
+                + "░▒░▒▒▒░▒░▒▒▒░▒▒▒▒▒▒▒▒▒▒▒░▒░▒░▒▒▒░▒░░░▒\n"
+                + "░▒░░▒░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░▒░▒▒▒░▒░░░░▒\n"
+                + "░▒░▒░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░▒░▒░░░▒\n"
+                + "░▒▒░▒░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░▒░▒░░▒\n"
+                + "░▒░░▒░▒▒▒▒▒▒▒▒▒▒▒▒▓██▒▒▒▒▒▒▒▒▒▒▒▒░▒░▒▒\n"
+                + "░▒░▒▒▒▒▒▒▒▒▒▒▒▒▒▒░▓█▓▒▒▒▒▒▒▒▒▒▒▒▒▒░▒░▒\n"
+                + "░▒▒░▒░▒▒▒▒▒▒▒▒▒▒░▓████░▒▒▒▒▒▒▒▒▒▒░▒░▒▒\n"
+                + "░▒░▒░▒▒▒▒▒▒▒▒▒▒▒░█████░▒▒▒▒▒▒▒░▒░▒▒▒░▒\n"
+                + "░▒▒░░░▒░▒▒▒▒▒▒▒▒░████▓░▒▒▒▒▒▒▒▒▒▒░▒░░▒\n"
+                + "░▒░░░▒░▒▒▒▒▒▒▒▒▒░████▓░▒▒▒▒▒▒▒▒▒▒▒░▒░▒\n"
+                + "░▒░░▒░▒▒▒░▒░▒▒▒░░██▓▓▓░░▒▒▒▒▒▒▒▒▒░▒░▒▒\n"
+                + "░▒░▒░▒░▒▒▒▒▒▒▒▒░░██▓▓▓░▒▒▒▒▒▒▒▒▒▒▒░░░▒\n"
+                + "░▒░░▒░▒░▒░▒░▒▒▒░░██▓▓▒░▒▒▒▒▒▒▒▒░▒░▒░░▒\n"
+                + "░▒░░░▒░▒▒▒░▒▒▒▒▒░██▓▓▒░▒▒▒▒▒▒▒▒▒░▒░▒░▒\n"
+                + "░▒░░░░▒░▒░▒▒▒▒▒░░▓█▓▓▒░▒▒▒▒▒▒░▒▒▒▒▒░▒▒\n"
+                + "░▒░▒░▒▒▒░▒▒▒▒▒▒▒░██▓▓▒░▒▒▒▒▒▒▒▒▒░▒░▒░▒\n"
+                + "░▒▒░▒░▒░▒▒▒▒▒▒▒░░▓█▓▓▒░▒▒▒▒▒▒▒▒▒▒░▒░▒▒\n"
+                + "░▒░▒░░░░░░░▒░░▒░░██▓▒▒░▒▒▒▒▒▒▒▒▒▒▒░▒░▒\n"
+                + "░▒░░░░▒▒▒▒▒▒▒▒▒▒▒██▓▓▒▒▒▒▒▒▒▒▒▒░░░▒░▒▒\n"
+                + " ░░░░▒▒▒▒░░▒▒▒▒▒░░░░░░░░░░░░     ░░░░░\n"
+                + "░░░░░░▒▒▒░                   ░▒▒▒▒░░░░\n"
+                + "▓█████▓▓▒▒▒                 ▒▒▒▒▓▓████\n"
+                + "██████████████████████████████████████\n"
+                + "A vela foi apagada!\n"
                 + " IR AO BANHEIRO", 4, 0, 0, 0, 0);
         c[3] = e;
         Atos f = new Atos(4, " vai até o lavabo atirar agua em sua face para dissipar a preguiça ainda remanescente, a agua está\n"
@@ -84,7 +92,7 @@ public class Carga {
         c[4] = f;
         //IMPLEMENTACAO DA DESPENSA, PEGAR ITENS ANTES
         Atos g = new Atos(5, "Percebendo a pouca quantia de alimento em sua dispensa decide ir caçar na floresta \n"
-                + "SAIR DE CASA E IR À FLORESTA CAÇAR", 6, 0, 0, 0, 0);
+                + "SAIR DE CASA E IR À FLORESTA CAÇAR" + Som.comendo(), 6, 0, 0, 0, 0);
         c[5] = g;
         Atos h = new Atos(6, "\n"
                 + "                                                                              \n"
@@ -122,11 +130,11 @@ public class Carga {
                 + "       ░▒▓▓▒▓▓▒▒▒░▒▒░░░▒▒▓▓▒▒▓▒▒▒▒░░▒▒▓▒░░▒▒░░░░░░▒█▓▒▒▒▒▒▒▓▒▓█▓▒▓▓▓████▓░    \n"
                 + "      ▓▓▓▒░▒▒░░▒▒░░░░ ░▒░▒▓▒▒▒▒▓▒▒ ░░▒▓▓▓▒▒▒░░░░░▓▓▓▒▒▓▒▒▒░▒▒▒▒░░ ▒░▒▓██▓     \n"
                 + "     ░▒▒░░▒▓▓▒▒▒▒▒░ ░░░▒▒░ ░▒▓▒░░░ ░▒▒▒▒░▒▓▓▒▒▒▒▒▓▒      ░░      ░            \n"
-                + "            ░                 ░                                               "
-                + "\n Pegando sua arma de caça que estava ao lado da porta de saída, depois de alguns passos vislumbra seu pequeno casebre de madeira cedido pelo ancião da vila Tothurin, após voce salva-lo em certa ocasião.\n"
+                + "            ░                 ░                                               \n"
+                + "Pegando sua arma de caça que estava ao lado da porta de saída, depois de alguns passos vislumbra seu pequeno casebre de madeira cedido pelo ancião da vila Tothurin, após voce salva-lo em certa ocasião.\n"
                 + "Este imóvel é sua morada a alguns anos, sempre solitariamente acolhendo seus pensamentos e seu corpo.\n"
                 + "Com um breve suspiro vira-se para a densa floresta de Lavitan: \n"
-                + "SENTAR UM POUCO E OBSERVAR ou ENTRAR NA FLORESTA?", 7, 8, 0, 0, 0);
+                + "SENTAR UM POUCO E OBSERVAR ou ENTRAR NA FLORESTA?" + Som.porta(), 7, 8, 0, 0, 0);
         c[6] = h;
         Atos i = new Atos(7, " \n"
                 + "█████████████████████████████████▓ █████████████████████████████████████████████\n"
@@ -160,7 +168,7 @@ public class Carga {
                 + "▒ ▒█▓▒▒░▒▒▒▒▒▓▒▒▒▒▒ ▒▓▓▓▒░▓▒▓▓▒▒▒▓▒▒▓▓▒▒▒▒▒▒▓█  ▒░▒▒▒▓▒▒ ▓▒ ░▓ ▒▒▒▒▒▓▒▒▓▒▒▒▒▓▓▒▒\n"
                 + "██░░▒▒░▒░▒▒▒▒▒▒▒▒▒▒░ ░▒░░░▒▒░░▒░▒░▒▓▒░▒▒▒░░▒▒▒░ ▒▒▓▒▒▒▒░▒▒▒▒▒▒▓▒ ▒▒▓▒░░░▒▒░▒▒ ▒█\n"
                 + " Após seu breve descanso, abservando as grandes arvores, você se sente inteiramente pronto para adentrar suas instâncias.\n"
-                + "ENTRAR NA FLORESTA", 8, 0, 0, 0, 0);
+                + "ENTRAR NA FLORESTA" + Som.entradaFloresta(), 8, 0, 0, 0, 0);
         c[7] = i;
         Atos j = new Atos(8, "Você caminha calmamente por uma pequena trilha, ela mal pode ser vista pois a vegetação muito densa\n"
                 + "mas sua notável experiência ela se torna apenas uma trilha normal, seguindo mais adiante voce depara-se com\n"
@@ -249,12 +257,12 @@ public class Carga {
                 + "                                        ░░░     ░░                                         \n"
                 + "                                       ░░░       ░                                         \n"
                 + "                                               ░░                                          \n"
-                + "                                             ░░░                                           "
+                + "                                             ░░░                                           \n"
                 + "Ao longe ouve o som da vegetação sendo pisada ou mexida observando calmamente voce avista um imponente javali\n"
                 + "os pelos escuros dão um tom sombrio a fera, contrastando com suas presas brancas como o leite, suas patas e focinho estão cobertas de lama.\n"
                 + "com seu equipamento em maos, e seu instinto de caça agucado,  prepara-se para o ataque no desavisado animal.\n"
                 + "aproximando-se sorrateiramente por trás da criatura, segurando firmemente sua arma e tentando fazer o minimo de barulho possivel.\n"
-                + "ATACAR SILECIOSAMENTE ou ATACAR FEROSMENTE?", 10, 11, 0, 0, 0);
+                + "ATACAR SILECIOSAMENTE ou ATACAR FEROSMENTE?" + Som.javali(), 10, 11, 0, 0, 0);
         c[9] = k;
 
         Atos l = new Atos(10, "A criatura percebe seu movimento e foge em desparada por entre a vegetação, com muita dificuldade voce consegue\n"
@@ -271,7 +279,7 @@ public class Carga {
 
         Atos n = new Atos(12, "Você começa a descarnar o animal, coletando o conteudo da caçada.\n" //IMPLEMENTACAO LOOT DO CERVO
                 + "Apos a tarefa voce percebe que grande parte do dia já se passou e é sabio retornar antes que a noite caia sobre Lavitan, apesar desta parte ser apenas sua borda ainda assim, varios perigos podem surgir.\n"
-                + "RETORNAR", 8, 0, 0, 0, 0);     //RETORNA PARA ENCRUZILHADA                                  
+                + "RETORNAR" + Som.esfolar(), 8, 0, 0, 0, 0);     //RETORNA PARA ENCRUZILHADA                                  
         c[12] = n;
 
         Atos o = new Atos(13, "\n" //norte
@@ -304,8 +312,8 @@ public class Carga {
                 + "      ▒█▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▒▒▒▒▓███▓░▒███▒▒▓▓▓▓▓░   \n"
                 + "     ▓█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓█▓▒▒▓█▓▒▓███████▒█▓▒▒▓▓▓▓▓▒░\n"
                 + "   ▓█▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▒▒▒▒▒▓▓▒▓█▒▒░▓▓▒▓▓▒▓▓▒▒ \n"
-                + " ▒██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▓▓▓▓▓▓▓▓▒▒▓▒▒▓▓▓▓▓▓▓▓▓▓▓█▒ "
-                + "\nSeguindo você encontra muitas rochas entre as grandes arvores e arbustos de variados tamanhos, avancar por aqui se torna por vezes bastante dificultoso\n"
+                + " ▒██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▓▓▓▓▓▓▓▓▒▒▓▒▒▓▓▓▓▓▓▓▓▓▓▓█▒ \n"
+                + "Seguindo você encontra muitas rochas entre as grandes arvores e arbustos de variados tamanhos, avancar por aqui se torna por vezes bastante dificultoso\n"
                 + "tendo que frequentemente escalar ou desviar das grandes rochas. Mais alguns minutos de caminhada voce se depara com uma pequena falésia\n"
                 + "pelo seu tamanho reduzido ainda é possivel escalá-la, mas ainda assim esta acao pode vir a ser perigosa caso algo de errado.\n"
                 + "O pensamento de contorná-la ou encontrar um ponto melhor para escalada passa por sua mente.\n"
@@ -346,17 +354,17 @@ public class Carga {
                 + "▒▓ ▓▓█▓ ▓░  ░ ▒░░ ██   ██            ▒█░        ██  \n"
                 + "▒█▒▓░███▒   ▓░▓▓▒ ██   ██           ░██     ▒  ░██ ░\n"
                 + " ▓█▓░███▒▒░ ░▒▒▓ ▒█▒   █▓         ░ ▒█▒  ░ ███░▒██ ░\n"
-                + " ░▓  ▒░ ░▒▒  ░░   ░                        ▒▒░  ░   "
-                + "no centro da clareira, agora avistada totalmente, esta um majestoso cervo, com seus grandes chifres e seu andar despreocupado.\n"
+                + " ░▓  ▒░ ░▒▒  ░░   ░                        ▒▒░  ░   \n"
+                + "No centro da clareira, agora avistada totalmente, esta um majestoso cervo, com seus grandes chifres e seu andar despreocupado.\n"
                 + "voce ja consegue sentir o sabor de sua suculenta carne em sua boca. E com este pensamento prepara-se para o ataque.\n"
-                + " ATACAR", 17, 0, 0, 0, 0);
+                + " ATACAR" + Som.cervo(), 17, 0, 0, 0, 0);
         c[16] = q;
         Atos r = new Atos(17, "O cervo mesmo ferido ainda tenta correr para o abrigo da floresta, mas antes de atingir seu objetivo tomba, levantando leivas de grama com sua pesada galhada.n\""
                 + "ESFOLAR O ANIMAL E COLETAR A CARNE", 18, 0, 0, 0, 0);
         c[17] = r;
         Atos s = new Atos(18, "Você começa a descarnar o animal, coletando o conteudo da caçada.\n" //IMPLEMENTACAO LOOT DO CERVO
                 + "Apos a tarefa voce percebe que grande parte do dia já se passou e é sabio retornar antes que a noite caia sobre Lavitan, apesar desta parte ser apenas sua borda ainda assim, varios perigos podem surgir.\n"
-                + "RETORNAR", 8, 0, 0, 0, 0);     //RETORNA PARA ENCRUZILHADA
+                + "RETORNAR" + Som.esfolar(), 8, 0, 0, 0, 0);     //RETORNA PARA ENCRUZILHADA
         c[18] = s;
 
         Atos t = new Atos(15, "Voce segue esgueirando-se da vegetação e rochas, contornando a pequena falésia. Ela parece nunca terminar\n"
@@ -407,8 +415,8 @@ public class Carga {
                 + "█▓▒▓░░▒▒▒▒▒░░░░▒▒░ ░   ░ ░ ░░░ ░░░░▒░░▒▒▒▒░░░░░░░░░░   ░▒▒░░░░▒▒▒░░▒▒▒▒░░   ░░░░░░  ░▓▓▓▒░▒▒▒▒▒▒░░░░░▒░░░░░░░░░░░░░░░▒▒▒░▒\n"
                 + "▓▓▒░ ▒▒▒▒▒░░▒▒▒░        ░      ░░░░░░░▒░▒░░▒▒░  ░░░░░   ░▒░░░░░▒▒ ░░░░░░░░▒░  ░░░░ ░▒▒▒▓▒░▒▒▒▒▒▒▒▒▒░░▒░░░░░░░░░░░ ░░  ░░░░\n"
                 + "▒▓▓▒▒▓▒▒░░░▒░░░  ░░░   ░░░░░░░░░  ░░ ▒▒▒░░▒▓░░░░░░░░░░▒▒ ░ ░░░░░ ░░▒▒▒▒▒░▒▒░    ░░ ▓▒░░▒▒░▒▓▒▒▒▒▒▒▒▒░  ░ ░               ░\n"
-                + "▒▒░▒▓▒▒▒░░▒░░░░░▒▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒░ ▒▒ ░▒▒▒▒▒░░░░ ░░░  ░▒▒▒▒▓▓▒▓▓▒▒▒▓▒▒▒▒▒▒▒▒░░░░░░ ▒▒▒░▒▒░▒▒▒▒▒▒▒▓▒▒▒▒░    ░░░░░ ░ ░░░░▒▒▒ "
-                + "\nVocê segue bravamente seu caminho, sempre atento para os sons da floresta, nunca se sabe quando uma presa pode surgir.\n"
+                + "▒▒░▒▓▒▒▒░░▒░░░░░▒▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒░ ▒▒ ░▒▒▒▒▒░░░░ ░░░  ░▒▒▒▒▓▓▒▓▓▒▒▒▓▒▒▒▒▒▒▒▒░░░░░░ ▒▒▒░▒▒░▒▒▒▒▒▒▒▓▒▒▒▒░    ░░░░░ ░ ░░░░▒▒▒ \n"
+                + "Você segue bravamente seu caminho, sempre atento para os sons da floresta, nunca se sabe quando uma presa pode surgir.\n"
                 + "Mas apesar dos seus esforços você se encontra em um “beco” sem saída formado pelas rochas\n"
                 + "nesta parte da falésia não é possivel escalar devido a inclinacao vertical da formação.\n"
                 + "Farto da situação e sem encontrar nenhum alvo para sua caçada voce concebe que é melhor voltar e ir à vila comprar algo\n"
@@ -458,14 +466,14 @@ public class Carga {
                 + "Apesar dos poucos segundos do surgimento da criatura voce observa sua grotesca feição, a boca aberta exibia seus amarelados dentes\n"
                 + "também vestindo alguns farrapos e um velho colete de couro. Sem titubear voce esta pronto para a batalha\n"
                 + "com um rapido movimento já está com sua arma em maos e a adrenalina elevada.\n"
-                + "1-ATACAR O GLOBIN", 21, 0, 0, 0, 0);  //fugir talvez seja colocado
+                + "1-ATACAR O GLOBIN" + Som.globin(), 21, 0, 0, 0, 0);  //fugir talvez seja colocado
         c[20] = v;
 //implementação metodo batalha 
         Atos x = new Atos(21, "Com a criatura estirada ao chao na sua frente voce ainda com o sangue quente da pequena luta, espera que mais deles aparecam para lhe enfrentarem\n"
                 + "pois estas criaturas sempre atacam em bando. Apesar do pequeno momento de espera mais inimigos não aparecem.\n"
                 + "Voce acha estranho, mas agradece mentalmente que isso não aconteceu, apenas um inimigo, apesar do susto, não era grande oponente para você\n"
                 + " mas uma grande quantidade com certeza seria perigoso. Sem mais nada a fazer resta apenas retornar para a sua morada ao sul."
-                + "IR AO SUL", 22, 0, 0, 0, 0);
+                + "IR AO SUL" + Som.lutasoco(), 22, 0, 0, 0, 0);
         c[21] = x;
 
         Atos z = new Atos(22, "\n"
@@ -508,13 +516,13 @@ public class Carga {
                 + "        ░▒▒▒░░░▒░░░▒▒▒░▒▓▒▒▒░░▒▒▒▒▒░▒▒▒░░░░▒░░░░░░░░░░░░ ░░░   ░     ░ ░     ░ ░ ░ ░         ░░░ ░  ░░       ░    ░░░░░░░▒\n"
                 + "▒▒▒▒▒▒▒░░▒▒ ▒▒▒░░░▓▓░░░░▒▒▒░░░▒░▒▒░░▒▒▒▒▒▒▒░   ░▒▒▒▒▒▒▓▒  ░░  ░░                    ░       ░░░░░         ░   ░    ░░░▒▒▒▓\n"
                 + "▒▓▓▓▒▒▒▒▒▒▓▓▒▒▒░ ░░ ░▒▒▒░  ░░▒░░  ▒▒░▒░   ░     ░░    ░          ░ ░            ░░         ░     ░             ░ ░░░▒▒░░░░\n"
-                + "░░░                         ░     ░░            ░                     ░ ░     ░ ░   ░░░░░                        ░░ ░▒░░░ "
-                + "\n Você segue caminhando para fora da floresta, ainda com sua arma em mãos para evitar mais algum possível confronto. \n"
+                + "░░░                         ░     ░░            ░                     ░ ░     ░ ░   ░░░░░                        ░░ ░▒░░░ \n"
+                + "Você segue caminhando para fora da floresta, ainda com sua arma em mãos para evitar mais algum possível confronto. \n"
                 + "Nesta parte da mata já é possivel avistar o sol comm clareza pois a vegetação nao e mais tao densa\n"
                 + "Você observa que ja passou do meio dia e a fome é grande, fazendo apressar seu passo. Ao sair da mata\n"
                 + "voce avista fumaça no ceu, nao é algo totalmente estranho, mas a quantidade meio que lhe deixa preocupado.\n"
                 + "Entao voce sente vontade de saber do que se trata, procurando um ponto de observacao melhor.\n"
-                + "OBSERVAR MELHOR", 23, 0, 0, 0, 0);
+                + "OBSERVAR MELHOR" + Som.fogo(), 23, 0, 0, 0, 0);
         c[22] = z;
         Atos w = new Atos(23, ""
                 + "                                                                                     \n"
@@ -556,8 +564,7 @@ public class Carga {
                 + "                                       ░▓▒▒▒▒▒░▒▒▒▒░                                 \n"
                 + "                                  ░▒▒▒▓▓▓░▒▒▓▒░░▒▒▒▓▒▒░                              \n"
                 + "                                 ░░░▒▒▒░░░▒▒▒░   ░░░░▒▒▒                             \n"
-                + "                                                                                     "
-                + "\nSubindo em uma arvore já nas proximidades de sua casa você avista a vila toda envolta em chamas e fumaca.\n"
+                + "Subindo em uma arvore já nas proximidades de sua casa você avista a vila toda envolta em chamas e fumaca.\n"
                 + "Uma sensação de desespero enche seu corpo, a sensação de perder entes queridos novamente o deixa perplexo\n"
                 + "o unico pensamneto agora é correr para a vila.\n"
                 + "CORRER PARA A VILA!", 24, 0, 0, 0, 0);
@@ -612,8 +619,8 @@ public class Carga {
                 + "                       ▓█▓██▒         \n"
                 + "                       ▒█▓███▓        \n"
                 + "                        ▓▒░           \n"
-                + "\n NOSSA!! Voce é o Usain Bolt dos RPGs!\n"
-                + "CONTINUAR", 26, 0, 0, 0, 0);
+                + "NOSSA!! Voce é o Usain Bolt dos RPGs!\n"
+                + "CONTINUAR" + Som.corre(), 26, 0, 0, 0, 0);
         c[25] = aa;
         Atos ab = new Atos(26, "\n"
                 + "Você finalmente para de correr na entrada da vila, Seus olhos nao conseguem acreditar no que veem\n"
@@ -664,14 +671,14 @@ public class Carga {
                 + "                                     ░░░░▒▒▒▒▒▒▒▒▒▒▒▒▓▒▓▒▓▓▓▒  ░▒▒▓▓▓▓▓▓▓█▓▓░▒▓██▓▒▓████▓▒   ▒▒ \n"
                 + "                                              ▒▒▒░▒▒▒▒▒▒░             ░░▒▒▓▓▓▒▒▓████▓░          \n"
                 + "                                               ░▒▒▒░▒▒▓█░                        ▒▒▓▒           \n"
-                + "                                                 ░░▒▒▒▒░                                        "
-                + "\nA paisagem de destruição se extendia a esta parte da vila também, apenas o antigo templo em seu centro ainda resistia\n"
+                + "                                                 ░░▒▒▒▒░                                        \n"
+                + "A paisagem de destruição se extendia a esta parte da vila também, apenas o antigo templo em seu centro ainda resistia\n"
                 + "nao por falta da insistência de seja lá quem que atacou este pacato lugar, suas grossas paredes feitas de solidas\n"
                 + "rochas a muito tempo, desde que se tem registro esta edificação já existia em Kenko\n"
                 + "certamente fazia parte de algo antigo.\n"
                 + "Apenas sua porta estava totalmente destruida, certamente os moradores tentaram abrigar-se do ataque neste solido abrigo.\n"
                 + "Voce sente que deve entrar.\n"
-                + "ENTRAR NO TEMPLO", 29, 0, 0, 0, 0);
+                + "ENTRAR NO TEMPLO" + Som.templo(), 29, 0, 0, 0, 0);
         c[28] = ad;
         Atos ae = new Atos(29, "A imagem ali dentro com certeza não sairá da sua mente tão cedo, varios corpos mutilados e sinais de luta pelo ambiente.\n"
                 + "Em meio ao silencio enlouquecedor você ouve alguns gemidos. Mais que depressa tenta localizar a origem deste agoniante som\n"
@@ -713,13 +720,13 @@ public class Carga {
                 + "          ░░░░░░░         ░░░░░░░░░░▒░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▒▒▒▓▒▓▒▒▒▒▒░░        \n"
                 + "          ░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▓▒       \n"
                 + "         ░░░▒░░░░░░░░░░░░░░░░░░░░░▒░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░       \n"
-                + "        ░▒▒▒▒▒▒▒░▒▒▒▒▒▒▒▒▒▒▒░░░░░▒░░░░░░░░                                      "
-                + "\nContornando o altar central esta Tothurin no chão, encharcado de sangue de um ferimento em seu peito e notaveis sinais\n"
+                + "        ░▒▒▒▒▒▒▒░▒▒▒▒▒▒▒▒▒▒▒░░░░░▒░░░░░░░░                                      \n"
+                + "Contornando o altar central esta Tothurin no chão, encharcado de sangue de um ferimento em seu peito e notaveis sinais\n"
                 + "de tortura pelo corpo. Ele rastejava para fora de uma abertura no chao do templo que você sequer sabia da existencia\n"
                 + "Seu amigo de longa data, foi o motivo de voce vir morar em Kenko, salvando-o da perdição que se encontrava e dando\n"
                 + "de certa forma um novo motivo para continuar vivendo depois dos acontecimentos de seu passado. Ele balbucia algumas palavras\n"
                 + "mas voce não entende, deve se aproximar para compreender melhor.\n"
-                + "3-APROXIMAR-SE", 31, 0, 0, 0, 0);
+                + "3-APROXIMAR-SE" + Som.ferido(), 31, 0, 0, 0, 0);
         c[30] = af;
         Atos ag = new Atos(31, "Em seus bracos Tothurin reconhecendo sua feição começa a falar: - Eles levaram o fragmento do orbe de Nys que estavamos protegendo\n"
                 + "por favor impeça que eles consigam utiliza-lo, por favor, eramos seus guardioes e agora o tomaram de nós\n"
@@ -768,8 +775,8 @@ public class Carga {
                 + "                                       ▓▓                                ░░▒▒   \n"
                 + "                                        ░▒░                              ░▒▒▒   \n"
                 + "                                          ░░                             ▒▒▓    \n"
-                + "                                                                                "
-                + "\nA vitalidade esta indo embora de seu velho corpo, esta batalha ele não vencerá… Com suas ultimas forcas ele responde que\n"
+                + "                                                                                \n"
+                + "A vitalidade esta indo embora de seu velho corpo, esta batalha ele não vencerá… Com suas ultimas forcas ele responde que\n"
                 + "foram o bando Wulfforce, novamente pede para que voce os impeça, mas dessa vez termina a frase dizendo para voce pegar uma adaga\n"
                 + "que esta em um compartimento escondido dentro da porta secreta abaixo do templo, apesar da tortura eu nao lhes contei sobre esta\n"
                 + "por favor a use bem, é a unica arma que pode derrotar quem os Wulfforce buscam, procure nos outros santuarios de \n"
@@ -816,8 +823,8 @@ public class Carga {
                 + "▓▒▒░▒▒░▒▓▓▒              ░░▒░▒▒▒▒▒▒░░░░░ ░      ▒▒▒▒▒▒░░▒▒░░░▒▒▒▒▒▒░ ░░▒▒▒▒░░▒░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░▓▓  ░           ░░▒▒▒░░░▒░▒░▒░▒░░░░░░░░     ░░▒░░░░▓▓▒▒░         ░▒  ░░▒░▒▒░▒\n"
                 + "▒▓▒▒▓▒▒▓█░                          ░▒▒▒▓▒▒▒▒░▒░ ░░ ░░░  ░░ ░ ░░      ░▒░▒▒▒▒▒░░▒░░░░░▒▒░░▒▒▒▒▒▒▒▒▓▓  ▒▒▒▒▒▒▒▒▒░▒▓▒           ░░░░░░     ░░        ░░▒▓▒ ▒▒▒▒▓▓▒▒▒▒▒░  ░░░░░░░░▒\n"
                 + "▒▓▒░▒▒▒▓░        ░ ░░░ ░    ░░░░   ▓▓▒ ▓▓▒▒█▓▓▓▓▒▓▓▓▓▓▓▓▓▓▓▓▒▒░░░        ░░▒▒▒▒▒▒▒░▒░░▒▒░▒░▒▒▒▒▒▒▒░▒▒▒▒▒▒▒░░░▒▒▒▒▓▓░             ░░▒▒▓▓▓▒▓▓█▒▒▒▒▒▒▓▓██▓  ░▒▒▒▓▓▓▓▓▒▒▓░ ░░░░░░░░▒\n"
-                + "▒▒▓▒▒▒▒ ░▓▓▓▓█▓▓▓▒▒░▒░▒░▒▒░    ░░ ░▓▓░▓▒▓▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓█▓▒▓▓▒░   ░░░▒▒▒▒▒░▒▒▒▒▒░░░░░    ░░ ░░░░▒▒▒▓▓▓█▓███████████ ░░▒░▒▓▓▓▒▒▒▒▓▒▒▒░░▒▒▒▒▒▒▓▓▓▓▓▓▓▒  ▒▒  ░░░░░░░░░▒"
-                + "\n descendo a pequena escada voce avista o pequeno altar ao fundo, onde provavelmente estava o fragmento do orbe que Tothurin falou.\n"
+                + "▒▒▓▒▒▒▒ ░▓▓▓▓█▓▓▓▒▒░▒░▒░▒▒░    ░░ ░▓▓░▓▒▓▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓█▓▒▓▓▒░   ░░░▒▒▒▒▒░▒▒▒▒▒░░░░░    ░░ ░░░░▒▒▒▓▓▓█▓███████████ ░░▒░▒▓▓▓▒▒▒▒▓▒▒▒░░▒▒▒▒▒▒▓▓▓▓▓▓▓▒  ▒▒  ░░░░░░░░░▒\n"
+                + "Descendo a pequena escada voce avista o pequeno altar ao fundo, onde provavelmente estava o fragmento do orbe que Tothurin falou.\n"
                 + "Observando a pequena sala, com suas paredes de pedra com varias inscricoes em alguma linguagem\n"
                 + "desconhecida a voce, como Tothurin lhe disse você procura pela pedra que abre o tal compartimento secreto\n"
                 + "PRESSIONAR PEDRA CORRETA", 34, 0, 0, 0, 0);   //TINHA O PUZZLE DAS PEDRAS, VER COMO COLOCAR 
@@ -867,13 +874,13 @@ public class Carga {
                 + "███████████▓▓▓▒▓█████████████████████████████████████████████████████\n"
                 + "█████████▓▓▓▓▓███████████████████████████████████████████████████████\n"
                 + "██████▓▓▓▓███████████████████████████████████████████████████████████\n"
-                + "█████████████████████████████████████████████████████████████████████"
-                + "\n Com a adaga em mãos voce com toda a sua raiva e desejo de vinganca decide partir em busca de respostas\n"
+                + "█████████████████████████████████████████████████████████████████████\n"
+                + "Com a adaga em mãos voce com toda a sua raiva e desejo de vinganca decide partir em busca de respostas\n"
                 + "e sangue por parte dos agressores. Achava que o passado de lutas e tragédias tinha ficado para tras\n"
                 + "mas novamente ele bate a minha porta, pensa voce. Está na hora de voltar a ser quem eu era.\n"
                 + "Com esta frase dita em sussurros para si mesmo,  voce pensa em seus antigos armamentos, escondidos\n"
                 + "em um bau no porão da sua casa. \n"
-                + "RETORNAR PARA SUA CASA", 36, 0, 0, 0, 0);
+                + "RETORNAR PARA SUA CASA" + Som.itemLendario(), 36, 0, 0, 0, 0);
         c[35] = al;
         Atos am = new Atos(36, "Novamente dentro do templo voce observa os corpos, nada mais importa, somente a vinganca, uma ultima olhada\n"
                 + "em seu mais fiel amigo Tothurin, voce lembra de suas palavras e agora passando por toda a carnificina\n"
@@ -883,13 +890,13 @@ public class Carga {
                 + "voce sempre passou para visitar seus amigos agora so lhe tras as visões de seus corpos estirados ao chão\n"
                 + "sem vida. Ao longe voce avista sua casa, mais lembrancas surgem, tudo ali de algma forma teve algum\n"
                 + "envolvimento com essas pessoas que lhe acolheram tão bem, e agora já não existem mais.\n"
-                + "ENTRAR EM CASA", 37, 0, 0, 0, 0);
+                + "ENTRAR EM CASA" + Som.porta(), 37, 0, 0, 0, 0);
         c[36] = am;
 
         Atos an = new Atos(37, "Adentrando a residência você dirige-se para o alcapão sob a mesa da sala.\n"
                 + "Você move a mesa, e vizualiza um alcapao trancado por um velho cadeado.\n"
                 + "A chave deste você carrega consigo o tempo todo como um colar, como um lembrete das atrocidades e erros cometidos no seu triste passado.\n"
-                + "ABRIR ALÇAPÃO", 38, 0, 0, 0, 0);
+                + "ABRIR ALÇAPÃO" + Som.cadeado(), 38, 0, 0, 0, 0);
         c[37] = an;
 
         Atos ao = new Atos(38, ""
@@ -932,8 +939,8 @@ public class Carga {
                 + "  ░▒  ▒▒ ▒██████████████████████████▓▓▒▒░   ░             \n"
                 + "         ▒▒▒▒▒▓▓▓▓██████████████████████████              \n"
                 + "                      ░░▒▒▒▓▓▓▓████████████▒              \n"
-                + "                                      ░░▒▒░               "
-                + "\nUsando a chave pendurada em seu pescoço, voce abre o cadeado do alcapao.\n"
+                + "                                      ░░▒▒░               \n"
+                + "Usando a chave pendurada em seu pescoço, voce abre o cadeado do alcapao.\n"
                 + "Dentro ha um velho baú, e nele ha algo que voce jurou nunca mais usar\n"
                 + "mas desta vez era diferente, as mesmas pessoas que o fizeram realizar este juramento agora merecem vingança.\n"
                 + "Você não sente qualquer remorso em quebrar esta promessa\n"
@@ -980,15 +987,15 @@ public class Carga {
                 + "██████████▒▒▓█████▒░▓▓▓▒░▒▒▓▓▓░    ▓█▓▒▒░▒▓███████████████████████\n"
                 + "███████████████████▓░▒▒▒▓▓▓▒▓░  ░▓██████▓█████████████████████████\n"
                 + "█████████████████████▓░▒▒▒▓███████████████████████████████████████\n"
-                + "██████████████████████████████████████████████████████████████████"
-                + "\n Sem orgulho algum por tudo o que estes apetrechos viram juntamente com seus olhos você os equipa.\n"
+                + "██████████████████████████████████████████████████████████████████\n"
+                + "Sem orgulho algum por tudo o que estes apetrechos viram juntamente com seus olhos você os equipa.\n"
                 + "já sob o velho manto e armadura, com sua antiga arma no suporte em suas costas\n"
                 + "o unico desejo ecoa por todo seu corpo…  VINGANÇA!\n"
-                + "SEGUIR PARA A FASE 2", 40, 0, 0, 0, 0);
+                + "SEGUIR PARA A FASE 2" + Som.itemLendario(), 40, 0, 0, 0, 0);
         c[39] = ap;
         Atos aq = new Atos(40, "PARABENS! voce acaba de concluir a primeira fase do jogo!.\n"
-                + "1-INICIAR ATO 2  2-IR PARA O MENU INICIAL   3-VERIFICAR STATUS", 0, 0, 0, 0, 0);
-        c[40]= aq;
+                + "1-INICIAR ATO 2  2-IR PARA O MENU INICIAL   3-VERIFICAR STATUS" + Som.finalMario(), 0, 0, 0, 0, 0);
+        c[40] = aq;
         //IMPLEMENTACAO DO STATUS E +
         return c;
     }
