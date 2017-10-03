@@ -23,7 +23,7 @@ public class Principal {
         // Pegar item da dispensa
         humano.adicionarItem(p.getDispensa().get(0));
         // Recompensa por matar um bixo
-        humano.adicionarItem(Itens.ESPADADEGELO);
+        humano.adicionarItem(Itens.getARCO());
         // Comer um item
         Comida JABUTICABA = (Comida) humano.getInventario().pegarItem(0);
         humano.comer(JABUTICABA);
@@ -36,52 +36,52 @@ public class Principal {
     }
 
     public void configuraDispensa(Especialidade classe) {
-        getDispensa().add(Itens.CAMISA);
-        getDispensa().add(Itens.JABUTICABA);
+        getDispensa().add(Itens.getCAMISA());
+        getDispensa().add(Itens.getJABUTICABA());
 
         if (classe.getDescricao().equals("Humano")) {
-            getDispensa().add(Itens.FACA);
+            getDispensa().add(Itens.getESPADA());
         }
         if (classe.getDescricao().equals("Anao")) {
-            getDispensa().add(Itens.CAJADO);
+            getDispensa().add(Itens.getCAJADO());
         }
         if (classe.getDescricao().equals("Elfo")) {
-            getDispensa().add(Itens.ARCO);
+            getDispensa().add(Itens.getARCO());
         }
         if (classe.getDescricao().equals("Orc")) {
-            getDispensa().add(Itens.FACA);
+            getDispensa().add(Itens.getESPADA());
         }
         if (classe.getDescricao().equals("Undead")) {
-            getDispensa().add(Itens.CAJADO);
+            getDispensa().add(Itens.getCAJADO());
         }
     }
 
     public Item[] recompensaBoss1(Especialidade classe) {
         Item[] recompensa = new Item[1];
         if (classe.getDescricao().equals("Humano")) {
-            System.out.println("Você ganhou uma " + Itens.ESPADALONGA + " e uma " + Itens.CARNE + "");
-            recompensa[0] = Itens.ESPADALONGA;
-            recompensa[1] = Itens.CARNE;
+            System.out.println("Você ganhou uma " + Itens.getESPADA() + " e uma " + Itens.getCARNE() + "");
+            recompensa[0] = Itens.getESPADA();
+            recompensa[1] = Itens.getCARNE();
             return recompensa;
         } else if (classe.getDescricao().equals("Anao")) {
-            System.out.println("Você ganhou um " + Itens.CAJADODEFOGO + " e uma " + Itens.CARNE + "");
-            recompensa[0] = Itens.CAJADODEFOGO;
-            recompensa[1] = Itens.CARNE;
+            System.out.println("Você ganhou um " + Itens.getCAJADO() + " e uma " + Itens.getCARNE() + "");
+            recompensa[0] = Itens.getCAJADO();
+            recompensa[1] = Itens.getCARNE();
             return recompensa;
         } else if (classe.getDescricao().equals("Elfo")) {
-            System.out.println("Você ganhou um " + Itens.ARCOANTIGO + " e uma " + Itens.CARNE + "");
-            recompensa[0] = Itens.ARCOANTIGO;
-            recompensa[1] = Itens.CARNE;
+            System.out.println("Você ganhou um " + Itens.getARCO() + " e uma " + Itens.getCARNE() + "");
+            recompensa[0] = Itens.getARCO();
+            recompensa[1] = Itens.getCARNE();
             return recompensa;
         } else if (classe.getDescricao().equals("Orc")) {
-            System.out.println("Você ganhou uma " + Itens.ESPADALONGA + " e uma " + Itens.CARNE + "");
-            recompensa[0] = Itens.ESPADALONGA;
-            recompensa[1] = Itens.CARNE;
+            System.out.println("Você ganhou uma " + Itens.getESPADA() + " e uma " + Itens.getCARNE() + "");
+            recompensa[0] = Itens.getESPADA();
+            recompensa[1] = Itens.getCARNE();
             return recompensa;
         } else if (classe.getDescricao().equals("Undead")) {
-            System.out.println("Você ganhou um " + Itens.CAJADODEFOGO + " e uma " + Itens.CARNE + "");
-            recompensa[0] = Itens.CAJADODEFOGO;
-            recompensa[1] = Itens.CARNE;
+            System.out.println("Você ganhou um " + Itens.getCAJADO() + " e uma " + Itens.getCARNE() + "");
+            recompensa[0] = Itens.getCAJADO();
+            recompensa[1] = Itens.getCARNE();
             return recompensa;
         } else {
             return recompensa;
