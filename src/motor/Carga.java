@@ -15,7 +15,7 @@ public class Carga {
         c[0] = a;
         Atos b = new Atos(1, "As galinhas cacarejam enlouquecidamente anunciando o novo dia, por vezes você sente vontade de dar cabo delas \n"
                 + "devido a irritação sonora recorrente. Agora desperta por completo.\n"
-                + "LEVANTAR" + Som.galinha(), 2, 0, 0, 0, 0);
+                + "LEVANTAR"+Som.galinha(), 2, 0, 0, 0, 0);
         c[1] = b;
         Atos d = new Atos(2, "Abrindo os olhos, ainda meio confuso, percebe que esqueceu de apagar a vela, e agora o cheiro de cera invade o recinto.\\n\"\n"
                 + "░▒░░░░░░░░░░░░░▒░░░░░░░▒░░░░░░░░░░░░░░\n"
