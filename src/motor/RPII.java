@@ -13,7 +13,7 @@ public class RPII {
         int resp = 0;
         System.out.println("Bem vindo ao MUD, Oque deseja fazer? ");
         while (resp != 1 || resp != 2 || resp != 3) {
-            System.out.println("1- Iniciar novo jogo 2- Escolher onde comecar o jogo 3- Obter ajuda");
+            System.out.println("1- Iniciar novo jogo  2- Sobre o jogo  3- Obter ajuda");
             resp = e.nextInt();
             if (resp == 1) {
                 Ato0 x = new Ato0();
@@ -44,41 +44,22 @@ public class RPII {
         if (print.proxcod.get(4) != 0) {
             System.out.println(print.proxcod.get(4) + " -P/ 5ª OPCAO");
         }
-        resp = e.nextInt();
-        while (resp != print.proxcod.get(0) || resp != print.proxcod.get(1) || resp != print.proxcod.get(2) || resp != print.proxcod.get(3) || resp != print.proxcod.get(4)) {
-            if (resp == print.proxcod.get(0)) {
-                int proximo = print.getProxcodigo(0);
-                print = j.compara(geral[proximo]);
-                System.out.println(print.desc);
-                break;
-            }
-            if (resp == print.proxcod.get(1)) {
-                int proximo = print.getProxcodigo(1);
-                print = j.compara(geral[proximo]);
-                System.out.println(print.desc);
-                break;
-            }
-            if (resp == print.proxcod.get(2)) {
-                int proximo = print.getProxcodigo(2);
-                print = j.compara(geral[proximo]);
-                System.out.println(print.desc);
-                break;
-            }
-            if (resp == print.proxcod.get(3)) {
-                int proximo = print.getProxcodigo(3);
-                print = j.compara(geral[proximo]);
-                System.out.println(print.desc);
-                break;
-            }
-            if (resp == print.proxcod.get(4)) {
-                int proximo = print.getProxcodigo(4);
-                print = j.compara(geral[proximo]);
-                System.out.println(print.desc);
-                break;
-            }
-            System.out.println("Numero Inválido, Tente novamente!");
+        boolean valido = false;
+        do {
             resp = e.nextInt();
-        }
+            for (int cod = 0; cod <= 4; cod++) {
+                if (resp == print.proxcod.get(cod)) {
+                    int proximo = print.getProxcodigo(cod);
+                    print = j.compara(geral[proximo]);
+                    System.out.println(print.desc);
+                    valido = true;
+                    break;
+                }
+            }
+            if (!valido) {
+                System.out.println("Numero Inválido, Tente novamente!");
+            }
+        } while (!valido);
         //segunda parte
         //INICIO DO LOOP DO MOTOR
         while (resp != -1) {
@@ -102,7 +83,7 @@ public class RPII {
             }
             // resp = e.nextInt();
             //Seleciona a opção
-            boolean valido = false;
+            valido = false;
             do {
                 resp = e.nextInt();
                 for (int cod = 0; cod <= 4; cod++) {
