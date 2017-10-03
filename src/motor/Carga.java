@@ -17,7 +17,7 @@ public class Carga {
                 + "devido a irritação sonora recorrente. Agora desperta por completo.\n"
                 + "LEVANTAR"+Som.galinha(), 2, 0, 0, 0, 0);
         c[1] = b;
-        Atos d = new Atos(2, "Abrindo os olhos, ainda meio confuso, percebe que esqueceu de apagar a vela, e agora o cheiro de cera invade o recinto.\\n\"\n"
+        Atos d = new Atos(2, "Abrindo os olhos, ainda meio confuso, percebe que esqueceu de apagar a vela, e agora o cheiro de cera invade o recinto.\n"
                 + "░▒░░░░░░░░░░░░░▒░░░░░░░▒░░░░░░░░░░░░░░\n"
                 + "░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░▒░░▒\n"
                 + "░▒░░░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░▒░░░▒░░░░░░░░\n"
@@ -44,11 +44,12 @@ public class Carga {
                 + "░▒▒░▒░▒░▒▒▒▒▒▒▒░░▓█▓▓▒░▒▒▒▒▒▒▒▒▒▒░▒░▒▒\n"
                 + "░▒░▒░░░░░░░▒░░▒░░██▓▒▒░▒▒▒▒▒▒▒▒▒▒▒░▒░▒\n"
                 + "░▒░░░░▒▒▒▒▒▒▒▒▒▒▒██▓▓▒▒▒▒▒▒▒▒▒▒░░░▒░▒▒\n"
-                + "░░░░▒▒▒▒░░▒▒▒▒▒░░░░░░░░░░░░     ░░░░░\n"
+                + " ░░░░▒▒▒▒░░▒▒▒▒▒░░░░░░░░░░░░     ░░░░░\n"
                 + "░░░░░░▒▒▒░                   ░▒▒▒▒░░░░\n"
                 + "▓█████▓▓▒▒▒                 ▒▒▒▒▓▓████\n"
-                + "██████████████████████████████████████\n"
-                + "APAGAR VELA ou IR AO BANHEIRO? ", 3, 4, 0, 0, 0);
+                + "██████████████████████████████████████"
+                + "\n"
+                + "APAGAR VELA ou IR AO BANHEIRO", 3, 4, 0, 0, 0);
         c[2] = d;
         Atos e = new Atos(3, "\n"
                 + "░▒░░░░░░░░░░░░░▒░░░░░░░▒░░░░░░░░░░░░░░\n"
