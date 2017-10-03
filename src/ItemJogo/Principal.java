@@ -23,7 +23,7 @@ public class Principal {
         // Pegar item da dispensa
         humano.adicionarItem(p.getDispensa().get(0));
         // Recompensa por matar um bixo
-        humano.adicionarItem(Itens.ESPADADEGELO);
+        humano.adicionarItem(Itens.ARCO);
         // Comer um item
         Comida JABUTICABA = (Comida) humano.getInventario().pegarItem(0);
         humano.comer(JABUTICABA);
@@ -40,7 +40,7 @@ public class Principal {
         getDispensa().add(Itens.JABUTICABA);
 
         if (classe.getDescricao().equals("Humano")) {
-            getDispensa().add(Itens.FACA);
+            getDispensa().add(Itens.ESPADA);
         }
         if (classe.getDescricao().equals("Anao")) {
             getDispensa().add(Itens.CAJADO);
@@ -49,7 +49,7 @@ public class Principal {
             getDispensa().add(Itens.ARCO);
         }
         if (classe.getDescricao().equals("Orc")) {
-            getDispensa().add(Itens.FACA);
+            getDispensa().add(Itens.ESPADA);
         }
         if (classe.getDescricao().equals("Undead")) {
             getDispensa().add(Itens.CAJADO);
@@ -59,28 +59,28 @@ public class Principal {
     public Item[] recompensaBoss1(Especialidade classe) {
         Item[] recompensa = new Item[1];
         if (classe.getDescricao().equals("Humano")) {
-            System.out.println("Você ganhou uma " + Itens.ESPADALONGA + " e uma " + Itens.CARNE + "");
-            recompensa[0] = Itens.ESPADALONGA;
+            System.out.println("Você ganhou uma " + Itens.ESPADA + " e uma " + Itens.CARNE + "");
+            recompensa[0] = Itens.ESPADA;
             recompensa[1] = Itens.CARNE;
             return recompensa;
         } else if (classe.getDescricao().equals("Anao")) {
-            System.out.println("Você ganhou um " + Itens.CAJADODEFOGO + " e uma " + Itens.CARNE + "");
-            recompensa[0] = Itens.CAJADODEFOGO;
+            System.out.println("Você ganhou um " + Itens.CAJADO + " e uma " + Itens.CARNE + "");
+            recompensa[0] = Itens.CAJADO;
             recompensa[1] = Itens.CARNE;
             return recompensa;
         } else if (classe.getDescricao().equals("Elfo")) {
-            System.out.println("Você ganhou um " + Itens.ARCOANTIGO + " e uma " + Itens.CARNE + "");
-            recompensa[0] = Itens.ARCOANTIGO;
+            System.out.println("Você ganhou um " + Itens.ARCO + " e uma " + Itens.CARNE + "");
+            recompensa[0] = Itens.ARCO;
             recompensa[1] = Itens.CARNE;
             return recompensa;
         } else if (classe.getDescricao().equals("Orc")) {
-            System.out.println("Você ganhou uma " + Itens.ESPADALONGA + " e uma " + Itens.CARNE + "");
-            recompensa[0] = Itens.ESPADALONGA;
+            System.out.println("Você ganhou uma " + Itens.ESPADA + " e uma " + Itens.CARNE + "");
+            recompensa[0] = Itens.ESPADA;
             recompensa[1] = Itens.CARNE;
             return recompensa;
         } else if (classe.getDescricao().equals("Undead")) {
-            System.out.println("Você ganhou um " + Itens.CAJADODEFOGO + " e uma " + Itens.CARNE + "");
-            recompensa[0] = Itens.CAJADODEFOGO;
+            System.out.println("Você ganhou um " + Itens.CAJADO + " e uma " + Itens.CARNE + "");
+            recompensa[0] = Itens.CAJADO;
             recompensa[1] = Itens.CARNE;
             return recompensa;
         } else {

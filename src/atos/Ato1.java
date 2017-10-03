@@ -1659,7 +1659,7 @@ public class Ato1 {
 
         switch (classe.getDescricao()) {
             case "Guerreiro":
-                dispensa.adicionarItem(Itens.FACA);
+                dispensa.adicionarItem(Itens.ESPADA);
                 break;
             case "Mago":
                 dispensa.adicionarItem(Itens.CAJADO);
@@ -1677,19 +1677,19 @@ public class Ato1 {
         Inventario recompensa = new Inventario(2);
         if (classe.getDescricao().equals("Guerreiro")) {
             System.out.println("Parabéns, você encontrou uma Faca de Combate, uma cenoura e uma Camisa Longa");
-            recompensa.adicionarItem(Itens.FACADECOMBATE);
+            recompensa.adicionarItem(Itens.ESPADA);
             recompensa.adicionarItem(Itens.CENOURA);
             recompensa.adicionarItem(Itens.CAMISALONGA);
             return recompensa;
         } else if (classe.getDescricao().equals("Mago")) {
             System.out.println("Parabéns, você encontrou um Cajado Longo, uma cenoura e uma Carne");
-            recompensa.adicionarItem(Itens.CAJADOLONGO);
+            recompensa.adicionarItem(Itens.CAJADO);
             recompensa.adicionarItem(Itens.CENOURA);
             recompensa.adicionarItem(Itens.CAMISALONGA);
             return recompensa;
         } else if (classe.getDescricao().equals("Arqueiro")) {
             System.out.println("Parabéns, você encontrou um Arco Moderno, uma cenoura e uma Carne");
-            recompensa.adicionarItem(Itens.ARCOMODERNO);
+            recompensa.adicionarItem(Itens.ARCO);
             recompensa.adicionarItem(Itens.CENOURA);
             recompensa.adicionarItem(Itens.CAMISALONGA);
             return recompensa;
@@ -1702,19 +1702,19 @@ public class Ato1 {
         Inventario recompensa = new Inventario(2);
         if (classe.getDescricao().equals("Guerreiro")) {
             System.out.println("Parabéns, você encontrou uma Faca de Combate, uma cenoura e uma Camisa Longa");
-            recompensa.adicionarItem(Itens.FACADECOMBATE);
+            recompensa.adicionarItem(Itens.ESPADA);
             recompensa.adicionarItem(Itens.CENOURA);
             recompensa.adicionarItem(Itens.CAMISALONGA);
             return recompensa;
         } else if (classe.getDescricao().equals("Mago")) {
             System.out.println("Parabéns, você encontrou um Cajado Longo, uma cenoura e uma Carne");
-            recompensa.adicionarItem(Itens.CAJADOLONGO);
+            recompensa.adicionarItem(Itens.CAJADO);
             recompensa.adicionarItem(Itens.CENOURA);
             recompensa.adicionarItem(Itens.CAMISALONGA);
             return recompensa;
         } else if (classe.getDescricao().equals("Arqueiro")) {
             System.out.println("Parabéns, você encontrou um Arco Moderno, uma cenoura e uma Carne");
-            recompensa.adicionarItem(Itens.ARCOMODERNO);
+            recompensa.adicionarItem(Itens.ARCO);
             recompensa.adicionarItem(Itens.CENOURA);
             recompensa.adicionarItem(Itens.CAMISALONGA);
             return recompensa;
@@ -1727,19 +1727,19 @@ public class Ato1 {
         Inventario recompensa = new Inventario(3);
         if (classe.getDescricao().equals("Guerreiro")) {
             System.out.println("Parabéns, você encontrou uma Espada longa, uma coxinha e uma Armadura dourada");
-            recompensa.adicionarItem(Itens.ESPADALONGA);
+            recompensa.adicionarItem(Itens.ESPADA);
             recompensa.adicionarItem(Itens.COXINHA);
             recompensa.adicionarItem(Itens.ARMADURADOURADA);
             return recompensa;
         } else if (classe.getDescricao().equals("Mago")) {
             System.out.println("Parabéns, você encontrou um Cajado de fogo, uma coxinha e uma Armadura dourada");
-            recompensa.adicionarItem(Itens.CAJADODEFOGO);
+            recompensa.adicionarItem(Itens.CAJADO);
             recompensa.adicionarItem(Itens.COXINHA);
             recompensa.adicionarItem(Itens.ARMADURADOURADA);
             return recompensa;
         } else if (classe.getDescricao().equals("Arqueiro")) {
             System.out.println("Parabéns, você encontrou um Arco antigo, uma coxinha e uma Armadura dourada");
-            recompensa.adicionarItem(Itens.ARCOANTIGO);
+            recompensa.adicionarItem(Itens.ARCO);
             recompensa.adicionarItem(Itens.COXINHA);
             recompensa.adicionarItem(Itens.ARMADURADOURADA);
             return recompensa;

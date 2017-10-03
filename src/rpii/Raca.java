@@ -3,6 +3,7 @@ package rpii;
 import ItemJogo.Comida;
 import ItemJogo.Inventario;
 import ItemJogo.Item;
+import ItemJogo.ItemDeCombate;
 import itens.armas.Armas;
 import java.util.Random;
 
@@ -20,6 +21,7 @@ public abstract class Raca {
     private Armas arma;
     private Inventario inventario;
     private Especialidade classeJogador;
+    private ItemDeCombate itemDaMao;
 
     public Raca(String nome, Especialidade classeJogador) {
         this.nome = nome;
@@ -33,6 +35,7 @@ public abstract class Raca {
         this.arma = classeJogador.getArma();
         this.classeJogador = classeJogador;
         this.inventario = new Inventario(30);
+        this.itemDaMao = itemDaMao;
     }
 
     public int atacar() {
