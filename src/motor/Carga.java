@@ -15,7 +15,7 @@ public class Carga {
         c[0] = a;
         Atos b = new Atos(1, "As galinhas cacarejam enlouquecidamente anunciando o novo dia, por vezes você sente vontade de dar cabo delas \n"
                 + "devido a irritação sonora recorrente. Agora desperta por completo.\n"
-                + "LEVANTAR"+Som.galinha(), 2, 0, 0, 0, 0);
+                + "LEVANTAR", 2, 0, 0, 0, 0);
         c[1] = b;
         Atos d = new Atos(2, "Abrindo os olhos, ainda meio confuso, percebe que esqueceu de apagar a vela, e agora o cheiro de cera invade o recinto.\n"
                 + "░▒░░░░░░░░░░░░░▒░░░░░░░▒░░░░░░░░░░░░░░\n"
@@ -92,7 +92,7 @@ public class Carga {
         c[4] = f;
         //IMPLEMENTACAO DA DESPENSA, PEGAR ITENS ANTES
         Atos g = new Atos(5, "Percebendo a pouca quantia de alimento em sua dispensa decide ir caçar na floresta \n"
-                + "SAIR DE CASA E IR À FLORESTA CAÇAR" + Som.comendo(), 6, 0, 0, 0, 0);
+                + "SAIR DE CASA E IR À FLORESTA CAÇAR" /*+ Som.comendo()*/, 6, 0, 0, 0, 0);
         c[5] = g;
         Atos h = new Atos(6, "\n"
                 + "                                                                              \n"
@@ -134,7 +134,7 @@ public class Carga {
                 + "Pegando sua arma de caça que estava ao lado da porta de saída, depois de alguns passos vislumbra seu pequeno casebre de madeira cedido pelo ancião da vila Tothurin, após voce salva-lo em certa ocasião.\n"
                 + "Este imóvel é sua morada a alguns anos, sempre solitariamente acolhendo seus pensamentos e seu corpo.\n"
                 + "Com um breve suspiro vira-se para a densa floresta de Lavitan: \n"
-                + "SENTAR UM POUCO E OBSERVAR ou ENTRAR NA FLORESTA?" + Som.porta(), 7, 8, 0, 0, 0);
+                + "SENTAR UM POUCO E OBSERVAR ou ENTRAR NA FLORESTA?"/* + Som.porta()*/, 7, 8, 0, 0, 0);
         c[6] = h;
         Atos i = new Atos(7, " \n"
                 + "█████████████████████████████████▓ █████████████████████████████████████████████\n"
@@ -168,7 +168,7 @@ public class Carga {
                 + "▒ ▒█▓▒▒░▒▒▒▒▒▓▒▒▒▒▒ ▒▓▓▓▒░▓▒▓▓▒▒▒▓▒▒▓▓▒▒▒▒▒▒▓█  ▒░▒▒▒▓▒▒ ▓▒ ░▓ ▒▒▒▒▒▓▒▒▓▒▒▒▒▓▓▒▒\n"
                 + "██░░▒▒░▒░▒▒▒▒▒▒▒▒▒▒░ ░▒░░░▒▒░░▒░▒░▒▓▒░▒▒▒░░▒▒▒░ ▒▒▓▒▒▒▒░▒▒▒▒▒▒▓▒ ▒▒▓▒░░░▒▒░▒▒ ▒█\n"
                 + " Após seu breve descanso, abservando as grandes arvores, você se sente inteiramente pronto para adentrar suas instâncias.\n"
-                + "ENTRAR NA FLORESTA" + Som.entradaFloresta(), 8, 0, 0, 0, 0);
+                + "ENTRAR NA FLORESTA"/* + Som.entradaFloresta()*/, 8, 0, 0, 0, 0);
         c[7] = i;
         Atos j = new Atos(8, "Você caminha calmamente por uma pequena trilha, ela mal pode ser vista pois a vegetação muito densa\n"
                 + "mas sua notável experiência ela se torna apenas uma trilha normal, seguindo mais adiante voce depara-se com\n"
@@ -262,7 +262,7 @@ public class Carga {
                 + "os pelos escuros dão um tom sombrio a fera, contrastando com suas presas brancas como o leite, suas patas e focinho estão cobertas de lama.\n"
                 + "com seu equipamento em maos, e seu instinto de caça agucado,  prepara-se para o ataque no desavisado animal.\n"
                 + "aproximando-se sorrateiramente por trás da criatura, segurando firmemente sua arma e tentando fazer o minimo de barulho possivel.\n"
-                + "ATACAR SILECIOSAMENTE ou ATACAR FEROSMENTE?" + Som.javali(), 10, 11, 0, 0, 0);
+                + "ATACAR SILECIOSAMENTE ou ATACAR FEROSMENTE?"/* + Som.javali()*/, 10, 11, 0, 0, 0);
         c[9] = k;
 
         Atos l = new Atos(10, "A criatura percebe seu movimento e foge em desparada por entre a vegetação, com muita dificuldade voce consegue\n"
@@ -279,7 +279,7 @@ public class Carga {
 
         Atos n = new Atos(12, "Você começa a descarnar o animal, coletando o conteudo da caçada.\n" //IMPLEMENTACAO LOOT DO CERVO
                 + "Apos a tarefa voce percebe que grande parte do dia já se passou e é sabio retornar antes que a noite caia sobre Lavitan, apesar desta parte ser apenas sua borda ainda assim, varios perigos podem surgir.\n"
-                + "RETORNAR" + Som.esfolar(), 8, 0, 0, 0, 0);     //RETORNA PARA ENCRUZILHADA                                  
+                + "RETORNAR" /*+ Som.esfolar()*/, 8, 0, 0, 0, 0);     //RETORNA PARA ENCRUZILHADA                                  
         c[12] = n;
 
         Atos o = new Atos(13, "\n" //norte
@@ -357,14 +357,14 @@ public class Carga {
                 + " ░▓  ▒░ ░▒▒  ░░   ░                        ▒▒░  ░   \n"
                 + "No centro da clareira, agora avistada totalmente, esta um majestoso cervo, com seus grandes chifres e seu andar despreocupado.\n"
                 + "voce ja consegue sentir o sabor de sua suculenta carne em sua boca. E com este pensamento prepara-se para o ataque.\n"
-                + " ATACAR" + Som.cervo(), 17, 0, 0, 0, 0);
+                + " ATACAR"/* + Som.cervo()*/, 17, 0, 0, 0, 0);
         c[16] = q;
         Atos r = new Atos(17, "O cervo mesmo ferido ainda tenta correr para o abrigo da floresta, mas antes de atingir seu objetivo tomba, levantando leivas de grama com sua pesada galhada.n\""
                 + "ESFOLAR O ANIMAL E COLETAR A CARNE", 18, 0, 0, 0, 0);
         c[17] = r;
         Atos s = new Atos(18, "Você começa a descarnar o animal, coletando o conteudo da caçada.\n" //IMPLEMENTACAO LOOT DO CERVO
                 + "Apos a tarefa voce percebe que grande parte do dia já se passou e é sabio retornar antes que a noite caia sobre Lavitan, apesar desta parte ser apenas sua borda ainda assim, varios perigos podem surgir.\n"
-                + "RETORNAR" + Som.esfolar(), 8, 0, 0, 0, 0);     //RETORNA PARA ENCRUZILHADA
+                + "RETORNAR"/* + Som.esfolar()*/, 8, 0, 0, 0, 0);     //RETORNA PARA ENCRUZILHADA
         c[18] = s;
 
         Atos t = new Atos(15, "Voce segue esgueirando-se da vegetação e rochas, contornando a pequena falésia. Ela parece nunca terminar\n"
@@ -466,14 +466,14 @@ public class Carga {
                 + "Apesar dos poucos segundos do surgimento da criatura voce observa sua grotesca feição, a boca aberta exibia seus amarelados dentes\n"
                 + "também vestindo alguns farrapos e um velho colete de couro. Sem titubear voce esta pronto para a batalha\n"
                 + "com um rapido movimento já está com sua arma em maos e a adrenalina elevada.\n"
-                + "1-ATACAR O GLOBIN" + Som.globin(), 21, 0, 0, 0, 0);  //fugir talvez seja colocado
+                + "1-ATACAR O GLOBIN"/* + Som.globin()*/, 21, 0, 0, 0, 0);  //fugir talvez seja colocado
         c[20] = v;
 //implementação metodo batalha 
         Atos x = new Atos(21, "Com a criatura estirada ao chao na sua frente voce ainda com o sangue quente da pequena luta, espera que mais deles aparecam para lhe enfrentarem\n"
                 + "pois estas criaturas sempre atacam em bando. Apesar do pequeno momento de espera mais inimigos não aparecem.\n"
                 + "Voce acha estranho, mas agradece mentalmente que isso não aconteceu, apenas um inimigo, apesar do susto, não era grande oponente para você\n"
                 + " mas uma grande quantidade com certeza seria perigoso. Sem mais nada a fazer resta apenas retornar para a sua morada ao sul."
-                + "IR AO SUL" + Som.lutasoco(), 22, 0, 0, 0, 0);
+                + "IR AO SUL"/* + Som.lutasoco()*/, 22, 0, 0, 0, 0);
         c[21] = x;
 
         Atos z = new Atos(22, "\n"
@@ -522,7 +522,7 @@ public class Carga {
                 + "Você observa que ja passou do meio dia e a fome é grande, fazendo apressar seu passo. Ao sair da mata\n"
                 + "voce avista fumaça no ceu, nao é algo totalmente estranho, mas a quantidade meio que lhe deixa preocupado.\n"
                 + "Entao voce sente vontade de saber do que se trata, procurando um ponto de observacao melhor.\n"
-                + "OBSERVAR MELHOR" + Som.fogo(), 23, 0, 0, 0, 0);
+                + "OBSERVAR MELHOR" /*+ Som.fogo()*/, 23, 0, 0, 0, 0);
         c[22] = z;
         Atos w = new Atos(23, ""
                 + "                                                                                     \n"
@@ -620,7 +620,7 @@ public class Carga {
                 + "                       ▒█▓███▓        \n"
                 + "                        ▓▒░           \n"
                 + "NOSSA!! Voce é o Usain Bolt dos RPGs!\n"
-                + "CONTINUAR" + Som.corre(), 26, 0, 0, 0, 0);
+                + "CONTINUAR"/* + Som.corre()*/, 26, 0, 0, 0, 0);
         c[25] = aa;
         Atos ab = new Atos(26, "\n"
                 + "Você finalmente para de correr na entrada da vila, Seus olhos nao conseguem acreditar no que veem\n"
@@ -678,7 +678,7 @@ public class Carga {
                 + "certamente fazia parte de algo antigo.\n"
                 + "Apenas sua porta estava totalmente destruida, certamente os moradores tentaram abrigar-se do ataque neste solido abrigo.\n"
                 + "Voce sente que deve entrar.\n"
-                + "ENTRAR NO TEMPLO" + Som.templo(), 29, 0, 0, 0, 0);
+                + "ENTRAR NO TEMPLO"/* + Som.templo()*/, 29, 0, 0, 0, 0);
         c[28] = ad;
         Atos ae = new Atos(29, "A imagem ali dentro com certeza não sairá da sua mente tão cedo, varios corpos mutilados e sinais de luta pelo ambiente.\n"
                 + "Em meio ao silencio enlouquecedor você ouve alguns gemidos. Mais que depressa tenta localizar a origem deste agoniante som\n"
@@ -726,7 +726,7 @@ public class Carga {
                 + "Seu amigo de longa data, foi o motivo de voce vir morar em Kenko, salvando-o da perdição que se encontrava e dando\n"
                 + "de certa forma um novo motivo para continuar vivendo depois dos acontecimentos de seu passado. Ele balbucia algumas palavras\n"
                 + "mas voce não entende, deve se aproximar para compreender melhor.\n"
-                + "3-APROXIMAR-SE" + Som.ferido(), 31, 0, 0, 0, 0);
+                + "3-APROXIMAR-SE"/* + Som.ferido()*/, 31, 0, 0, 0, 0);
         c[30] = af;
         Atos ag = new Atos(31, "Em seus bracos Tothurin reconhecendo sua feição começa a falar: - Eles levaram o fragmento do orbe de Nys que estavamos protegendo\n"
                 + "por favor impeça que eles consigam utiliza-lo, por favor, eramos seus guardioes e agora o tomaram de nós\n"
@@ -880,7 +880,7 @@ public class Carga {
                 + "mas novamente ele bate a minha porta, pensa voce. Está na hora de voltar a ser quem eu era.\n"
                 + "Com esta frase dita em sussurros para si mesmo,  voce pensa em seus antigos armamentos, escondidos\n"
                 + "em um bau no porão da sua casa. \n"
-                + "RETORNAR PARA SUA CASA" + Som.itemLendario(), 36, 0, 0, 0, 0);
+                + "RETORNAR PARA SUA CASA"/* + Som.itemLendario()*/, 36, 0, 0, 0, 0);
         c[35] = al;
         Atos am = new Atos(36, "Novamente dentro do templo voce observa os corpos, nada mais importa, somente a vinganca, uma ultima olhada\n"
                 + "em seu mais fiel amigo Tothurin, voce lembra de suas palavras e agora passando por toda a carnificina\n"
@@ -890,7 +890,7 @@ public class Carga {
                 + "voce sempre passou para visitar seus amigos agora so lhe tras as visões de seus corpos estirados ao chão\n"
                 + "sem vida. Ao longe voce avista sua casa, mais lembrancas surgem, tudo ali de algma forma teve algum\n"
                 + "envolvimento com essas pessoas que lhe acolheram tão bem, e agora já não existem mais.\n"
-                + "ENTRAR EM CASA" + Som.porta(), 37, 0, 0, 0, 0);
+                + "ENTRAR EM CASA"/* + Som.porta()*/, 37, 0, 0, 0, 0);
         c[36] = am;
 
         Atos an = new Atos(37, "Adentrando a residência você dirige-se para o alcapão sob a mesa da sala.\n"
@@ -991,10 +991,10 @@ public class Carga {
                 + "Sem orgulho algum por tudo o que estes apetrechos viram juntamente com seus olhos você os equipa.\n"
                 + "já sob o velho manto e armadura, com sua antiga arma no suporte em suas costas\n"
                 + "o unico desejo ecoa por todo seu corpo…  VINGANÇA!\n"
-                + "SEGUIR PARA A FASE 2" + Som.itemLendario(), 40, 0, 0, 0, 0);
+                + "SEGUIR PARA A FASE 2"/* + Som.itemLendario()*/, 40, 0, 0, 0, 0);
         c[39] = ap;
         Atos aq = new Atos(40, "PARABENS! voce acaba de concluir a primeira fase do jogo!.\n"
-                + "1-INICIAR ATO 2  2-IR PARA O MENU INICIAL   3-VERIFICAR STATUS" + Som.finalMario(), 0, 0, 0, 0, 0);
+                + "1-INICIAR ATO 2  2-IR PARA O MENU INICIAL   3-VERIFICAR STATUS"/* + Som.finalMario()*/, 0, 0, 0, 0, 0);
         c[40] = aq;
         //IMPLEMENTACAO DO STATUS E +
         return c;
