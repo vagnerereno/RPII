@@ -15,10 +15,10 @@ public class Ato2 {
 
     public long Enredo_2() throws Exception {
         AudioStream musica = ato2();
-        System.out.println("Fechando seu velho casebre você da uma ultima olhada para a vila de kenka, a fumaça apesar de ter diminuído ainda não se extinguiu.\n"
+      /*  System.out.println("Fechando seu velho casebre você da uma ultima olhada para a vila de kenka, a fumaça apesar de ter diminuído ainda não se extinguiu.\n"
                 + "Você pensa em dar um enterro digno para seus amigos, grande parte de seus corpos foi consumida pelo fogo\n"
                 + "mas os que restaram ainda estão a céu aberto.\n"
-                + "Ao mesmo tempo que se preocupa com entrar na floresta de Lavitan com o corpo cansado, pode não ser uma boa ideia.\n");
+                + "Ao mesmo tempo que se preocupa com entrar na floresta de Lavitan com o corpo cansado, pode não ser uma boa ideia.\n");*/
         fase1();
         return 0;
     }
@@ -30,33 +30,33 @@ public class Ato2 {
         int resp = e.nextInt();
         while (resp != 1 || resp != 2) {
             if (resp == 1) {
-                System.out.println("Você segue a passos lentos atravessando pela última vez à vila, observa os corpos pelo chão mas os ignora\n"
+               /* System.out.println("Você segue a passos lentos atravessando pela última vez à vila, observa os corpos pelo chão mas os ignora\n"
                         + "um grande vazio preenche seu coração, tal sensação já foi sentida em seu passado, mas os calmos anos em Kenko\n"
                         + "de certa forma tinham o preenchido. nada mais importa, o fervor de seu sangue em busca de vingança fala mais alto e \n"
-                        + "a entrada da pequena estrada que atravessa a Grande Floresta de Lavitan  se aproxima.\n");
+                        + "a entrada da pequena estrada que atravessa a Grande Floresta de Lavitan  se aproxima.\n");*/
                 break;
             }
             if (resp == 2) {
-                System.out.println("Você pega uma pá e segue para a vila de Kenka novamente, após recolher os corpos com uma pequena carroça puxada por você mesmo\n"
+               /* System.out.println("Você pega uma pá e segue para a vila de Kenko novamente, após recolher os corpos com uma pequena carroça puxada por você mesmo\n"
                         + "inicia o feitio das covas, entrando noite adentro executando tal tarefa, no fim, coloca os corpos em seus respectivos locais e realiza uma\n"
                         + "pequena oração para cada e se despede pela última vez. \n"
                         + "Apesar de não ter notado no momento, suas mãos estão quase em carne viva, e seu corpo está fadigado. \n"
                         + "Você pensa em usarseu bálsamo de cura, um dos itens que pegou ao sair de casa, mas ao mesmo tempo lembra que pode precisar dele para mais tarde\n"
-                        + "na floresta e só tem uma unidade deste.");
+                        + "na floresta e só tem uma unidade deste.");*/
                 //comando consumo de item
                 System.out.println("1-NAO CONSUMIR   2-CONSUMIR BALSAMO");
                 resp = e.nextInt();
                 while (resp != 1 || resp != 2) {
                     if (resp == 2) {
-                        System.out.println("Tragando o líquido espesso você sente seu cansaço desaparecer completamente, e as feridas em suas mãos regeneram-se.\n"
+                      /*  System.out.println("Tragando o líquido espesso você sente seu cansaço desaparecer completamente, os ferimentos regeneram-se.\n"
                                 + "agora só resta partir para a saída da vila, e seguir à pequena estrada que atravessa a Grande Floresta de Lavitan.\n"
-                                + "Já está quase nascendo um novo dia e você com pressa de fazer algo em relação ao ocorrido com Kenko parte na sua jornada.");
+                                + "Já está quase nascendo um novo dia e você com pressa de fazer algo em relação ao ocorrido com Kenko parte na sua jornada.");*/
                         break;
                     }
                     if (resp == 1) {
-                        System.out.println("Você pondera que é melhor guardar a cura para um momento mais oportuno e ignora os danos, e também a ansiedade\n"
+                        /*System.out.println("Você pondera que é melhor guardar a cura para um momento mais oportuno e ignora os danos, e também a ansiedade\n"
                                 + "de vingar seus amigos o impede de descansar mais um dia.\n"
-                                + "Agora só resta partir para a saída da vila, e seguir à pequena estrada que atravessa a Grande Floresta de Lavitan.");
+                                + "Agora só resta partir para a saída da vila, e seguir à pequena estrada que atravessa a Grande Floresta de Lavitan.");*/
                         break;
                     }
                     System.out.println("Numero invalido, tente novamente\n"
@@ -66,11 +66,11 @@ public class Ato2 {
             System.out.println("1-POUPAR-SE DO ENTERRO   2-ENTERRAR AMIGOS");
             resp = e.nextInt();
         }
-        System.out.println("\nA grande floresta de Lavitan, uma das maiores no reino de Eresda, muitos criaturas habitam ali, desde animais, seres mitológicos"
+        /*System.out.println("\nA grande floresta de Lavitan, uma das maiores no reino de Eresda, muitos criaturas habitam ali, desde animais, seres mitológicos"
                 + "criaturas desconhecidas e bandidos.\n "
                 + "Sabendo deste último, seguir pela estrada principal pode não ser uma boa idéia, saqueadores podem aparecer e frustrar qualquer avanço.\n"
                 + "Mas seguir pela floresta pode gerar encontros inesperados com algumas criaturas.\n"
-                + "1-ENTRAR NA FLORESTA  2-SEGUIR PELA ESTRADA");
+                + "1-ENTRAR NA FLORESTA  2-SEGUIR PELA ESTRADA");*/
         resp = e.nextInt();
         while (resp != 1 || resp != 2) {
             if (resp == 1) {
@@ -88,21 +88,21 @@ public class Ato2 {
 
     public void estrada() {
         Scanner e = new Scanner(System.in);
-        System.out.println("Você segue seu ritmo pela pequena estrada, aos poucos mais algumas trilhas se juntam a ela e de certa forma ela aumente um pouco"
+        /*System.out.println("Você segue seu ritmo pela pequena estrada, aos poucos mais algumas trilhas se juntam a ela e de certa forma ela aumente um pouco"
                 + "significando que pessoas passam por ali mais frequentemente. \n"
                 + "Mais adiante você percebe que alguns galhos movem-se na floresta, acompanhando sua caminhada, ainda não dá para saber o que é mas certamente\n"
                 + "coisa boa não deve ser, pensa consigo mesmo.\n"
                 + "3 bandidos(humanos?) surgem ao seu redor, com olhares penetrantes e certamente decididos do que estão fazendo.\n"
                 + "Você observa mais atentamente que eles estão muito magros e com roupas já bastante gastas, estas também claramente não foram feitas para a batalha\n"
                 + "já que desprovem de qualquer proteção mais robusta.\n"
-                + "5-LUTAR!");
+                + "5-LUTAR!");*/
         //comando de luta
         int resp = e.nextInt();
         while (resp != 5) {
             if (resp == 5) {
-                System.out.println("Tragando o líquido espesso você sente seu cansaço desaparecer completamente, e as feridas em suas mãos regeneram-se.\n"
+             /*   System.out.println("Tragando o líquido espesso você sente seu cansaço desaparecer completamente, e as feridas em suas mãos regeneram-se.\n"
                         + "agora só resta partir para a saída da vila, e seguir à pequena estrada que atravessa a Grande Floresta de Lavitan.\n"
-                        + "Já está quase nascendo um novo dia e você com pressa de fazer algo em relação ao ocorrido com Kenko parte na sua jornada.");
+                        + "Já está quase nascendo um novo dia e você com pressa de fazer algo em relação ao ocorrido com Kenko parte na sua jornada.");*/
                 break;
             }
             System.out.println("Numero invalido, tente novamente\n"
@@ -122,19 +122,19 @@ public class Ato2 {
             System.out.println("Numero invalido, tente novamente\n"
                     + "5-LUTAR!");
         }
-        System.out.println("Apos a luta segue seu ruma pela estrada de terra batida, mais adiante você avista a estrutura de uma ponte\n"
+        /*System.out.println("Apos a luta segue seu ruma pela estrada de terra batida, mais adiante você avista a estrutura de uma ponte\n"
                 + "chegando mais perto percebe que ela foi derrubada, suas vigas de sustentação foram derrubadas, acarretando em sua queda.\n"
                 + "Olhando para baixo só se avista o pequeno Canyon e as águas turbulentas do rio passando. Apesar de nao ser muito grande\n"
                 + "qualquer tentativa de passagem parece impossível devido o declive muito íngreme e a feroz correnteza em seu fundo.\n"
-                + "1- SUBIR O LEITO DO RIO   2- DESCER O LEITO DO RIO");
+                + "1- SUBIR O LEITO DO RIO   2- DESCER O LEITO DO RIO");*/
         resp = e.nextInt();
         while (resp != 1 || resp != 2) {
             if (resp == 1) {
-                System.out.println("Você segue bravamente mata adentro pela costa do rio. Sempre atento para possíveis perigos advindos\n"
+                System.out.println("Você segue bravamente mata adentro subindo pela costa do rio. Sempre atento para possíveis perigos advindos\n"
                         + "da desconhecida floresta.\n"
                         + "Mais adiante há um trecho em que é possível a passagem, pois não há barrancas muito grandes no rio e a correnteza\n"
                         + "primeiramente parece permitir passagem.\n"
-                        + "5- NADAR ATE O OUTRO LADO DO LEITO");
+                        + "5- NADAR ATE O OUTRO LADO DO LEITO (vai ter mesmo mob da outra parte do rio");
                 //comando que perde vida
                 resp = e.nextInt();
                 while (resp != 5) {
@@ -164,13 +164,13 @@ public class Ato2 {
                 break;
             }
             if (resp == 2) {
-                System.out.println("Você segue as corredeiras do caudaloso rio, quebrando galhos e contornando quando necessário, passa alguns pequenos riachos e rios de\n"
+                /*System.out.println("Você segue as corredeiras do caudaloso rio, quebrando galhos e contornando quando necessário, passa alguns pequenos riachos e rios de\n"
                         + "pequeno porte, estes últimos geralmente acabando em cachoeiras e cascatas ao juntar-se com o rio Levitan a floresta de levitan é um desafio para\n"
                         + "qualquer um que se aventure fora de suas trilhas.\n"
                         + "Mais adiante embora com o rio mais calmo e com o fim do pequeno canyon. O que parece dificultar agora é sua largura, com algumas junções de outros\n"
                         + "rios e riachos ele tomou proporções preocupantes, e conhecendo bem a floresta de Levitan certamente haveriam perigos naquelas águas. atravessar a nado\n"
                         + "seria certamente um desafio.\n"
-                        + "Seria mais sábio construir uma pequena jangada ou algo do gênero, mas para isso é necessário coletar alguns materiais.");
+                        + "Seria mais sábio construir uma pequena jangada ou algo do gênero, mas para isso é necessário coletar alguns materiais.");*/
                 floresta();
                 break;
             }
@@ -181,12 +181,12 @@ public class Ato2 {
 
     public void floresta() {
         Scanner e = new Scanner(System.in);
-        System.out.println("Você começa a andar pelos arredores da margem, em busca de cipós, pequenos troncos e troncos maiores para a base, estes mais espessos\n"
+        /*System.out.println("Você começa a andar pelos arredores da margem, em busca de cipós, pequenos troncos e troncos maiores para a base, estes mais espessos\n"
                 + "obrigando a dar cabo de algumas árvores. Você avança alguns metros longe da costa do rio e começa a talhar os materiais, mas de repente uma das\n"
                 + "árvores atingidas por seus golpes surpreendentemente parece ganhar vida própria e se afasta de voce.\n"
                 + "É um Ent, uma espécie de “árvore humanóide” surge para você, com pelo menos quatro metros de altura, muito robusta, com uma cabeça alta e quase sem pescoço\n"
                 + "sua “pele” parece uma casca de árvore e coberta de musgo. Olhos profundos, lentos e solenes, mas muito penetrantes.\n"
-                + "1-LUTAR CONTA O ENT   2-FUGIR");
+                + "1-METODO LUTA CONTA O ENT   2-FUGIR(VAI NADANDO DAI)");*/
         int resp = e.nextInt();
         while (resp != 1 || resp != 2) {
             if (resp == 1) {
