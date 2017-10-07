@@ -7,37 +7,37 @@ package ItemJogo;
 public class Itens {
 
     // Itens de ataque
-    private static Item ESPADA = new ItemMao("Espada", 5, 1, 5, 3); // ESPADA RECEBIDA QUANDO ABRE A DISPENSA NO INÍCIO DO JOGO
-    private static Item ESPADAJUSTICEIRA = new ItemMao("Espada Justiceira", 5, 1, 5, 3); // RECOMPENSA DOS BOSS 1
-    private static Item ESPADAMAGICA = new ItemMao("Espada Magica", 5, 1, 5, 3); // RECOMPENSA DO GLOBIN FASE 2
-    private static Item ESPADADRAGAO = new ItemMao("Espada Dragão", 5, 1, 5, 3);
+    public static Item ESPADA = new ItemAtaque("Espada", 5, 1, 5, 3); // ESPADA RECEBIDA QUANDO ABRE A DISPENSA NO INÍCIO DO JOGO
+    public static Item ESPADAJUSTICEIRA = new ItemAtaque("Espada Justiceira", 5, 1, 5, 3); // RECOMPENSA DOS BOSS 1
+    public static Item ESPADAMAGICA = new ItemAtaque("Espada Magica", 5, 1, 5, 3); // RECOMPENSA DO GLOBIN FASE 2
+    public static Item ESPADADRAGAO = new ItemAtaque("Espada Dragão", 5, 1, 5, 3);
     
-    private static Item ARCO = new ItemMao("Arco", 5, 1, 5, 3); // ARCO RECEBIDO QUANDO ABRE A DISPENSA NO INÍCIO DO JOGO
-    private static Item ARCOANTIGO = new ItemMao("Arco Antigo", 5, 1, 5, 3); // RECOMPENSA DOS BOSS 1
-    private static Item ARCOARBALEST = new ItemMao("Arco Arbalest", 5, 1, 5, 3); // RECOMPENSA DO GLOBIN FASE 2
-    private static Item ARCOBOBLEE = new ItemMao("Arco Bob Lee", 5, 1, 5, 3);
+    public static Item ARCO = new ItemAtaque("Arco", 5, 1, 5, 3); // ARCO RECEBIDO QUANDO ABRE A DISPENSA NO INÍCIO DO JOGO
+    public static Item ARCOANTIGO = new ItemAtaque("Arco Antigo", 5, 1, 5, 3); // RECOMPENSA DOS BOSS 1
+    public static Item ARCOARBALEST = new ItemAtaque("Arco Arbalest", 5, 1, 5, 3); // RECOMPENSA DO GLOBIN FASE 2
+    public static Item ARCOBOBLEE = new ItemAtaque("Arco Bob Lee", 5, 1, 5, 3);
     
-    private static Item CAJADO = new ItemMao("Cajado", 5, 1, 5, 3); // CAJADO RECEBIDO QUANDO ABRE A DISPENSA NO INÍCIO DO JOGO
-    private static Item CAJADOESMERALDA = new ItemMao("Cajado Esmeralda", 5, 1, 5, 3); // RECOMPENSA DOS BOSS 1
-    private static Item CAJADODEPAUS = new ItemMao("Cajado de Paus", 5, 1, 5, 3); // RECOMPENSA DO GOBLIN / FASE 2
-    private static Item CAJADODOSANOES = new ItemMao("Cajado Dos Anoes", 5, 1, 5, 3);
+    public static Item CAJADO = new ItemAtaque("Cajado", 5, 1, 5, 3); // CAJADO RECEBIDO QUANDO ABRE A DISPENSA NO INÍCIO DO JOGO
+    public static Item CAJADOESMERALDA = new ItemAtaque("Cajado Esmeralda", 5, 1, 5, 3); // RECOMPENSA DOS BOSS 1
+    public static Item CAJADODEPAUS = new ItemAtaque("Cajado de Paus", 5, 1, 5, 3); // RECOMPENSA DO GOBLIN / FASE 2
+    public static Item CAJADODOSANOES = new ItemAtaque("Cajado Dos Anoes", 5, 1, 5, 3);
 
     // Armaduras
-    private static Item CAMISA = new Armadura("Camiseta", 8, 1); // ARMADURA RECEBIDA QUANDO ABRE A DISPENSA NO INÍCIO DO JOGO
-    private static Item CAMISALONGA = new Armadura("Camiseta Longa", 10, 1); // RECOMPENSA DOS BOSS 1
-    private static Item ARMADURAAZUL = new Armadura("Armadura Azul", 12, 1); //  RECOMPENSA DO GOBLIN / FASE 2
-    private static Item ARMADURADOURADA = new Armadura("Armadura Dourada", 15, 2); //
-    private static Item ARMADURADEPAUS = new Armadura("Armadura de Paus", 17, 2);
-    private static Item ARMADURADEFERRO = new Armadura("Armadura de Ferro", 18, 3);
-    private static Item ARMADURADEMETAL = new Armadura("Armadura de Metal", 20, 3);
+    public static Item CAMISA = new Armadura("Camiseta", 8, 1); // ARMADURA RECEBIDA QUANDO ABRE A DISPENSA NO INÍCIO DO JOGO
+    public static Item CAMISALONGA = new Armadura("Camiseta Longa", 10, 1); // RECOMPENSA DOS BOSS 1
+    public static Item ARMADURAAZUL = new Armadura("Armadura Azul", 12, 1); //  RECOMPENSA DO GOBLIN / FASE 2
+    public static Item ARMADURADOURADA = new Armadura("Armadura Dourada", 15, 2); //
+    public static Item ARMADURADEPAUS = new Armadura("Armadura de Paus", 17, 2);
+    public static Item ARMADURADEFERRO = new Armadura("Armadura de Ferro", 18, 3);
+    public static Item ARMADURADEMETAL = new Armadura("Armadura de Metal", 20, 3);
 
     // Regeneração
-    private static Item JABUTICABA = new Comida("Jabuticaba", 3);
-    private static Item CENOURA = new Comida("Cenoura", 6);
-    private static Item COXINHA = new Comida("Coxinha", 10);
-    private static Item ESPINAFRE = new Comida("Espinafre", 15);
-    private static Item CARNE = new Comida("Carne", 25);
-    private static Item POCAO = new Comida("Poção dos Deuses", 75);
+    public static Item JABUTICABA = new Comida("Jabuticaba", 3);
+    public static Item CENOURA = new Comida("Cenoura", 6);
+    public static Item COXINHA = new Comida("Coxinha", 10);
+    public static Item ESPINAFRE = new Comida("Espinafre", 15);
+    public static Item CARNE = new Comida("Carne", 25);
+    public static Item POCAO = new Comida("Poção dos Deuses", 75);
 
     
     
