@@ -997,8 +997,7 @@ public class Carga {
                 + "INICIAR ATO 2, IR PARA O MENU INICIAL ou VERIFICAR STATUS?"/* + Som.finalMario()*/, 41, 0, 0, 0, 0);
         c[40] = aq;
         //IMPLEMENTACAO DO STATUS E + coisas
-        
-        
+
         Atos ar = new Atos(41, "Fechando seu velho casebre você da uma ultima olhada para a vila de kenka, a fumaça apesar de \n"
                 + "ter diminuído ainda não se extinguiu.\n"
                 + "Você pensa em dar um enterro digno para seus amigos, grande parte de seus corpos foi consumida pelo fogo\n"
@@ -1013,14 +1012,14 @@ public class Carga {
                 + "criaturas desconhecidas e é claro, alguns bandidos.\n "
                 + "Sabendo deste último, seguir pela estrada principal pode não ser uma boa idéia, saqueadores podem aparecer e frustrar qualquer avanço.\n"
                 + "Mas seguir pela floresta pode gerar encontros inesperados com algumas criaturas.\n"
-                + "SEGUIR PELA ESTRADA ou SEGUIR PELO MEIO DA FLORESTA?", 44, 00, 0, 0, 0);
+                + "SEGUIR PELA ESTRADA ou SEGUIR PELO MEIO DA FLORESTA?", 44, 50, 0, 0, 0);
         c[42] = as;
 
         //enterrar
         Atos at = new Atos(43, "Você pega uma pá e segue para a vila de Kenko novamente, após recolher os corpos com uma pequena carroça puxada por você mesmo\n"
                 + "inicia o feitio das covas, entrando noite adentro executando tal tarefa, no fim, coloca os corpos em seus respectivos locais e realiza uma\n"
                 + "pequena oração para cada e se despede pela última vez. \n"
-        //IMAGEM TUMULO COM PEDRAS E CRUZ DE MADEIRA IMPROVISADA
+                //IMAGEM TUMULO COM PEDRAS E CRUZ DE MADEIRA IMPROVISADA
                 + "Apesar de não ter notado no momento, suas mãos estão quase em carne viva, e seu corpo está fadigado. \n" //EXIBIR A SAUDE AQUI SERIA UMA BOA
                 + "Você pensa em usarseu bálsamo de cura, um dos itens que pegou ao sair de casa, mas ao mesmo tempo lembra que pode precisar dele para mais tarde\n"
                 + "na floresta e só tem uma unidade deste.\n"
@@ -1029,53 +1028,243 @@ public class Carga {
         //pensando bem e melhor colocar direto no metodo :) // "Tragando o líquido espesso você sente seu cansaço desaparecer completamente, os ferimentos regeneram-se.\n"
         c[43] = at;
 
-        Atos au = new Atos(44,"\n"
-                +"Você segue seu ritmo pela pequena estrada, aos poucos mais algumas trilhas se juntam a ela e de certa forma ela aumente um pouco"
+        Atos au = new Atos(44, "\n"
+                + "Você segue seu ritmo pela pequena estrada, aos poucos mais algumas trilhas se juntam a ela e de certa forma ela aumente um pouco"
                 + "significando que pessoas passam por ali mais frequentemente. \n"
                 + "Mais adiante você percebe que alguns galhos movem-se na floresta, acompanhando sua caminhada, ainda não dá para saber o que é mas certamente\n"
                 + "coisa boa não deve ser, pensa consigo mesmo.\n"
                 + "3 bandidos(humanos?) surgem ao seu redor, com olhares penetrantes e certamente decididos do que estão fazendo.\n"
                 + "Você observa mais atentamente que eles estão muito magros e com roupas já bastante gastas, estas também claramente não foram feitas para a batalha\n"
                 + "já que desprovem de qualquer proteção mais robusta.\n"
-              //IMAGEM BANDIDOS  
+                //IMAGEM BANDIDOS  
                 + "METODO BATALHA N FUNFA, POR ENQUANTO APENAS CLIQUE NA OPCAO PARA SEGUIR", 45, 0, 0, 0, 0);
         c[44] = au;
-        
-        
+
         Atos av = new Atos(45, "Apos a luta segue seu ruma pela estrada de terra batida, mais adiante você avista a estrutura de uma ponte\n"
                 + " chegando mais perto percebe que ela foi derrubada, suas vigas de sustentação foram derrubadas, acarretando em sua queda.\n"
                 + "Olhando para baixo só se avista o pequeno Canyon e as águas turbulentas do rio passando. Apesar de nao ser muito grande\n"
                 + "qualquer tentativa de passagem parece impossível devido o declive muito íngreme e a feroz correnteza em seu fundo.\n"
                 //IMAGEM ponte quebrada
-                + "DESCER RIO ou SUBIR RIO? ", 46, 000, 0, 0, 0);//COLOCAR ARPIA NO SUBIR PRA DISTRIBUIR MELHOR
+                + "DESCER RIO ou SUBIR RIO? ", 46, 55, 0, 0, 0);
         c[45] = av;
-        
+
         Atos ax = new Atos(46, "Você segue as corredeiras do caudaloso rio, quebrando galhos e contornando quando necessário, passa alguns pequenos riachos e rios de\n"
-                        + "pequeno porte, estes últimos geralmente acabando em cachoeiras e cascatas ao juntar-se com o rio Levitan a floresta de levitan é um desafio para\n"
-                        + "qualquer um que se aventure fora de suas trilhas.\n"
-                        + "Mais adiante embora com o rio mais calmo e com o fim do pequeno canyon. O que parece dificultar agora é sua largura, com algumas junções de outros\n"
-                        + "rios e riachos ele tomou proporções preocupantes, e conhecendo bem a floresta de Levitan certamente haveriam perigos naquelas águas. atravessar a nado\n"
-                        + "seria certamente um desafio.\n"
+                + "pequeno porte, estes últimos geralmente acabando em cachoeiras e cascatas ao juntar-se com o rio Levitan a floresta de levitan é um desafio para\n"
+                + "qualquer um que se aventure fora de suas trilhas.\n"
+                + "Mais adiante embora com o rio mais calmo e com o fim do pequeno canyon. O que parece dificultar agora é sua largura, com algumas junções de outros\n"
+                + "rios e riachos ele tomou proporções preocupantes, e conhecendo bem a floresta de Levitan certamente haveriam perigos naquelas águas. atravessar a nado\n"
+                + "seria certamente um desafio.\n"
                 //IMAGEM RIO LARGO
-                        + "Seria mais sábio construir uma pequena jangada ou algo do gênero, mas para isso é necessário coletar alguns materiais.\n"
-                +"JUNTAR MATERIAIS PARA A JANGADA ou ATRAVESSAR NADANDO?", 47, 00, 0, 0, 0);
+                + "Seria mais sábio construir uma pequena jangada ou algo do gênero, mas para isso é necessário coletar alguns materiais.\n"
+                + "JUNTAR MATERIAIS PARA A JANGADA ou ATRAVESSAR NADANDO?", 47, 54, 0, 0, 0);
         c[46] = ax;
         Atos az = new Atos(47, "Você começa a andar pelos arredores da margem, em busca de cipós, pequenos troncos e troncos maiores para a base, estes mais espessos\n"
                 + "obrigando a dar cabo de algumas árvores. Você avança alguns metros longe da costa do rio e começa a talhar os materiais, mas de repente uma das\n"
                 + "árvores atingidas por seus golpes surpreendentemente parece ganhar vida própria e se afasta de voce.\n"
                 + "É um Ent, uma espécie de “árvore humanóide” surge para você, com pelo menos quatro metros de altura, muito robusta, com uma cabeça alta e quase sem pescoço\n"
+                //foto ent
                 + "sua “pele” parece uma casca de árvore e coberta de musgo. Olhos profundos, lentos e solenes, mas muito penetrantes.\n"
-                + "1-METODO LUTA CONTA O ENT   2-FUGIR(VAI NADANDO DAI)", 48, 0, 0, 0, 0);
+                + "METODO LUTA CONTA O ENT  ou FUGIR PARA A AGUA(VAI NADANDO DAI)", 48, 54, 0, 0, 0);
         c[47] = az;
-        Atos ay = new Atos(48, "Após a luta você termina de catar os materiais.(colocar talvez alguma coisa para catar os itens e ir pro invent\n"
-                +"", 0, 0, 0, 0, 0);
+        Atos ay = new Atos(48, "Após a luta você termina de catar os materiais e construir a jangada.(colocar talvez alguma coisa para catar os itens e ir pro invent\n"
+                + "ATRAVESSAR  O RIO COM A JANGADA", 49, 0, 0, 0, 0);
         c[48] = ay;
-        /*Atos aw = new Atos(xx, "", 0, 0, 0, 0, 0);
-        c[xx] = aw;
-        Atos ba = new Atos(xx, "", 0, 0, 0, 0, 0);
-        c[xx] = ba;
-        Atos bb = new Atos(xx, "", 0, 0, 0, 0, 0);
-        c[xx] = bb;*/
+        Atos aw = new Atos(49, "A jangada improvisada boia com dificuldades, mas cumpre seu papel, suportando todo seu peso sobre sua estrutura, por vezes, dependendo do balanço devido\n"
+                + "as remadas a água gelada bate em seus pés.\n"
+                + "Chegando na outra margem salta da sua jangada, que já estava mostrando sinais de naufrágio, certamente seu destino dentro de alguns minutos seria o fundo do rio \n"
+                //FOTO JANGADA
+                + "Agora so resta subir o pequeno barranco e seguir seu rumo\n"
+                + "SEGUIR ADIANTE", 62, 0, 0, 0, 0);
+        c[49] = aw;
+
+        Atos ba = new Atos(50, "Você adentra pela floresta de lavitan, no início ela até parecia uma floresta normal mas a média que se embrenha em seu interior a vegetação fica cada vez mais soberana. \n"
+                + "Durante algumas horas você avança sem muitas dificuldades, de vez em quando cruzando com algum animal pequeno, como lebres e pássaros das mais variadas espécies.\n"
+                + "\n"
+                + "Sem perceber você se encontra cercado por uma matilha de lobos cinzas, eles simplesmente surgiram silenciosamente ao seu redor, aos rosnados, seus olhos famintos destoavam da sua pelagem, e bem na sua frente\n"
+                + "o maior entre eles possuía os olhos vermelhos, certamente esse era o alfa do grupo.\n"
+                //FOTO LOBOS
+                + "ENFRENTAR LOBOS ou TENTAR FUGIR?", 51, 52, 0, 0, 0);
+        c[50] = ba;
+        //METODO ENFRENTAR LOBOS
+        Atos bb = new Atos(51, "Após derrotar o lider, os mais fracos se assustam e fogem!\n"
+                + "Agora só resta seguir seu caminho.", 53, 0, 0, 0, 0);
+        c[51] = bb;
+        Atos bc = new Atos(52, "Você tenta correr por entre as arvores mas falha miseravelmente, dando de cara com um dos lobos rosnando de uma \n"
+                + "forma ameaçadora, ele pula sobre você para evitar a fuga e abate-lo, mesmo assim você esquiva-se do maior dano, conseguindo apenas \n"
+                + "aranhões da queda no chão. Segurando firme sua arma você sabe que a única opção é a batalha \n"
+                + "ENFRENTAR LOBOS", 51, 0, 0, 0, 0);
+        c[52] = bc;
+
+        Atos bd = new Atos(53, "DPS DOS LOBOS, A passos largos onde o terreno permitia você continua em sua jornada pela floresta. Algumas horas depois chega na borda de um grande rio, possivelmente o rio Lavitan, que corta a floresta com mesmo nome\n"
+                + "e conhecendo bem esta parte do reino de Eresda certamente haveriam perigos naquelas águas. atravessar a nado poderia ser uma experiência bem ruim.\n"
+                + "Seria mais sábio construir uma pequena jangada ou algo do gênero.\n"
+                + "CONSTRUIR JANGADA ou ATRAVESSAR NADANDO?", 47, 54, 0, 0, 0);
+        c[53] = bd;
+
+//N ESQUECA DE ESCREVER       //pensando nas ligacoes da historia melhor deixar sem nada aqui  
+        Atos be = new Atos(54, "atravessando nadando vai aparecer algum inimigo a definir ainda, talvez um hipocampo (sim na agua doce hu3) + descricao +luta\n"
+                + "terminar de atravessar o rio e seguir caminho", 62, 0, 0, 0, 0);
+        c[54] = be;
+
+        Atos bf = new Atos(55, "Seguindo pela floresta, atravessando variados tipos de terrenos você chega em uma área parcialmente “limpa” em relação ao resto da floresta, mas não de forma natural,\n"
+                + "a vegetação foi quebrada e há sinais claros que algo habita naquelas árvores, você ouve um som agudo vindo do meio das árvores, de repente algo dá um rasante sobre você\n"
+                + "que se atira ao chão para evitar o choque.\n"
+                + "Erguendo a cabeça você observa a criatura, uma harpia, esta criatura tem asas e pernas como aves de rapina com rosto e busto de mulher, com um tamanho proporcional a pouco\n"
+                //foto harpia
+                + "mais da metade de um homem. retornando do rasante ela pousa em um galho próximo e grita novamente, ameaçando sua presença."
+                + "1-ENFRENTAR HARPIA   3-CORRER", 56, 57, 0, 0, 0);
+        c[55] = bf;
+        Atos bg = new Atos(57, "Você tenta correr para evitar conflitos desnecessários, porem harpias podem voar e logo o alcança, forcando-lhe a enfrenta-la!\n"
+                + "LUTAR", 56, 0, 0, 0, 0);
+        c[57] = bg;
+        //metodo luta
+        Atos bh = new Atos(56, "Após o duro confronto você pensa em cuidar dos ferimentos. Apesar de querer seguir em frente logo,\n"
+                + "você sabe que harpias sempre carregam coisas para seus ninhos, passa pela sua cabeça procurar, possivelmente deve estar nas proximidades.\n"
+                + "SEGUIR SUA JORNADA ou PROCURAR PELO NINHO ou inventario(n funfa, n clique)? ", 58, 59, 0, 0, 0);
+        c[56] = bh;
+        Atos bi = new Atos(59, "Você anda pela redondeza olhando para cima em busca do tal ninho, e no topo de uma imponente árvore retorcida está ele. Apesar de ser relativamente alto os grossos galhos tortos facilitam a subida.\n"
+                + "Dentro dele estão ovos e uns brike x ainda a ser decidido \n"
+                //foto ninho talvez
+                + "CONTINUAR", 60, 0, 0, 0, 0); //colocar mais coisa nesse buscar, largue de ser preguiçoso ewerton do futuro
+        c[59] = bi;
+        Atos bj = new Atos(60, "Você segue bravamente mata adentro subindo pela costa do rio. Sempre atento para possíveis perigos advindos\n"
+                + "da desconhecida floresta.\n"
+                + "Mais adiante há um trecho em que é possível a passagem, pois não há barrancas muito grandes no rio e a correnteza\n"
+                + " parece permitir passagem.\n"
+                + "NADAR ATE O OUTRO LADO", 61, 0, 0, 0, 0);
+        c[60] = bj;
+        Atos bk = new Atos(61, "Após a travessia você segue pela densa floresta, começando a perceber um aumento na elevação do terreno,\n"
+                + "em um estalo latente da sua memória uma lembrança de um relato de Tothurin, este a muito tempo lhe havia dito que havia\n"
+                + "um templo semelhante no meio da floresta de levitan, mas estava abandonada devido o difícil acesso e o constante ataque\n"
+                + "de criaturas do local. O relato era que o tal templo ficava próximo a margem do grande rio que corta Levitan\n"
+                + "onde a floresta fica mais densa e o terreno eleva-se, lá ficava o templo, mais que depressa você procura pelo templo.\n"
+                + " PROCURAR PELO TEMPLO ", 64, 0, 0, 0, 0); // AQUI VAI JUNTAR AS 2
+
+        //////////////////////////////////////////////////////SEGUE DO ATRAVESSAR O RIO POR BAIXO
+        c[61] = bk;
+        Atos bl = new Atos(62, "Seguindo seu caminho pela densa floresta você tem uma lembrança de um relato de Tothurin, este a muito tempo lhe havia dito que havia um templo semelhante no meio da floresta\n"
+                + "de levitan, mas estava abandonada devido o difícil acesso e o constante ataque de criaturas do local.\n"
+                + "Por um breve momento você se sente feliz, mas logo em seguida vem a lembrança da morte de Tothurin e todos os outros, contrastando com o primeiro sentimento.\n"
+                + "Seguindo a lógica geográfica você segue a costa do rio no sentido ascendente, já que provavelmente o templo ficará na parte da cabeceira do rio, mais alta em relevo.\n"
+                + "5-SUBIR O LEITO DO RIO", 63, 0, 0, 0, 0); //VAI DIRETO PRA ESTRADA
+        c[62] = bl;
+        Atos bm = new Atos(63, "Seguindo seu caminho, pela selva de levitan, você chega a estrada principal que corta as localidades entre Kenko e as outras localidades. A cena não é das melhores, a esquerda, sobre o rio Levitan,\n"
+                + "a ponte que ali existia está destruída, e pelo chão da estrada há muito sangue e carroças destruídas ou viradas. \n"
+                + "Nas proximidades do comboio haviam muitos corpos sem vida espalhados, certamente atacados sem dó ou piedade.\n"
+                //foto caravana atacada
+                + "Não há muito o que fazer, apenas seguir seu caminho para o terreno mais elevado rio acima.\n"
+                + "seguindo pela floresta começa a perceber um aumento na elevação do terreno mais significativa, batendo com o relato de Tothurin lembrado anteriormente.\n"
+                + "Agora possivelmente o templo está mais próximo, falta encontrá-lo, você sente que deve apurar o paço e encontrar tal templo antes que a noite caia\n"
+                + "PROCURAR PELO TEMPLO", 64, 0, 0, 0, 0);
+        c[63] = bm;
+
+        Atos bn = new Atos(64, "A tentativa de encontrar o templo falha e noite cai sobre levitan, agora a floresta\n"
+                + "que já éra escura pela copa espessa das árvores durante o dia, está totalmente dominada pelo breu, impossivel transitar sem uma fonte de luz.\n"
+                + "você pega um galho seco amarra um pedaço de pano encerado com uma vela que tem no inventário \n"
+                + "para montar uma espécie de tocha, agora só resta acendê-la.\n"
+                + "7-ACENDER TOCHA", 65, 0, 0, 0, 0);
+        c[64] = bn;
+        Atos bo = new Atos(65, "a pequena chama ilumina os arredores, e os sons noturnos da floresta o deixam bem mais atento\n"
+                + "que anteriormente, a noite os principais predadores saem em busca de alimento, e você certamente não pretende\n"
+                //talvez foto tocha
+                + "findar seus dias nesta posição.\n"
+                + "Parar e se esconder pode ser útil, mas sem ninguém para revezar na vigia pode ser perigoso, mas seguir no escuro\n"
+                + "também não é nada convidativo\n"
+                + "PARAR E DESCANSAR   ou CONTINUAR MESMO A NOITE", 66, 67, 0, 0, 0);
+        c[65] = bo;
+        Atos bp = new Atos(66, "Você sobe em uma grande árvore próxima, encontrando uma forquilha formada pelos galhos, ali poderia descansar\n"
+                + "seu corpo com a menor probabilidade de sofrer algum ataque durante o período em repouso. Após a escalada e acomodação,\n"
+                + "a tocha é apagada e rapidamente você cai no sono, o cansaço era evidente apesar da relutância em aceitá-lo.\n"
+                + "…\n" //comando tirar itens
+                + "Quando desperta no outro dia você agradece mentalmente por nada ter ocorrido, mas sua mochila parece estar mais leve que quando\n"
+                + "iniciou o descanso. Observando um lado dela percebe-se um rasgo em sua lateral, certamente alguma pequena criatura na procura de alimento\n"
+                + "a rasgou e furtou alguns dos seus itens.\n"
+                + "Descendo de seu posto você recolhe algumas coisas que caíram pelo rasgo, inclusive a adaga de Chunchumaru, que estava acoplada na lateral\n"
+                + "da mochila, este importante item poderia ter sido perdido. As únicas coisas que sumiram foram coisas alimentícias (definir o que tinha,\n"
+                + "possivelmente carne da caçada do começo), - dos males o menor - pensa você.\n"
+                + "agora só resta recolher os itens\n"
+                + "1- RECOLHER ITENS (metodo para reccolher)  ou SEGUIR SEU CAMINHO", 0, 67, 0, 0, 0);
+
+        c[66] = bp;
+        Atos bq = new Atos(67, "Sem muito o que fazer resta seguir em frente na procura do templo. Seguindo, no meio da floresta você se depara com uma\n"
+                + "trilha de pedra, quase encoberta pela vegetação rasteira, certamente ela levaria ao templo, seria difícil alguma outra construção\n"
+                + "ser feita tão no interior da floresta de Lavitan ter outraa finalidade.\n"
+                + "Considerando que se está no interior da floresta o caminho aqui é de facil passagem, apesar da vegetação espalhar alguns galhos pelo caminho\n"
+                + "e pequenas ervas nascem nas frestas das pedras, ainda assim um caminho fácil de andar.\n"
+                + "Depois de algum tempo o caminho se alarga em um grande platô de pedra esculpida, e na outra extremidade está a entrada do templo, que adentra a\n"
+                //imagem caminho d epedra
+                + "elevação rochosa em sua retaguarda.  Finalmente o templo é encontrado, é só entrar.\n"
+                + "ENTRAR NO TEMPLO", 68, 0, 0, 0, 0);
+        c[67] = bq;
+        Atos br = new Atos(68, "Você atravessa o plano pavimentado da entrada e quando se aproxima da entrada do templo, mas um som parecido com rochas rolando e se chocando lhe vem aos ouvidos,\n"
+                + "mais que depressa você para e observa algo mover-se ao lado da entrada do templo.\n"
+                + "E um golem de pedra, possuindo cerca de 4 metros e algumas inscrições rúnicas no rosto. Certamente feito e colocado ali para proteger qualquer entrada não autorizada\n"
+                //imagem golem
+                + "no templo antes de seu abandono.\n"
+                + "LUTAR CONTRA O GOLEM", 69, 0, 0, 0, 0);
+        //implementacao luta (so q vai perder inevitavelmente
+        c[68] = br;
+        Atos bs = new Atos(69, "o golem desfere um golpe com uma das mãos, você desvia dele com dificuldades devido a surpresa, a tocha que lhe servia com iluminação cai entre as folhas\n"
+                + "secas presentes no chão, o fogo rapidamente se espalha para uma das extremidades da área, iluminando melhor todo o local\n"
+                + "\nOs ataques não surtem dano.\n"
+                + "Após sua arma ter sido arremessada para longe com um golpe do golem desferido, o que também o derrubou, você recorre a adaga de Chunchumaru,\n"
+                + "sua única arma restante, com ela em mãos encara o imponente gigante.\n"
+                + "De repente ele cessa seus ataques, e as inscrições rúnicas em seu rosto começam brilhar em um tom azulado e ele retorna para o lado da entrada, sentando e ficando imóvel novamente.\n"
+                + "Certamente a adaga deve ter algum poder mágico que permite a entrada no local - pensa voce.\n"
+                + "Agora só resta entrar\n"
+                + "ENTRAR NO TEMPLO", 70, 0, 0, 0, 0);
+        c[69] = bs;
+        Atos bt = new Atos(70, "acendendo sua tocha você adentra o templo, depois de descer algumas escadarias você chega ao altar principal, este ultimo igual ao que existe na vila de Kenko.\n"
+                + "já sabendo das passagens secretas você adentra aos cômodos escondidos.\n"
+                + "dessa vez no local igual ao que existia a adaga de Chunchumaru estava apenas um pergaminho, que continha os dizeres: (print dentro de um pergaminho desenhado com caracteres)\n"
+                + "Se estiver lendo isto possivelmente alguém está tentando ressuscitar Darknuss, uma personificação do mal a muito tempo banida deste mundo. Os impeça!\n"
+                + "Cada templo possui um fragmento de Nys, usados para selar este grande mal no passado, infelizmente os fragmentos reunidos também tem o poder de libertar Darknuss, formando o Orbe de Nys.\n"
+                + "Este último, juntamente com a adaga são as ferramentas para o aprisionamento.\n"
+                + "O orbe deste templo foi levado para a vila de Kenko a muitos anos.\n"
+                + "\n"
+                + "Por favor coloque a adaga de Chunchunmaru no altar neste cômodo, nela estão contidas diversas magias antigas de selamento, que serão incorporadas no líquido dentro do cabo da adaga, faça\n"
+                + "esse processo em todos os outros templos para recarregar os poderes de selamento da adaga.\n"
+                + "Reúna todos as magias e o orbe e evite que este mal assole o mundo novamente.\n"
+                + "\n"
+                + "Dos protetores de Xiuhno.\n"
+                + "\n"
+                + "\n"
+                + "Terminando de ler muita coisa se esclarece para você, agora falta fazer o procedimento com a adaga.\n"
+                + "COLOCAR ADAGA SOBRE O ALTAR DE PEDRA", 71, 0, 0, 0, 0);
+        c[70] = bt;
+        Atos bu = new Atos(71, "Largando a adaga sobre o altar, ela misteriosamente começa a flutuar e uma espécie de vórtice surge no local, girando calmamente e sendo absorvidos pela adaga, o cabo desta brilha\n"
+                + "intensamente. Após esta cena ela repousa novamente sobre o altar, como se nada tivesse acontecido."
+                + "Agora um objetivo maior e mais nobre o aguarda.\n"
+                + "\n"
+                + "\n"
+                + "Saindo do templo agora com destino a próxima cidade/vila Paeres era de noite quando chegou, Você está novamente no átrio externo do templo de Xiuhno da floresta de Lavitan, certamente o\n"
+                + "caminho de pedra de onde você veio levará para a estrada principal que corta a floresta de Lavitan, é a melhor escolha a tomar neste momento.\n"
+                + "A sua direita está o golem protetor, agora inofensivo,  como qualquer outra rocha, contrastando com seu real poder destrutivo, sem a adaga a única opção seria fugir, agora era possível\n"
+                + "observar que existiam apenas alguns arranhões em sua superfície, e não foram feitos por você."
+                + "SEGUIR ESTRADA", 72, 0, 0, 0, 0);
+        c[71] = bu;
+        Atos bv = new Atos(72, "seguindo pelo caminho, depois de muito andar, as pedras simplesmente foram arrancadas e a pequena trilha desfeita, restando apenas algumas remanescentes, pelo jeito do relevo\n"
+                + "lavado nesta parte o motivo era visivelmente a força d'água, com declive do terreno ela arrastou a maioria das pedras em dias de chuva durante os anos.  \n"
+                + "Ignorando este fato você segue em linha reta em direção ao sul sem mais problemas, até chegar na estrada principal.\n"
+                + "Já avistando entre a vegetação a estrada você ouve muitas vozes, e passos de muitas pessoas marchando. a essa altura é melhor ser cauteloso antes de aparecer.\n"
+                + "Saindo do meio do mato os soldados lhe encaram por alguns momentos mas não chegam a tomar qualquer atitude, você procura alguém para perguntar.\n"
+                + "PERGUNTAR AO COMERCIANTE   ou PERGUNTAR AO SOLDADO", 73, 74, 0, 0, 0);
+        c[72] = bv;
+        Atos bx = new Atos(73, "O comerciante exaltado apenas lhe fala da ponte e de uma de suas caravanas que foi atacada nas proximidades da travessia do rio Lavitan e como isso lhe causou prejuízo.\n"
+                + "Isso nao lhe esclarece muito mas o comerciante não parece interessado em falar de outra coisa. resta perguntar aos soldados.\n"
+                + "PERGUNTAR PARA OS SOLDADOS", 74, 0, 0, 0, 0);
+        c[73] = bx;
+        Atos bz = new Atos(74, "\n"
+                + "Você indaga um soldado sobre o porquê daquilo tudo, ele lhe conta que estavam averiguando os fatos da ponte caída e de comerciantes atacados na região, e também atrás de um\n"
+                + "grupo de mercenários chamado Wulfforce, que vinha causando estragos por alguns lugares do reino.\n"
+                +"Você decide não lhes contar sobre sua missão, pois sabe que os governantes e comandantes de Eresda nem sempre são bem intencionados e nunca se sabe quem pode estar envolvido.\n"
+                + "Mas agora ao menos já sabe o nome de quem fez isso com Kenko.\n"
+                + "\n"
+                + "Você acompanha a caravana até a saída da floresta de Lavitan, aproveitando de sua escolta passiva contra quaisquer perigos advindo dos arredores.\n"
+                + "PARABENS VOCE ACABA DE CONCLUIR O ATO2!  O que deseja fazer agora?\n"
+                + "INICIAR PROXIMA FASE ou VER STATUS", 0, 0, 0, 0, 0);
+        c[74] = bz;
+        
         return c;
     }
 }
