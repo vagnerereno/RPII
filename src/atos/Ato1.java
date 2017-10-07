@@ -1714,33 +1714,23 @@ public class Ato1 {
 
     public Inventario cervoNorte(Especialidade classe) {
         Inventario recompensa = new Inventario(2);
+            ItemAtaque item;
         if (classe.getDescricao().equals("Guerreiro")) {
-            ItemAtaque espadaJusticeira = (ItemAtaque) Itens.ESPADAJUSTICEIRA;
-            espadaJusticeira.getInformacoes();
-            System.out.println("Parabéns, você encontrou uma " + espadaJusticeira.getInformacoes() + ", uma coxinha " + (Itens.COXINHA) + " e uma Camisa Longa" + (Itens.CAMISALONGA));
-            recompensa.adicionarItem(Itens.ESPADAJUSTICEIRA);
+            item = (ItemAtaque) Itens.ESPADAJUSTICEIRA;
+         } else if (classe.getDescricao().equals("Mago")) {
+            item = (ItemAtaque) Itens.CAJADOESMERALDA;
+         } else if (classe.getDescricao().equals("Arqueiro")) {
+            item = (ItemAtaque) Itens.ARCOANTIGO;
+         } else {
+            return recompensa;
+         }
+           item.getInformacoes();
+            System.out.println("Parabéns, você encontrou uma " + item.getInformacoes() + ", uma coxinha " + (Itens.COXINHA) + " e uma Camisa Longa" + (Itens.CAMISALONGA));
+            recompensa.adicionarItem(item);
             recompensa.adicionarItem(Itens.COXINHA);
             recompensa.adicionarItem(Itens.CAMISALONGA);
             return recompensa;
-        } else if (classe.getDescricao().equals("Mago")) {
-            ItemAtaque cajadoEsmeralda = (ItemAtaque) Itens.CAJADOESMERALDA;
-            cajadoEsmeralda.getInformacoes();
-            System.out.println("Parabéns, você encontrou um Cajado Esmeralda " + cajadoEsmeralda.getInformacoes() + ", uma coxinha " + (Itens.COXINHA) + " e uma Camisa Longa" + (Itens.CAMISALONGA));
-            recompensa.adicionarItem(Itens.CAJADOESMERALDA);
-            recompensa.adicionarItem(Itens.COXINHA);
-            recompensa.adicionarItem(Itens.CAMISALONGA);
-            return recompensa;
-        } else if (classe.getDescricao().equals("Arqueiro")) {
-            ItemAtaque arcoAntigo = (ItemAtaque) Itens.ARCOANTIGO;
-            arcoAntigo.getInformacoes();
-            System.out.println("Parabéns, você encontrou um Arco Antigo " + arcoAntigo.getInformacoes() + ", uma coxinha " + (Itens.COXINHA) + " e uma Camisa Longa" + (Itens.CAMISALONGA));
-            recompensa.adicionarItem(Itens.ARCOANTIGO);
-            recompensa.adicionarItem(Itens.COXINHA);
-            recompensa.adicionarItem(Itens.CAMISALONGA);
-            return recompensa;
-        } else {
-            return recompensa;
-        }
+        
     }
 
     public Inventario globinFase2(Especialidade classe) {

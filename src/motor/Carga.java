@@ -9,6 +9,8 @@ import audio.Som;
 public class Carga {
 
     public Atos[] carga(Atos[] c) throws Exception {
+       /* ArrayList<Integer> opcoesA = new ArrayList();
+*/        
         Atos a = new Atos(0, "Pois bem, então parte em sua longa jornada.\n"
                 + "Nos arredores da vila Kenko, você descança, sem abrir os olhos voce pensa: acordo ou durmo mais um pouco?\n"
                 + "SEGUIR DORMINDO ou ACORDAR?", 1, 2, 0, 0, 0);
@@ -92,7 +94,7 @@ public class Carga {
         c[4] = f;
         //IMPLEMENTACAO DA DESPENSA, PEGAR ITENS ANTES
         Atos g = new Atos(5, "Percebendo a pouca quantia de alimento em sua dispensa decide ir caçar na floresta \n"
-                + "SAIR DE CASA E IR À FLORESTA CAÇAR" /*+ Som.comendo()*/, 6, 0, 0, 0, 0);
+                + "SAIR DE CASA E IR À FLORESTA CAÇAR" + Som.comendo(), 6, 0, 0, 0, 0);
         c[5] = g;
         Atos h = new Atos(6, "\n"
                 + "                                                                              \n"
@@ -137,7 +139,7 @@ public class Carga {
                 + "SENTAR UM POUCO E OBSERVAR ou ENTRAR NA FLORESTA?"/* + Som.porta()*/, 7, 8, 0, 0, 0);
         c[6] = h;
         Atos i = new Atos(7, " \n"
-                + "█████████████████████████████████▓ █████████████████████████████████████████████\n"
+                + "█████████████████████████████████▓██████████████████████████████████████████████\n"
                 + "████████████████████████████████▓▓▓▓████████████████████████████████████████████\n"
                 + "███████████████████████████████▒▒▒▒▒▒▒███████████████████████████▓██████████████\n"
                 + "██████████████▒░█████████████▓▒▒▒▒▒▒▒▒▒▓████████████████████████▒▒▒█████████████\n"
