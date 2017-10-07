@@ -8,6 +8,7 @@ import sun.audio.AudioStream;
 import ItemJogo.Inventario;
 import ItemJogo.Item;
 import ItemJogo.ItemAtaque;
+import ItemJogo.ItemDeCombate;
 import ItemJogo.Itens;
 import inimigos.AnaoIA;
 import java.util.ArrayList;
@@ -26,6 +27,12 @@ public class Ato1 {
     private Raca jogadorTeste;
     private Inventario dispensa;
     private String nome;
+    
+    public static void main(String[] args) {
+        Ato0 a0 = new Ato0();
+        Ato1 as = new Ato1(a0.criarJogador());
+        as.abrirInventario(as.getDispensa(), "dispensa");
+    }
 
     public Ato1(Raca jogador) {
         this.jogador = jogador;
@@ -1788,8 +1795,9 @@ public class Ato1 {
         System.out.println("------------------");
         System.out.println("Selecione uma ação: ");
         System.out.println("0 - Fechar");
-        System.out.println("1 - Pegar itens");
+        System.out.println("1 - Guardar na mochila");
         System.out.println("2 - Comer alimento");
+        System.out.println("3 - Mover para a mão");
         Scanner selecionar = new Scanner(System.in);
         int acao = selecionar.nextInt();
         if (acao == 1) {
@@ -1809,7 +1817,22 @@ public class Ato1 {
                 inventario.adicionarItem(comida);
                 abrirInventario(inventario, descricao);
             }
+        } else if (acao == 3) {
+            System.out.println("Digite o número do item que deseja mover para a mão: ");
+            Scanner itemDeAtaque = new Scanner(System.in);
+            int posicao = itemDeAtaque.nextInt();
+            System.out.println("Você tem certeza que deseja descartar o item atual para pegar o item " + inventario.verItem(posicao).getDescricao() + "(1 - Sim / 2 - Não)");
+            Scanner confirma = new Scanner(System.in);
+            int resposta = confirma.nextInt();
+            if (resposta == 1) {
+                try {
+                    Item itemAtaque = inventario.pegarItem(posicao);
+                    jogadorTeste.setItemDaMao((ItemDeCombate) itemAtaque);
+                } catch (Exception e) {
+                    System.out.println("Erro ao pegar item. Verifique se é um item de ataque.");
+                }
 
+            }
         }
 
     }
