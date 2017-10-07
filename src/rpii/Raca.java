@@ -35,7 +35,6 @@ public abstract class Raca {
         this.arma = classeJogador.getArma();
         this.classeJogador = classeJogador;
         this.inventario = new Inventario(30);
-        this.itemDaMao = itemDaMao;
     }
 
     public int atacar() {
@@ -279,6 +278,20 @@ public abstract class Raca {
      */
     public void setClasseJogador(Especialidade classeJogador) {
         this.classeJogador = classeJogador;
+    }
+
+        /**
+     * @return the itemDaMao
+     */
+    public ItemDeCombate getItemDaMao() {
+        return itemDaMao;
+    }
+
+    /**
+     * @param itemDaMao the itemDaMao to set
+     */
+    public void setItemDaMao(ItemDeCombate itemDaMao) {
+        this.itemDaMao = itemDaMao;
     }
 
 }
