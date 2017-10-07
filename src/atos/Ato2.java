@@ -130,11 +130,11 @@ public class Ato2 {
         resp = e.nextInt();
         while (resp != 1 || resp != 2) {
             if (resp == 1) {
-                System.out.println("Você segue bravamente mata adentro subindo pela costa do rio. Sempre atento para possíveis perigos advindos\n"
+                /*System.out.println("Você segue bravamente mata adentro subindo pela costa do rio. Sempre atento para possíveis perigos advindos\n"
                         + "da desconhecida floresta.\n"
                         + "Mais adiante há um trecho em que é possível a passagem, pois não há barrancas muito grandes no rio e a correnteza\n"
                         + "primeiramente parece permitir passagem.\n"
-                        + "5- NADAR ATE O OUTRO LADO DO LEITO (vai ter mesmo mob da outra parte do rio");
+                        + "5- NADAR ATE O OUTRO LADO DO LEITO (vai ter mesmo mob da outra parte do rio");*/
                 //comando que perde vida
                 resp = e.nextInt();
                 while (resp != 5) {
@@ -143,12 +143,12 @@ public class Ato2 {
                         resp = e.nextInt();
                         while (resp != 4) {
                             if (resp == 4) {
-                                System.out.println("Após a travessia você segue pela densa floresta, começando a perceber um aumento na elevação do terreno,\n"
+                                /*System.out.println("Você segue pela densa floresta, começando a perceber um aumento na elevação do terreno,\n"
                                         + "em um estalo latente da sua memória uma lembrança de um relato de Tothurin, este a muito tempo lhe havia dito que havia\n"
                                         + "um templo semelhante no meio da floresta de levitan, mas estava abandonada devido o difícil acesso e o constante ataque\n"
                                         + "de criaturas do local. O relato era que o tal templo ficava próximo a margem do grande rio que corta Levitan\n"
                                         + "onde a floresta fica mais densa e o terreno eleva-se, lá ficava o templo, mais que depressa você procura pelo templo.\n");
-                                fase2();
+                               */ fase2();
                                 break;
                             }
                             System.out.println("Numero errado, VOCE ESTA SE AFOGANDO!\n"
@@ -212,21 +212,21 @@ public class Ato2 {
             System.out.println("Numero invalido, tente novamente\n"
                     + "5-MONTAR JANGADA");
         }
-        System.out.println("A jangada improvisada boia com dificuldades, mas cumpre seu papel, suportando todo seu peso sobre sua estrutura, por vezes, dependendo do balanço devido\n"
+      /*  System.out.println("A jangada improvisada boia com dificuldades, mas cumpre seu papel, suportando todo seu peso sobre sua estrutura, por vezes, dependendo do balanço devido\n"
                 + "as remadas a água gelada bate em seus pés.\n"
                 + "Pela metade do rio você observar alguns objetos vindo em sua direção, primeiramente pensa serem alguns troncos, mas quando se aproximam, os objetos revelam-se sendo\n"
                 + "corpos de pessoas, homens e algumas mulheres, provavelmente algum grupo de comerciantes.\n"
                 + "A visão não lhe apavora tanto quanto deveria, o que mais lhe intriga é isto estar acontecendo nesta situação. Será que teria alguma relação com as pessoas que atacaram a vila?\n"
                 + "Chegando na outra margem você observa sua jangada e pensa em amarrá-la, mas ao mesmo tempo está com pressa e pode ser um desperdício de tempo\n"
-                + "1- ATAR JANGADA  2-SOMENTE DESCER DA JANGADA");
+                + "1- ATAR JANGADA  2-SOMENTE DESCER DA JANGADA");*/
         resp = e.nextInt();
         while (resp != 1 || resp != 2) {
             if (resp == 1) {
-                System.out.println("Sua jangada estara aqui caso precise usa-la novamente!\n");
+               /* System.out.println("Sua jangada estara aqui caso precise usa-la novamente!\n");
                 System.out.println("A passos largos onde o terreno permitia você continua em sua jornada pela floresta. \n"
                         + "Algumas horas depois chega na borda de um grande rio, possivelmente o rio Lavitan, que corta a floresta com mesmo nome, e conhecendo bem esta parte do reino de Eresda\n"
                         + "certamente haveriam perigos naquelas águas. atravessar a nado poderia ser uma experiência bem ruim.\n"
-                        + "1-USAR SUA JANGADA   2-ENCONTRAR OUTRA FORMA DE ATRAVESSAR");
+                        + "1-USAR SUA JANGADA   2-ENCONTRAR OUTRA FORMA DE ATRAVESSAR");*/
                 resp = e.nextInt();
                 while (resp != 1 || resp != 2) {
                     if (resp == 1) {
@@ -248,11 +248,11 @@ public class Ato2 {
             System.out.println("Numero invalido, tente novamente\n"
                     + "1- ATAR JANGADA  2-SOMENTE DESCER DA JANGADA");
         }
-        System.out.println("Seguindo seu caminho pela densa floresta você tem uma lembrança de um relato de Tothurin, este a muito tempo lhe havia dito que havia um templo semelhante no meio da floresta\n"
+       /* System.out.println("Seguindo seu caminho pela densa floresta você tem uma lembrança de um relato de Tothurin, este a muito tempo lhe havia dito que havia um templo semelhante no meio da floresta\n"
                 + "de levitan, mas estava abandonada devido o difícil acesso e o constante ataque de criaturas do local.\n"
-                + "Por um breve momento você se sente feliz, mas logo em seguida vem a lembrança da morte de Tothurin, contrastando com o primeiro sentimento.\n"
+                + "Por um breve momento você se sente feliz, mas logo em seguida vem a lembrança da morte de Tothurin e todos os outros, contrastando com o primeiro sentimento.\n"
                 + "Seguindo a lógica geográfica você segue a costa do rio no sentido ascendente, já que provavelmente o templo ficará na parte da cabeceira do rio, mais alta em relevo.\n"
-                + "5-SUBIR O LEITO DO RIO");
+                + "5-SUBIR O LEITO DO RIO");*/
         resp = e.nextInt();
         while (resp != 5) {
             if (resp == 5) {
@@ -261,16 +261,16 @@ public class Ato2 {
             System.out.println("Numero invalido, tente novamente\n"
                     + "5-SUBIR O LEITO DO RIO");
         }
-        System.out.println("Seguindo pela floresta, atravessando variados tipos de terrenos você chega em uma área parcialmente “limpa” em relação ao resto da floresta, mas não de forma natural,\n"
+        /*System.out.println("Seguindo pela floresta, atravessando variados tipos de terrenos você chega em uma área parcialmente “limpa” em relação ao resto da floresta, mas não de forma natural,\n"
                 + "a vegetação foi quebrada e há sinais claros que algo habita naquelas árvores, você ouve um som agudo vindo do meio das árvores, de repente algo dá um rasante sobre você\n"
                 + "que se atira ao chão para evitar o choque.\n"
                 + "Erguendo a cabeça você observa a criatura, uma harpia, esta criatura tem asas e pernas como aves de rapina com rosto e busto de mulher, com um tamanho proporcional a pouco\n"
                 + "mais da metade de um homem. retornando do rasante ela pousa em um galho próximo e grita novamente, ameaçando sua presença."
-                + "1-ENFRENTAR HARPIA   3-CORRER");
+                + "1-ENFRENTAR HARPIA   3-CORRER");*/
         resp = e.nextInt();
         while (resp != 1 || resp != 3) {
             if (resp == 3) {
-                System.out.println("Você tenta correr vergonhosamente, porem as harpias podem voar e logo o alcansa, forcando-lhe a enfrenta-las!");
+              /*  System.out.println("Você tenta correr vergonhosamente, porem as harpias podem voar e logo o alcansa, forcando-lhe a enfrenta-las!");*/
                 break;
             }
             if (resp == 1) {
@@ -280,15 +280,15 @@ public class Ato2 {
             System.out.println("Numero invalido, tente novamente\n"
                     + "1-ENFRENTAR HARPIA   3-CORRER");
         }
-        System.out.println("Após o duro confronto você pensa em cuidar dos ferimentos. Apesar de querer seguir em frente logo,\n"
+        /*System.out.println("Após o duro confronto você pensa em cuidar dos ferimentos. Apesar de querer seguir em frente logo,\n"
                 + "você sabe que harpias sempre carregam coisas para seus ninhos, passa pela sua cabeça procurar, possivelmente deve estar nas proximidades.\n"
-                + "1-SEGUIR SUA JORNADA   2-PROCURAR PELO NINHO");
+                + "1-SEGUIR SUA JORNADA   2-PROCURAR PELO NINHO");*/
         resp = e.nextInt();
         while (resp != 1 || resp != 2) {
             if (resp == 2) {
                 //comando pegar itens
-                System.out.println("Você anda pela redondeza olhando para cima em busca do tal ninho, e no topo de uma imponente árvore retorcida está ele. Apesar de ser relativamente alto os grossos galhos tortos facilitam a subida.\n"
-                        + "Dentro dele estão ovos e ...");
+               /* System.out.println("Você anda pela redondeza olhando para cima em busca do tal ninho, e no topo de uma imponente árvore retorcida está ele. Apesar de ser relativamente alto os grossos galhos tortos facilitam a subida.\n"
+                        + "Dentro dele estão ovos e ...");*/
                 break;
             }
             if (resp == 1) {
@@ -298,13 +298,13 @@ public class Ato2 {
             System.out.println("Numero invalido, tente novamente\n"
                     + "1-SEGUIR SUA JORNADA   2-PROCURAR PELO NINHO");
         }
-        System.out.println("Seguindo seu caminho, pela selva de levitan, você chega a estrada principal que corta as localidades entre Kenko e as outras localidades. A cena não é das melhores, a esquerda, sobre o rio Levitan,\n"
+       /* System.out.println("Seguindo seu caminho, pela selva de levitan, você chega a estrada principal que corta as localidades entre Kenko e as outras localidades. A cena não é das melhores, a esquerda, sobre o rio Levitan,\n"
                 + "a ponte que ali existia está destruída, e pelo chão da estrada há muito sangue e carroças destruídas ou viradas. \n"
-                + "Rapidamente você percebe que os corpos boiando mais cedo, pertenciam aos corpos vistos rio abaixo anteriormente, certamente atacados sem dó ou piedade.\n"
+                + "Nas proximidades do comboio haviam muitos corpos sem vida espalhados, certamente atacados sem dó ou piedade.\n"
                 + "Não há muito o que fazer, apenas seguir seu caminho para o terreno mais elevado rio acima.\n"
                 + "seguindo pela floresta começa a perceber um aumento na elevação do terreno mais significativa, batendo com o relato de Tothurin lembrado anteriormente.\n"
                 + "Agora possivelmente o templo está próximo, falta encontrá-lo, você sente que deve apurar o paço e encontrar tal templo antes que a noite caia\n"
-                + "6-SEGUIR CAMINHO EM BUSCA DO TEMPLO");
+                + "6-SEGUIR CAMINHO EM BUSCA DO TEMPLO");*/
         resp = e.nextInt();
         while (resp != 6) {
             if (resp == 6) {
@@ -313,12 +313,12 @@ public class Ato2 {
             System.out.println("Numero invalido, tente novamente\n"
                     + "6-SEGUIR CAMINHO EM BUSCA DO TEMPLO");
         }
-        System.out.println("Você adentra pela floresta de lavitan, no início ela até parecia uma floresta normal mas a média que se embrenha em seu interior a vegetação fica cada vez mais soberana. \n"
+        /*System.out.println("Você adentra pela floresta de lavitan, no início ela até parecia uma floresta normal mas a média que se embrenha em seu interior a vegetação fica cada vez mais soberana. \n"
                 + "Durante algumas horas você avança sem muitas dificuldades, de vez em quando cruzando com algum animal pequeno, como lebres e pássaros das mais variadas espécies.\n"
                 + "\n"
                 + "Sem perceber você se encontra cercado por uma matilha de lobos cinzas, eles simplesmente surgiram silenciosamente ao seu redor, aos rosnados, seus olhos famintos destoavam da sua pelagem, e bem na sua frente\n"
                 + "o maior entre eles possuía os olhos vermelhos, certamente esse era o alfa do grupo, se de alguma forma fosse possível abate-lo antes dos outros a matilha ficará desorientada.\n"
-                + "1-ENFRENTAR LOBOS  2-FUGIR");
+                + "1-ENFRENTAR LOBOS  2-FUGIR");*/
         resp = e.nextInt();
         while (resp != 1 || resp != 2) {
             if (resp == 1) {
@@ -331,9 +331,9 @@ public class Ato2 {
                         break;
                     }
                     if (resp == 2) {
-                        System.out.println("Após derrotar o lider, os mais fracos se assustam e fogem!\n"
+                        /*System.out.println("Após derrotar o lider, os mais fracos se assustam e fogem!\n"
                                 + "Mais uma vez em sua existência, sua calma na hora de analisar o campo de batalha o salva de um desfecho desfavorável, certamente atacar aleatoriamente ou fugir de inimigos rápidos\n"
-                                + "e múltiplos como estes seria uma má ideia. Agora só resta seguir seu caminho.");
+                                + "e múltiplos como estes seria uma má ideia. Agora só resta seguir seu caminho.");*/
                         break;
                     }
                     System.out.println("Numero invalido, tente novamente\n"
@@ -346,10 +346,10 @@ public class Ato2 {
             System.out.println("Numero invalido, tente novamente\n"
                     + "1-ENFRENTAR LOBOS  2-FUGIR");
         }
-        System.out.println("A passos largos onde o terreno permitia você continua em sua jornada pela floresta. Algumas horas depois chega na borda de um grande rio, possivelmente o rio Lavitan, que corta a floresta com mesmo nome\n"
+        /*System.out.println("A passos largos onde o terreno permitia você continua em sua jornada pela floresta. Algumas horas depois chega na borda de um grande rio, possivelmente o rio Lavitan, que corta a floresta com mesmo nome\n"
                 + "e conhecendo bem esta parte do reino de Eresda certamente haveriam perigos naquelas águas. atravessar a nado poderia ser uma experiência bem ruim.\n"
                 + "Seria mais sábio construir uma pequena jangada ou algo do gênero.\n"
-                + "4-CONSTRUIR JANGADA");
+                + "4-CONSTRUIR JANGADA");*/
         resp = e.nextInt();
         while (resp != 4) {
             if (resp == 4) {
@@ -447,11 +447,11 @@ public class Ato2 {
     public void fase2() {
         Scanner e = new Scanner(System.in);
         //comando pegar item
-        System.out.println("A tentativa de encontrar o templo falha e noite cai sobre levitan, agora a floresta\n"
+        /*System.out.println("A tentativa de encontrar o templo falha e noite cai sobre levitan, agora a floresta\n"
                 + "que já éra escura pela copa espessa das árvores durante o dia, está totalmente dominada pelo breu.\n"
                 + "você pega um galho seco amarra um pedaço de pano encerado com uma vela que tem no inventário \n"
                 + "para montar uma espécie de tocha, agora só resta acendê-la.\n"
-                + "7-ACENDER TOCHA");
+                + "7-ACENDER TOCHA");*/
         int resp = e.nextInt();
         while (resp != 7) {
             if (resp == 7) {
@@ -460,16 +460,16 @@ public class Ato2 {
             System.out.println("Numero invalido, tente novamente\n"
                     + "7-ACENDER TOCHA");
         }
-        System.out.println("a pequena chama ilumina os arredores, e os sons noturnos da floresta o deixam bem mais atento\n"
+        /*System.out.println("a pequena chama ilumina os arredores, e os sons noturnos da floresta o deixam bem mais atento\n"
                 + "que anteriormente, a noite os principais predadores saem em busca de alimento, e você certamente não pretende\n"
                 + "findar seus dias nesta posição.\n"
                 + "Parar e se esconder pode ser útil, mas sem ninguém para revezar na vigia pode ser perigoso, mas seguir no escuro\n"
                 + "também não é nada convidativo\n"
-                + "1-PARAR E DESCANSAR   2-CONTINUAR MESMO A NOITE");
+                + "1-PARAR E DESCANSAR   2-CONTINUAR MESMO A NOITE");*/
         resp = e.nextInt();
         while (resp != 1 || resp != 2) {
             if (resp == 1) {
-                System.out.println("Você sobe em uma grande árvore próxima, encontrando uma forquilha formada pelos galhos, ali poderia descansar\n"
+                /*System.out.println("Você sobe em uma grande árvore próxima, encontrando uma forquilha formada pelos galhos, ali poderia descansar\n"
                         + "seu corpo com a menor probabilidade de sofrer algum ataque durante o período em repouso. Após a escalada e acomodação,\n"
                         + "a tocha é apagada e rapidamente você cai no sono, o cansaço era evidente apesar da relutância em aceitá-lo.\n"
                         + "…\n" //comando tirar itens
@@ -480,13 +480,13 @@ public class Ato2 {
                         + "da mochila, este importante item poderia ter sido perdido. As únicas coisas que sumiram foram coisas alimentícias (definir o que tinha,\n"
                         + "possivelmente carne da caçada do começo), - dos males o menor - pensa você.\n"
                         + "agora só resta recolher os itens\n"
-                        + "1- RECOLHER ITENS   2-SEGUIR SEU CAMINHO");//comando recolher itens
+                        + "1- RECOLHER ITENS   2-SEGUIR SEU CAMINHO");//comando recolher itens*/
                 resp = e.nextInt();
                 while (resp != 1 || resp != 2) {
                     if (resp == 1) {
-                        System.out.println("Sem muito o que fazer resta seguir em frente na procura do templo. Seguindo, no meio da floresta você se depara com uma\n"
+                      /*  System.out.println("Sem muito o que fazer resta seguir em frente na procura do templo. Seguindo, no meio da floresta você se depara com uma\n"
                                 + "trilha de pedra, quase encoberta pela vegetação rasteira, certamente ela levaria ao templo, seria difícil alguma outra construção\n"
-                                + "ser feita tão adentro da floresta de Lavitan.");
+                                + "ser feita tão adentro da floresta de Lavitan.");*/
                         break;
                     }
                     if (resp == 2) {
@@ -495,26 +495,26 @@ public class Ato2 {
                     System.out.println("Numero invalido, tente novamente\n"
                             + "1- RECOLHER ITENS   2-SEGUIR SEU CAMINHOS");
                 }
-                System.out.println("Considerando que se está no interior da floresta o caminho aqui é de facil passagem, apesar da vegetação espalhar alguns galhos pelo caminho\n"
+                /*System.out.println("Considerando que se está no interior da floresta o caminho aqui é de facil passagem, apesar da vegetação espalhar alguns galhos pelo caminho\n"
                         + "e pequenas ervas nascem nas frestas das pedras, ainda assim um caminho fácil de andar.\n"
                         + "Depois de algum tempo o caminho se alarga em um grande platô de pedra esculpida, e na outra extremidade está a entrada do templo, que adentra a\n"
-                        + "elevação rochosa em sua retaguarda.  Finalmente o templo é encontrado, é só entrar.");
+                        + "elevação rochosa em sua retaguarda.  Finalmente o templo é encontrado, é só entrar.");*/
             }
             if (resp == 2) {
-                System.out.println("Seguindo adiante com sua tocha iluminando o ambiente e afastando as criaturas que não suportam a luz você tropeça em uma espécie de calçamento\n"
+              /*  System.out.println("Seguindo adiante com sua tocha iluminando o ambiente e afastando as criaturas que não suportam a luz você tropeça em uma espécie de calçamento\n"
                         + "caindo e derrubando a tocha.\n"
                         + "Você levanta-se e recolhe sua fonte de visão, observando mais atentamente você percebe q os formatos geométricos do solo ali não pertencem a\n"
                         + "construções naturais, agachando-se olhando mais de perto é percebido que se trata de um caminho pavimentado com pedras.\n"
                         + "Certamente levariam para o templo, agora resta somente segui-lo\n"
-                        + "4-SEGUIR CAMINHO PAVIMENTADO");
+                        + "4-SEGUIR CAMINHO PAVIMENTADO");*/
                 resp = e.nextInt();
                 while (resp != 4) {
                     if (resp == 4) {
-                        System.out.println("Considerando que se está no interior da floresta o caminho aqui é de fácil passagem, apesar da vegetação espalhar alguns galhos pelo caminho\n"
+                      /*  System.out.println("Considerando que se está no interior da floresta o caminho aqui é de fácil passagem, apesar da vegetação espalhar alguns galhos pelo caminho\n"
                                 + "e pequenas ervas nascem nas frestas das pedras, ainda assim um caminho fácil de andar.\n"
                                 + "Depois de algum tempo o caminho se alarga em um grande platô de pedra esculpida, como não existe vegetação nele, é possível avistar que na outra extremidade\n"
                                 + "está a entrada do templo, que adentra a elevação rochosa em sua retaguarda.\n"
-                                + "Finalmente o templo é encontrado, e só entrar.");
+                                + "Finalmente o templo é encontrado, e só entrar.");*/
                         break;
                     }
                     System.out.println("Numero invalido, tente novamente\n"
@@ -539,11 +539,11 @@ public class Ato2 {
 
     public void templo() {
         Scanner e = new Scanner(System.in);
-        System.out.println("Você atravessa o plano pavimentado da entrada e quando se aproxima da entrada do templo, mas um som parecido com rochas rolando e se chocando lhe vem aos ouvidos,\n"
+        /*System.out.println("Você atravessa o plano pavimentado da entrada e quando se aproxima da entrada do templo, mas um som parecido com rochas rolando e se chocando lhe vem aos ouvidos,\n"
                 + "mais que depressa você para e observa algo mover-se ao lado da entrada do templo.\n"
                 + "E um golem de pedra, possuindo cerca de 4 metros e algumas inscrições rúnicas no rosto. Certamente feito e colocado ali para proteger qualquer entrada não autorizada\n"
                 + "no templo antes de seu abandono.\n"
-                + "7-LUTAR CONTRA O GOLEM");
+                + "7-LUTAR CONTRA O GOLEM");*/
         int resp = e.nextInt();
         while (resp != 7) {
             if (resp == 7) {
@@ -571,7 +571,7 @@ public class Ato2 {
             System.out.println("Numero invalido, tente novamente\n"
                     + "2-ENTRAR NA SALA");
         }
-        System.out.println("ascendendo novamente sua tocha você adentra o templo, depois de descer algumas escadarias você chega ao altar principal, este ultimo igual ao que existe na vila de Kenko.\n"
+        System.out.println("acendendo sua tocha você adentra o templo, depois de descer algumas escadarias você chega ao altar principal, este ultimo igual ao que existe na vila de Kenko.\n"
                 + "já sabendo das passagens secretas você adentra aos cômodos escondidos.\n"
                 + "dessa vez no local igual ao que existia a adaga de Chunchumaru estava apenas um pergaminho, que continha os dizeres: (print dentro de um pergaminho desenhado com caracteres)\n"
                 + "Se estiver lendo isto possivelmente alguém está tentando ressuscitar Darknuss, uma personificação do mal a muito tempo banida deste mundo. Os impeça!\n"
