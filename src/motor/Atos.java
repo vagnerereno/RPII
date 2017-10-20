@@ -11,17 +11,13 @@ public class Atos {
     int codigo;
     String desc;
     String som;
-    ArrayList<Integer>proxcod = new ArrayList<Integer>();
+    ArrayList<Integer>proxcod;
 
-    public Atos(int a, String b, String s, int c, int d, int e, int f, int g) {
+    public Atos(int a, String b, String s, ArrayList codigos) {
         this.codigo = a;
         this.desc = b;
         this.som = s;
-        proxcod.add(c);
-        proxcod.add(d);
-        proxcod.add(e);
-        proxcod.add(f);
-        proxcod.add(g);
+        this.proxcod=codigos;
     }
 
     public Atos[] carregar(Atos[] vazio) throws Exception {

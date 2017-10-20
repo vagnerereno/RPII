@@ -3,7 +3,6 @@ package motor;
 import atos.Ato0;
 import atos.Ato1;
 import audio.Tocador;
-import java.io.File;
 import java.util.Scanner;
 import motor.EnumEspecialidades;
 
@@ -29,7 +28,7 @@ public class RPII {
                 int especialidade;
                 especialidade = input.nextInt();
                 System.out.println("Então " + nome + " qual raça você gostaria de ser?");
-                System.out.println("1 - Anão - ");
+                System.out.println("1 - Anão -");
                 System.out.println("2 - Elfo - ");
                 System.out.println("3 - Humano - ");
                 System.out.println("4 - Orc - ");
@@ -49,23 +48,15 @@ public class RPII {
         System.out.println(print.desc);
         //primeira parte
         System.out.println("\nDigite a proxima opção");
-        if (print.proxcod.get(0) != 0) {
-            System.out.println("DIGITE (" + print.proxcod.get(0) + ") PARA PRIMEIRA OPCAO");
-        }
-        if (print.proxcod.get(1) != 0) {
-            System.out.println("DIGITE (" + print.proxcod.get(1) + ") PARA SEGUNDA OPCAO");
-        }
-        if (print.proxcod.get(2) != 0) {
-            System.out.println("DIGITE (" + print.proxcod.get(2) + ") PARA TERCEIRA OPCAO");
-        }
-        if (print.proxcod.get(3) != 0) {
-            System.out.println("DIGITE (" + print.proxcod.get(3) + ") PARA QUARTA OPCAO");
-        }
-        if (print.proxcod.get(4) != 0) {
-            System.out.println("DIGITE (" + print.proxcod.get(4) + ") PARA QUINTA OPCAO");
+        int opcao = 1;
+        for (int i = 0; i < print.proxcod.size(); i++) {
+            System.out.print("(" + print.proxcod.get(i) + ")" + " Opção " + opcao);
+            System.out.print("   ");
+            opcao++;
         }
         boolean valido = false;
         do {
+            System.out.println("");
             resp = e.nextInt();
             for (int cod = 0; cod <= 4; cod++) {
                 if (resp == print.proxcod.get(cod)) {
@@ -85,25 +76,15 @@ public class RPII {
         while (resp != -1) {
             Atos parcial = j.compara(geral[resp]);
             System.out.println("\nDigite a proxima opção!!!");
-            if (parcial.proxcod.get(0) != 0) {
-                System.out.println("DIGITE (" + parcial.proxcod.get(0) + ") PARA PRIMEIRA OPCAO");
+            opcao = 1;
+            for (int i = 0; i < parcial.proxcod.size(); i++) {
+                System.out.print("(" + parcial.proxcod.get(i) + ")" + " Opção " + opcao);
+                System.out.print("   ");
+                opcao++;
             }
-            if (parcial.proxcod.get(1) != 0) {
-                System.out.println("DIGITE (" + parcial.proxcod.get(1) + ") PARA SEGUNDA OPCAO");
-            }
-            if (parcial.proxcod.get(2) != 0) {
-                System.out.println("DIGITE (" + parcial.proxcod.get(2) + ") PARA TERCEIRA OPCAO");
-            }
-            if (parcial.proxcod.get(3) != 0) {
-                System.out.println("DIGITE (" + parcial.proxcod.get(3) + ") PARA QUARTA OPCAO");
-            }
-            if (parcial.proxcod.get(4) != 0) {
-                System.out.println("DIGITE (" + parcial.proxcod.get(4) + ") PARA QUINTA OPCAO");
-            }
-            // resp = e.nextInt();
-            //Seleciona a opção
             valido = false;
             do {
+                System.out.println("");
                 resp = e.nextInt();
                 for (int cod = 0; cod <= 4; cod++) {
                     if (resp == parcial.proxcod.get(cod)) {

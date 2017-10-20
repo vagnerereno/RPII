@@ -10,7 +10,7 @@ public class Engine {
     //liga o motor
     public Atos[] iniciando() throws Exception {
         Atos n[] = new Atos[100];
-        Atos a = new Atos(0, null,null,0,0,0,0,0);
+        Atos a = new Atos(0, null,null,null);
         Atos x[] = a.carregar(n);
         this.mundo = x;
         return x;
