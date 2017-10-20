@@ -14,10 +14,8 @@ import rpii.*;
  */
 public class Ato0 {
 
-    public Raca criarJogador() {
+    public Raca criarJogador(String nome) {
         Scanner input = new Scanner(System.in);
-        System.out.println("Olá jogador, qual o seu nome?");
-        String nome = input.next();
         System.out.println(nome + " Qual especialidade você quer ter?");
         System.out.println(" 1 - Arqueiro - ");
         System.out.println(" 2 - Guerreiro - ");

@@ -27,10 +27,13 @@ public class Ato1 {
     private Raca jogadorTeste;
     private Inventario dispensa;
     private String nome;
-    
+
     public static void main(String[] args) {
         Ato0 a0 = new Ato0();
-        Ato1 as = new Ato1(a0.criarJogador());
+        Scanner input = new Scanner(System.in);
+        System.out.println("Olá jogador, qual o seu nome?");
+        String nome = input.next();
+        Ato1 as = new Ato1(a0.criarJogador(nome));
         as.abrirInventario(as.getDispensa(), "dispensa");
     }
 

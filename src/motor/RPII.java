@@ -17,8 +17,10 @@ public class RPII {
             resp = e.nextInt();
             if (resp == 1) {
                 Ato0 x = new Ato0();
-
-                Ato1 c = new Ato1(x.criarJogador());
+                Scanner input = new Scanner(System.in);
+                System.out.println("Olá jogador, qual o seu nome?");
+                String nome = input.next();
+                Ato1 c = new Ato1(x.criarJogador(nome));
                 break;
             }
         }
@@ -30,19 +32,19 @@ public class RPII {
         //primeira parte
         System.out.println("\nDigite a proxima opção");
         if (print.proxcod.get(0) != 0) {
-            System.out.println("DIGITE ("+print.proxcod.get(0)+") PARA PRIMEIRA OPCAO");
+            System.out.println("DIGITE (" + print.proxcod.get(0) + ") PARA PRIMEIRA OPCAO");
         }
         if (print.proxcod.get(1) != 0) {
-            System.out.println("DIGITE ("+print.proxcod.get(1)+") PARA SEGUNDA OPCAO");
+            System.out.println("DIGITE (" + print.proxcod.get(1) + ") PARA SEGUNDA OPCAO");
         }
         if (print.proxcod.get(2) != 0) {
-            System.out.println("DIGITE ("+print.proxcod.get(2)+") PARA TERCEIRA OPCAO");
+            System.out.println("DIGITE (" + print.proxcod.get(2) + ") PARA TERCEIRA OPCAO");
         }
         if (print.proxcod.get(3) != 0) {
-            System.out.println("DIGITE ("+print.proxcod.get(3)+") PARA QUARTA OPCAO");
+            System.out.println("DIGITE (" + print.proxcod.get(3) + ") PARA QUARTA OPCAO");
         }
         if (print.proxcod.get(4) != 0) {
-            System.out.println("DIGITE ("+print.proxcod.get(4)+") PARA QUINTA OPCAO");
+            System.out.println("DIGITE (" + print.proxcod.get(4) + ") PARA QUINTA OPCAO");
         }
         boolean valido = false;
         do {
@@ -67,19 +69,19 @@ public class RPII {
             System.out.println(parcial.desc);
             System.out.println("\nDigite a proxima opção!!!");
             if (parcial.proxcod.get(0) != 0) {
-                System.out.println("DIGITE ("+parcial.proxcod.get(0)+") PARA PRIMEIRA OPCAO");
+                System.out.println("DIGITE (" + parcial.proxcod.get(0) + ") PARA PRIMEIRA OPCAO");
             }
             if (parcial.proxcod.get(1) != 0) {
-                System.out.println("DIGITE ("+parcial.proxcod.get(1)+") PARA SEGUNDA OPCAO");
+                System.out.println("DIGITE (" + parcial.proxcod.get(1) + ") PARA SEGUNDA OPCAO");
             }
             if (parcial.proxcod.get(2) != 0) {
-                System.out.println("DIGITE ("+parcial.proxcod.get(2)+") PARA TERCEIRA OPCAO");
+                System.out.println("DIGITE (" + parcial.proxcod.get(2) + ") PARA TERCEIRA OPCAO");
             }
             if (parcial.proxcod.get(3) != 0) {
-                System.out.println("DIGITE ("+parcial.proxcod.get(3)+") PARA QUARTA OPCAO");
+                System.out.println("DIGITE (" + parcial.proxcod.get(3) + ") PARA QUARTA OPCAO");
             }
             if (parcial.proxcod.get(4) != 0) {
-                System.out.println("DIGITE ("+parcial.proxcod.get(4)+") PARA QUINTA OPCAO");
+                System.out.println("DIGITE (" + parcial.proxcod.get(4) + ") PARA QUINTA OPCAO");
             }
             // resp = e.nextInt();
             //Seleciona a opção
