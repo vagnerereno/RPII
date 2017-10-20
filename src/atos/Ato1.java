@@ -11,6 +11,7 @@ import ItemJogo.ItemAtaque;
 import ItemJogo.ItemDeCombate;
 import ItemJogo.Itens;
 import inimigos.AnaoIA;
+import inimigos.Inimigo;
 import java.util.ArrayList;
 import java.util.Scanner;
 import motor.EnumEspecialidades;
@@ -64,12 +65,12 @@ public class Ato1 {
     public long Enredo_1() throws Exception {
         Som.fase1();
         System.out.println("");
-        System.out.println(jogador.getNome() + ", vive numa pequena vila hermitao, se exilou, passado obscuro voltando de uma cacada, avista fumaca vindo da vila proxima \n"
+        System.out.println(getJogador().getNome() + ", vive numa pequena vila hermitao, se exilou, passado obscuro voltando de uma cacada, avista fumaca vindo da vila proxima \n"
                 + "onde estao todos os seus amigos, encontra um sobrevivente nos escombros, que lhe conta quem destruiu, vagamente, e morre() \n"
-                + "foi a caravana... disse o sobrevivente usando toda sua energia que o mantinha vivo " + jogador.getNome() + " se lembra que eles estão buscando artefatos\n"
+                + "foi a caravana... disse o sobrevivente usando toda sua energia que o mantinha vivo " + getJogador().getNome() + " se lembra que eles estão buscando artefatos\n"
                 + "para reviver inimigo pica que tem poderes de mandar em criaturas e esse inimigo so pode ser derrotado com armas imbuídas com uma \n"
                 + "magia perdida dos antigos contos de taodistante agora, precisa achar pedacos de adamantium pra montar ritual de criacao dessas \n"
-                + "armas sagradas! furioso, " + jogador.getNome() + " vai para sua casa se preparar para a sua jornada em busca de adamantium para conseguir sua vinganca\n"
+                + "armas sagradas! furioso, " + getJogador().getNome() + " vai para sua casa se preparar para a sua jornada em busca de adamantium para conseguir sua vinganca\n"
                 + " Mas tome CUIDADO! pois o caminho possui altos exercitos e alguns lideres q comandam a hierarquia da caravana");
         fase_1();
         return 0;
@@ -84,7 +85,7 @@ public class Ato1 {
                 + ".##..##..##......##...##...........####.....##....##..##..##..##..##..##.\n"
                 + ".#####...######..##...##............##....######..##..##..#####....####..\n"
                 + ".........................................................................");
-        System.out.println("Pois bem, então " + jogador.getNome() + " parte em sua longa jornada.\n"
+        System.out.println("Pois bem, então " + getJogador().getNome() + " parte em sua longa jornada.\n"
                 + "Nos arredores da vila Kenko, você descança, sem abrir os olhos voce pensa: acordo ou durmo mais um pouco?\n"
                 + "1-SEGUIR DORMINDO   2-ACORDAR");
         int resp = e.nextInt();
@@ -167,7 +168,7 @@ public class Ato1 {
                     + "1-APAGAR VELA   2-IR AO BANHEIRO");
             resp = e.nextInt();
         }
-        System.out.println(jogador.getNome() + " vai até o lavabo atirar agua em sua face para dissipar a preguiça ainda remanescente, a agua está\n"
+        System.out.println(getJogador().getNome() + " vai até o lavabo atirar agua em sua face para dissipar a preguiça ainda remanescente, a agua está\n"
                 + "um arrepio percorre todo o seu corpo, você encara-se no velho espelho e contempla sua triste feição\n"
                 + "trazendo flashes das lembranças de seu passado de mercenário, tempos de matança em prol do atual reino.\n"
                 + "Voltando a si, ainda contemplando sua face no reflexo:\n");
@@ -237,7 +238,7 @@ public class Ato1 {
         while (resp != 1 || resp != 2) {
             if (resp == 1) {
                 abrirInventario(getDispensa(), "dispensa");
-                System.out.println(jogador + " percebendo a pouca quantia de alimento em sua dispensa decide ir caçar na floresta");
+                System.out.println(getJogador() + " percebendo a pouca quantia de alimento em sua dispensa decide ir caçar na floresta");
                 System.out.println("Mochila!");
                 abrirMochila(jogadorTeste.getInventario(), "mochila");
                 break;
@@ -345,7 +346,7 @@ public class Ato1 {
         resp = e.nextInt();
         while (resp != 1 || resp != 2) {
             if (resp == 1) {
-                System.out.println(jogador.getNome() + " recupera um pouco de sua saude durante seu descanso, depois disso adentra a floresta de Levitan.");
+                System.out.println(getJogador().getNome() + " recupera um pouco de sua saude durante seu descanso, depois disso adentra a floresta de Levitan.");
                 break;
             }
             if (resp == 2) {
@@ -549,11 +550,10 @@ public class Ato1 {
                     + "1-ESFOLAR O ANIMAL");
             resp = e.nextInt();
         }
-
         System.out.println("você começa a descarnar o animal, coletando o conteudo da caçada.");
         Som.esfolar();
         AnaoIA javaliLeste = new AnaoIA("Javali", new Guerreiro());
-        Inventario loot = javaliLeste(javaliLeste.getClasseInimigo());
+        Inventario loot = getRecompensa(javaliLeste, getJogador().getClasseJogador());
         abrirInventario(loot, "Javali");
         return 1;
     }
@@ -654,7 +654,7 @@ public class Ato1 {
                         System.out.println("Você começa a descarnar o animal, coletando o conteudo da caçada.");
                         Som.esfolar();
                         AnaoIA cervoNorte = new AnaoIA("Cervo", new Guerreiro());
-                        Inventario loot = cervoNorte(cervoNorte.getClasseInimigo());
+                        Inventario loot = getRecompensa(cervoNorte, getJogador().getClasseJogador());
                         abrirInventario(loot, "Cervo");
                         System.out.println("Apos a tarefa voce percebe que grande parte do dia já se passou e é sabio retornar antes que a noite caia sobre Lavitan, apesar desta parte ser apenas sua borda ainda assim, varios perigos podem surgir.");
                         return 2;
@@ -857,8 +857,8 @@ public class Ato1 {
                 Som.lutasoco();
                 System.out.println("Com a criatura estirada ao chao na sua frente voce ainda com o sangue quente da pequena luta, espera que mais deles aparecam para lhe enfrentarem\n"
                         + "pois estas criaturas sempre atacam em bando. Apesar do pequeno momento de espera mais inimigos não aparecem");
-                AnaoIA globinFase2 = new AnaoIA("Globlin", new Guerreiro());
-                Inventario loot = globinFase2(globinFase2.getClasseInimigo());
+                Inimigo globinFase2 = new AnaoIA("Goblin", new Guerreiro());
+                Inventario loot = getRecompensa(globinFase2, getJogador().getClasseJogador());
                 abrirInventario(loot, "Goblin");
                 break;
             }
@@ -1658,7 +1658,7 @@ public class Ato1 {
         resp = e.nextInt();
         while (resp != 1 || resp != 2) {
             if (resp == 1) {
-                Ato2 c = new Ato2(this.jogador);
+                Ato2 c = new Ato2(this.getJogador());
                 c.Enredo_2();
                 break;
             }
@@ -1698,70 +1698,6 @@ public class Ato1 {
                 break;
         }
         setDispensa(dispensa);
-    }
-
-    public Inventario javaliLeste(Especialidade classe) {
-        Inventario recompensa = new Inventario(2);
-        ItemAtaque item;
-        if (classe.getDescricao().equals("Guerreiro")) {
-            item = (ItemAtaque) Itens.ESPADAJUSTICEIRA;
-        } else if (classe.getDescricao().equals("Mago")) {
-            item = (ItemAtaque) Itens.CAJADOESMERALDA;
-        } else if (classe.getDescricao().equals("Arqueiro")) {
-            item = (ItemAtaque) Itens.ARCOANTIGO;
-        } else {
-            return recompensa;
-        }
-        item.getInformacoes();
-        System.out.println("Parabéns, você encontrou uma " + item.getInformacoes() + ", uma coxinha " + (Itens.COXINHA) + " e uma Camisa Longa" + (Itens.CAMISALONGA));
-        recompensa.adicionarItem(item);
-        recompensa.adicionarItem(Itens.COXINHA);
-        recompensa.adicionarItem(Itens.CAMISALONGA);
-        return recompensa;
-
-    }
-
-    public Inventario cervoNorte(Especialidade classe) {
-        Inventario recompensa = new Inventario(2);
-        ItemAtaque item;
-        if (classe.getDescricao().equals("Guerreiro")) {
-            item = (ItemAtaque) Itens.ESPADAJUSTICEIRA;
-        } else if (classe.getDescricao().equals("Mago")) {
-            item = (ItemAtaque) Itens.CAJADOESMERALDA;
-        } else if (classe.getDescricao().equals("Arqueiro")) {
-            item = (ItemAtaque) Itens.ARCOANTIGO;
-        } else {
-            return recompensa;
-        }
-        item.getInformacoes();
-        System.out.println("Parabéns, você encontrou uma " + item.getInformacoes() + ", uma coxinha " + (Itens.COXINHA) + " e uma Camisa Longa" + (Itens.CAMISALONGA));
-        recompensa.adicionarItem(item);
-        recompensa.adicionarItem(Itens.COXINHA);
-        recompensa.adicionarItem(Itens.CAMISALONGA);
-        return recompensa;
-
-    }
-
-    public Inventario globinFase2(Especialidade classe) {
-        Inventario recompensa = new Inventario(3);
-
-        ItemAtaque item;
-        if (classe.getDescricao().equals("Guerreiro")) {
-            item = (ItemAtaque) Itens.ESPADAMAGICA;
-        } else if (classe.getDescricao().equals("Mago")) {
-            item = (ItemAtaque) Itens.CAJADODEPAUS;
-        } else if (classe.getDescricao().equals("Arqueiro")) {
-            item = (ItemAtaque) Itens.ARCOARBALEST;
-        } else {
-            return recompensa;
-        }
-        item.getInformacoes();
-        System.out.println("Parabéns, você encontrou uma " + item.getInformacoes() + ", um espinafre " + (Itens.ESPINAFRE) + " e uma Armadura Azul" + (Itens.ARMADURAAZUL));
-        recompensa.adicionarItem(item);
-        recompensa.adicionarItem(Itens.ESPINAFRE);
-        recompensa.adicionarItem(Itens.ARMADURAAZUL);
-        return recompensa;
-
     }
 
     public Inventario getDispensa() {
@@ -1879,6 +1815,84 @@ public class Ato1 {
             System.out.println("Deseja pegar outro item (1) ou fechar a mochila (0)?");
             acao = selecionar.nextInt();
         }
+    }
+
+    private Inventario getRecompensa(Inimigo inimigo, Especialidade classeJogador) {
+        ItemAtaque item;
+        Inventario recompensa = new Inventario(3);
+        if (inimigo.getNome().equals("Goblin")) {
+            switch (classeJogador.getDescricao()) {
+                case "Guerreiro":
+                    item = (ItemAtaque) Itens.ESPADAMAGICA;
+                    break;
+                case "Mago":
+                    item = (ItemAtaque) Itens.CAJADODEPAUS;
+                    break;
+                case "Arqueiro":
+                    item = (ItemAtaque) Itens.ARCOARBALEST;
+                    break;
+                default:
+                    return recompensa;
+            }
+            item.getInformacoes();
+            System.out.println("Parabéns, você encontrou uma " + item.getInformacoes() + ", um espinafre " + (Itens.ESPINAFRE) + " e uma Armadura Azul" + (Itens.ARMADURAAZUL));
+            recompensa.adicionarItem(item);
+            recompensa.adicionarItem(Itens.ESPINAFRE);
+            recompensa.adicionarItem(Itens.ARMADURAAZUL);
+            return recompensa;
+        }
+        // FIM 1º LOOT
+        if (inimigo.getNome().equals("Javali")) {
+            switch (classeJogador.getDescricao()) {
+                case "Guerreiro":
+                    item = (ItemAtaque) Itens.ESPADAJUSTICEIRA;
+                    break;
+                case "Mago":
+                    item = (ItemAtaque) Itens.CAJADOESMERALDA;
+                    break;
+                case "Arqueiro":
+                    item = (ItemAtaque) Itens.ARCOANTIGO;
+                    break;
+                default:
+                    return recompensa;
+            }
+            item.getInformacoes();
+            System.out.println("Parabéns, você encontrou uma " + item.getInformacoes() + ", uma coxinha " + (Itens.COXINHA) + " e uma Camisa Longa" + (Itens.CAMISALONGA));
+            recompensa.adicionarItem(item);
+            recompensa.adicionarItem(Itens.COXINHA);
+            recompensa.adicionarItem(Itens.CAMISALONGA);
+        }
+        // FIM 2º LOOT
+        if (inimigo.getNome().equals("Cervo")) {
+            switch (classeJogador.getDescricao()) {
+                case "Guerreiro":
+                    item = (ItemAtaque) Itens.ESPADAJUSTICEIRA;
+                    break;
+                case "Mago":
+                    item = (ItemAtaque) Itens.CAJADOESMERALDA;
+                    break;
+                case "Arqueiro":
+                    item = (ItemAtaque) Itens.ARCOANTIGO;
+                    break;
+                default:
+                    return recompensa;
+            }
+            item.getInformacoes();
+            System.out.println("Parabéns, você encontrou uma " + item.getInformacoes() + ", uma coxinha " + (Itens.COXINHA) + " e uma Camisa Longa" + (Itens.CAMISALONGA));
+            recompensa.adicionarItem(item);
+            recompensa.adicionarItem(Itens.COXINHA);
+            recompensa.adicionarItem(Itens.CAMISALONGA);
+        }
+        // FIM 3º LOOT
+        return recompensa;
+    }
+
+    public Raca getJogador() {
+        return jogador;
+    }
+
+    public void setJogador(Raca jogador) {
+        this.jogador = jogador;
     }
 
 }
