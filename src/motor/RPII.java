@@ -4,6 +4,7 @@ import atos.Ato0;
 import audio.Som;
 import atos.Ato1;
 import java.util.Scanner;
+import motor.EnumEspecialidades;
 
 public class RPII {
 
@@ -20,7 +21,13 @@ public class RPII {
                 Scanner input = new Scanner(System.in);
                 System.out.println("Olá jogador, qual o seu nome?");
                 String nome = input.next();
-                Ato1 c = new Ato1(x.criarJogador(nome));
+                System.out.println(nome + " Qual especialidade você quer ter?");
+                System.out.println(" 1 - Arqueiro - ");
+                System.out.println(" 2 - Guerreiro - ");
+                System.out.println(" 3 - Mago - ");
+                int especialidade;
+                especialidade = input.nextInt();
+                Ato1 c = new Ato1(x.criarJogador(nome, EnumEspecialidades.values()[especialidade]));
                 break;
             }
         }

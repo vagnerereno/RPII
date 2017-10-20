@@ -13,6 +13,7 @@ import ItemJogo.Itens;
 import inimigos.AnaoIA;
 import java.util.ArrayList;
 import java.util.Scanner;
+import motor.EnumEspecialidades;
 import raca.Anao;
 import raca.Elfo;
 import raca.Humano;
@@ -33,7 +34,8 @@ public class Ato1 {
         Scanner input = new Scanner(System.in);
         System.out.println("Olá jogador, qual o seu nome?");
         String nome = input.next();
-        Ato1 as = new Ato1(a0.criarJogador(nome));
+        int especialidade = input.nextInt();
+        Ato1 as = new Ato1(a0.criarJogador(nome, EnumEspecialidades.values()[especialidade]));
         as.abrirInventario(as.getDispensa(), "dispensa");
     }
 
