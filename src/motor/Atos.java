@@ -10,11 +10,13 @@ public class Atos {
 
     int codigo;
     String desc;
+    String som;
     ArrayList<Integer>proxcod = new ArrayList<Integer>();
 
-    public Atos(int a, String b, int c, int d, int e, int f, int g) {
+    public Atos(int a, String b, String s, int c, int d, int e, int f, int g) {
         this.codigo = a;
         this.desc = b;
+        this.som = s;
         proxcod.add(c);
         proxcod.add(d);
         proxcod.add(e);

@@ -1,8 +1,6 @@
 package atos;
 
 import java.util.Scanner;
-import audio.Som;
-import static audio.Som.ato2;
 import rpii.Raca;
 import sun.audio.AudioStream;
 public class Ato2 {
@@ -14,7 +12,6 @@ public class Ato2 {
     }
 
     public long Enredo_2() throws Exception {
-        AudioStream musica = ato2();
       /*  System.out.println("Fechando seu velho casebre você da uma ultima olhada para a vila de kenka, a fumaça apesar de ter diminuído ainda não se extinguiu.\n"
                 + "Você pensa em dar um enterro digno para seus amigos, grande parte de seus corpos foi consumida pelo fogo\n"
                 + "mas os que restaram ainda estão a céu aberto.\n"

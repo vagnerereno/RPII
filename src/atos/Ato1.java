@@ -1,8 +1,6 @@
 package atos;
 
 import ItemJogo.Comida;
-import audio.Som;
-import static audio.Som.parar;
 import java.util.Scanner;
 import sun.audio.AudioStream;
 import ItemJogo.Inventario;
@@ -63,7 +61,6 @@ public class Ato1 {
     }
 
     public long Enredo_1() throws Exception {
-        Som.fase1();
         System.out.println("");
         System.out.println(getJogador().getNome() + ", vive numa pequena vila hermitao, se exilou, passado obscuro voltando de uma cacada, avista fumaca vindo da vila proxima \n"
                 + "onde estao todos os seus amigos, encontra um sobrevivente nos escombros, que lhe conta quem destruiu, vagamente, e morre() \n"
@@ -91,7 +88,7 @@ public class Ato1 {
         int resp = e.nextInt();
         while (resp != 1 || resp != 2) {
             if (resp == 1) {
-                Som.galinha();
+                //Som.galinha();
                 System.out.println("As galinhas cacarejam enlouquecidamente anunciando o novo dia, por vezes você sente vontade de dar cabo delas \n"
                         + "devido a irritação sonora recorrente. Agora desperta por completo.");
                 break;
@@ -301,7 +298,6 @@ public class Ato1 {
                     + "1-SAIR DA CASA   2-PROCURAR POR COMIDA DENTRO DA CASA");
             resp = e.nextInt();
         }
-        Som.porta();
         System.out.println("\n"
                 + "                                                                              \n"
                 + "                              ░                                               \n"
@@ -356,7 +352,6 @@ public class Ato1 {
                     + "1-SENTAR UM POUCO  2-ENTRAR NA FLORESTA");
             resp = e.nextInt();
         }
-        Som.entradaFloresta();
         System.out.println("\n"
                 + "█████████████████████████████████▓ █████████████████████████████████████████████\n"
                 + "████████████████████████████████▓▓▓▓████████████████████████████████████████████\n"
@@ -525,19 +520,16 @@ public class Ato1 {
         resp = e.nextInt();
         while (resp != 1 || resp != 2) {
             if (resp == 1) {
-                Som.javali();
                 System.out.println("A criatura percebe seu movimento e começa a fugir, com muita dificuldade voce consegue alcansa-la");
                 break;
             }
             if (resp == 2) {
-                Som.javali();
                 break;
             }
             System.out.println("Numero invalido, tente novamente\n"
                     + "1-ATACAR FEROSMENTE  2-ATACAR SILECIOSAMENTE");
             resp = e.nextInt();
         }
-        Som.cervo();
         System.out.println("com um rápido e súbito movimento você lanca-se sobre a fera que num grunhido de dor e aflição cai por terra\n"
                 + "ao lado, voce solta sua bolsa e empunha sua pequena adaga para dilacerar a fera e coletar sua carne e seu couro");
         System.out.println("1-ESFOLAR O ANIMAL");
@@ -551,7 +543,6 @@ public class Ato1 {
             resp = e.nextInt();
         }
         System.out.println("você começa a descarnar o animal, coletando o conteudo da caçada.");
-        Som.esfolar();
         AnaoIA javaliLeste = new AnaoIA("Javali", new Guerreiro());
         Inventario loot = getRecompensa(javaliLeste, getJogador().getClasseJogador());
         abrirInventario(loot, "Javali");
@@ -641,7 +632,6 @@ public class Ato1 {
                                 + "\nno centro da clareira agora avistada totalmente esta um majestoso cervo, com seus grandes chifres e seu andar despreocupado.\n"
                                 + "voce ja consegue sentir o sabor de sua suculenta carne em sua boca. E com este pensamento prepara-se para o ataque.");
                         System.out.println("1-ATACAR");
-                        Som.cervo();
                         resp = e.nextInt();
                         while (resp != 1) {
                             if (resp == 1) {
@@ -652,7 +642,6 @@ public class Ato1 {
                             resp = e.nextInt();
                         }
                         System.out.println("Você começa a descarnar o animal, coletando o conteudo da caçada.");
-                        Som.esfolar();
                         AnaoIA cervoNorte = new AnaoIA("Cervo", new Guerreiro());
                         Inventario loot = getRecompensa(cervoNorte, getJogador().getClasseJogador());
                         abrirInventario(loot, "Cervo");
@@ -850,11 +839,9 @@ public class Ato1 {
                 + "também vestindo alguns farrapos e um velho colete de couro. Sem titubear voce esta pronto para a batalha\n"
                 + "com um rapido movimento já está com sua arma em maos e a adrenalina elevada.\n"
                 + "1-ATACAR O GLOBIN  2-FUGIR");
-        Som.globin();
         resp = e.nextInt();
         while (resp != 1 || resp != 2) {
             if (resp == 1) {
-                Som.lutasoco();
                 System.out.println("Com a criatura estirada ao chao na sua frente voce ainda com o sangue quente da pequena luta, espera que mais deles aparecam para lhe enfrentarem\n"
                         + "pois estas criaturas sempre atacam em bando. Apesar do pequeno momento de espera mais inimigos não aparecem");
                 Inimigo globinFase2 = new AnaoIA("Goblin", new Guerreiro());
@@ -864,7 +851,6 @@ public class Ato1 {
             }
 
             if (resp == 2) {
-                Som.corre();
                 break;
             }
             System.out.println("Numero invalido, tente novamente\n"
@@ -1041,7 +1027,6 @@ public class Ato1 {
         resp = e.nextInt();
         while (resp != 1 || resp != 2) {
             if (resp == 1) {
-                Som.corre();
                 System.out.println(""
                         + "                                      \n"
                         + "               ▒▒▒▒░                  \n"
@@ -1161,7 +1146,6 @@ public class Ato1 {
         resp = e.nextInt();
         while (resp != 1) {
             if (resp == 1) {
-                Som.templo();
                 break;
             }
             System.out.println("Numero invalido, tente novamente\n"
@@ -1181,7 +1165,6 @@ public class Ato1 {
                     + "2-PROCURAR A ORIGEM DO SOM");
             resp = e.nextInt();
         }
-        Som.ferido();
         System.out.println(""
                 + "                                                                            ▒   \n"
                 + "     ▒░                                                                    ▒▓   \n"
@@ -1402,7 +1385,6 @@ public class Ato1 {
                 + "1-EMPURRAR A PEDRA AO NORTE  2-EMPURRAR A PEDRA AO SUL  3-EMPURRAR A PEDRA AO OESTE  4-EMPURRAR A PEDRA AO LESTE");
         resp = e.nextInt();
         while (resp != 3) {
-            Som.emppedra();
             if (resp == 3) {
                 System.out.println("Voce percebe que esta pedra pode ser empurrada, a pressionando algumas outras pedras abrem\n"
                         + "mostrando uma pequena adaga com varias inscricoes runicas e um cabo transparente de vidro, ali dentro\n"
@@ -1535,14 +1517,12 @@ public class Ato1 {
         System.out.println("1-ENTRAR NA CASA");
         resp = e.nextInt();
         if (resp == 1) {
-            Som.porta();
             System.out.println("Adentrando a residencia voce dirige-se para o alcapao sob a mesa da sala.\n"
                     + "Voce move a mesa, e vizualiza um alcapao trancado por um velho cadeado.");
         }
         System.out.println("2-DESTRANCAR");
         resp = e.nextInt();
         if (resp == 2) {
-            Som.cadeado();
             System.out.println(""
                     + "                                                          \n"
                     + "                  ░▓▓▓▓▓▓▓▓▓▓▒ ░▒▒▒▒▒░░░░░░░              \n"
@@ -1599,7 +1579,6 @@ public class Ato1 {
         System.out.println("4-ABRIR BAU");
         resp = e.nextInt();
         if (resp == 4) {
-            Som.itemLendario();
             System.out.println("Dentro estão fotos de seu passado que você não gostaria de ter revisto, e alguns itens lendarios.");
         }
         System.out.println("");
@@ -1652,7 +1631,6 @@ public class Ato1 {
                     + "o unico desejo ecoa por todo seu corpo…  VINGANÇA!");
         }
         System.out.println("");
-        Som.finalMario();
         System.out.println("PARABENS! voce acaba de concluir a primeira fase do jogo!.\n"
                 + "1-INICIAR ATO 2  2-IR PARA O MENU INICIAL   3-VERIFICAR STATUS");
         resp = e.nextInt();

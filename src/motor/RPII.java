@@ -1,15 +1,16 @@
 package motor;
 
 import atos.Ato0;
-import audio.Som;
 import atos.Ato1;
+import audio.Tocador;
+import java.io.File;
 import java.util.Scanner;
 import motor.EnumEspecialidades;
 
 public class RPII {
 
     public static void main(String args[]) throws Exception {
-        Som.fase1();
+        Tocador.play("audio/musica_fase1.wav");
         Scanner e = new Scanner(System.in);
         int resp = 0;
         System.out.println("Bem vindo ao MUD, O que deseja fazer? ");
@@ -110,6 +111,9 @@ public class RPII {
                         int proximo = parcial.getProxcodigo(cod);
                         parcial = j.compara(geral[proximo]);
                         System.out.println(parcial.desc);
+                        if(parcial.som != null){
+                            Tocador.play("audio/"+parcial.som);
+                        }
                         valido = true;
                         break;
                     }
