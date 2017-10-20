@@ -27,7 +27,17 @@ public class RPII {
                 System.out.println(" 3 - Mago - ");
                 int especialidade;
                 especialidade = input.nextInt();
-                Ato1 c = new Ato1(x.criarJogador(nome, EnumEspecialidades.values()[especialidade]));
+                System.out.println("Então " + nome + " qual raça você gostaria de ser?");
+                System.out.println("1 - Anão - ");
+                System.out.println("2 - Elfo - ");
+                System.out.println("3 - Humano - ");
+                System.out.println("4 - Orc - ");
+                System.out.println("5 - Undead - ");
+                int raca;
+                raca = input.nextInt();
+                
+                Ato1 c;
+                c = new Ato1(x.criarJogador(nome, EnumEspecialidades.values()[especialidade], EnumRacas.values()[raca]));
                 break;
             }
         }

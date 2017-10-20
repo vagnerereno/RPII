@@ -14,6 +14,7 @@ import inimigos.AnaoIA;
 import java.util.ArrayList;
 import java.util.Scanner;
 import motor.EnumEspecialidades;
+import motor.EnumRacas;
 import raca.Anao;
 import raca.Elfo;
 import raca.Humano;
@@ -34,8 +35,21 @@ public class Ato1 {
         Scanner input = new Scanner(System.in);
         System.out.println("Olá jogador, qual o seu nome?");
         String nome = input.next();
-        int especialidade = input.nextInt();
-        Ato1 as = new Ato1(a0.criarJogador(nome, EnumEspecialidades.values()[especialidade]));
+        System.out.println(nome + " Qual especialidade você quer ter?");
+        System.out.println(" 1 - Arqueiro - ");
+        System.out.println(" 2 - Guerreiro - ");
+        System.out.println(" 3 - Mago - ");
+        int especialidade;
+        especialidade = input.nextInt();
+        System.out.println("Então " + nome + " qual raça você gostaria de ser?");
+        System.out.println("1 - Anão - ");
+        System.out.println("2 - Elfo - ");
+        System.out.println("3 - Humano - ");
+        System.out.println("4 - Orc - ");
+        System.out.println("5 - Undead - ");
+        int raca;
+        raca = input.nextInt();
+        Ato1 as = new Ato1(a0.criarJogador(nome, EnumEspecialidades.values()[especialidade], EnumRacas.values()[raca]));
         as.abrirInventario(as.getDispensa(), "dispensa");
     }
 

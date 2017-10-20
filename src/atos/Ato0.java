@@ -7,6 +7,7 @@ package atos;
 
 import java.util.*;
 import motor.EnumEspecialidades;
+import motor.EnumRacas;
 import raca.*;
 import rpii.*;
 
@@ -15,7 +16,7 @@ import rpii.*;
  */
 public class Ato0 {
 
-    public Raca criarJogador(String nome, EnumEspecialidades especialidade) {
+    public Raca criarJogador(String nome, EnumEspecialidades especialidade, EnumRacas raca) {
         Scanner input = new Scanner(System.in);
         Especialidade classea = null;
         switch (especialidade) {
@@ -34,29 +35,22 @@ public class Ato0 {
             default:
                 break;
         }
-        System.out.println("Então " + nome + " qual raça você gostaria de ser?");
-        System.out.println("1 - Anão - ");
-        System.out.println("2 - Elfo - ");
-        System.out.println("3 - Humano - ");
-        System.out.println("4 - Orc - ");
-        System.out.println("5 - Undead - ");
-        int resp = 0;
-        resp = input.nextInt();
+        
         Raca player = null;
-        switch (resp) {
-            case 1:
+        switch (raca) {
+            case ANAO:
                 player = new Anao(nome, classea);
                 break;
-            case 2:
+            case ELFO:
                 player = new Elfo(nome, classea);
                 break;
-            case 3:
+            case HUMANO:
                 player = new Humano(nome, classea);
                 break;
-            case 4:
+            case ORC:
                 player = new Orc(nome, classea);
                 break;
-            case 5:
+            case UNDEAD:
                 player = new Undead(nome, classea);
                 break;
 
