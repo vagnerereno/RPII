@@ -36,7 +36,7 @@ public class RPII {
                 System.out.println("5 - Undead - ");
                 int raca;
                 raca = input.nextInt();
-                
+
                 Ato1 c;
                 c = new Ato1(x.criarJogador(nome, EnumEspecialidades.values()[especialidade], EnumRacas.values()[raca]));
                 break;
@@ -84,7 +84,6 @@ public class RPII {
         //INICIO DO LOOP DO MOTOR
         while (resp != -1) {
             Atos parcial = j.compara(geral[resp]);
-            System.out.println(parcial.desc);
             System.out.println("\nDigite a proxima opção!!!");
             if (parcial.proxcod.get(0) != 0) {
                 System.out.println("DIGITE (" + parcial.proxcod.get(0) + ") PARA PRIMEIRA OPCAO");
@@ -111,8 +110,8 @@ public class RPII {
                         int proximo = parcial.getProxcodigo(cod);
                         parcial = j.compara(geral[proximo]);
                         System.out.println(parcial.desc);
-                        if(parcial.som != null){
-                            Tocador.play("audio/"+parcial.som);
+                        if (parcial.som != null) {
+                            Tocador.play("audio/" + parcial.som);
                         }
                         valido = true;
                         break;

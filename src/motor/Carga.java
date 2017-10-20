@@ -1,5 +1,7 @@
 package motor;
 
+import java.util.ArrayList;
+
 
 /**
  *
@@ -8,8 +10,7 @@ package motor;
 public class Carga {
 
     public Atos[] carga(Atos[] c) throws Exception {
-       /* ArrayList<Integer> opcoesA = new ArrayList();
-*/        
+        ArrayList<Integer> opcoesA = new ArrayList();
         Atos a = new Atos(0, "Pois bem, então parte em sua longa jornada.\n"
                 + "Nos arredores da vila Kenko, você descança, sem abrir os olhos voce pensa: acordo ou durmo mais um pouco?\n"
                 + "SEGUIR DORMINDO ou ACORDAR?",null , 1, 2, 0, 0, 0);
