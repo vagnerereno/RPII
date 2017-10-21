@@ -6,12 +6,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import rpii.Raca;
 import sun.audio.AudioStream;
-public class Ato2 implements InterfaceAto2 {
-
-    private Raca jogador;
+public class Ato2 extends AtoGenerico implements InterfaceAto2 {
 
     public Ato2(Raca jogador) {
-        this.jogador = jogador;
+        super(jogador);
     }
 
     @Override

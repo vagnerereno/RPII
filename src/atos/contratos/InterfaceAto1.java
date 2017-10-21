@@ -27,8 +27,6 @@ public interface InterfaceAto1 {
         
         public void fase3();
         
-        public void inicializarJogador();
-        
         public void configuraDispensa(Especialidade classe);
         
         public Inventario getDispensa();
