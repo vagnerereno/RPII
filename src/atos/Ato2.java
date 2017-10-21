@@ -1,9 +1,12 @@
 package atos;
 
+import atos.contratos.InterfaceAto2;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import rpii.Raca;
 import sun.audio.AudioStream;
-public class Ato2 {
+public class Ato2 implements InterfaceAto2 {
 
     private Raca jogador;
 
@@ -11,16 +14,22 @@ public class Ato2 {
         this.jogador = jogador;
     }
 
-    public long Enredo_2() throws Exception {
-      /*  System.out.println("Fechando seu velho casebre você da uma ultima olhada para a vila de kenka, a fumaça apesar de ter diminuído ainda não se extinguiu.\n"
-                + "Você pensa em dar um enterro digno para seus amigos, grande parte de seus corpos foi consumida pelo fogo\n"
-                + "mas os que restaram ainda estão a céu aberto.\n"
-                + "Ao mesmo tempo que se preocupa com entrar na floresta de Lavitan com o corpo cansado, pode não ser uma boa ideia.\n");*/
-        fase1();
+    @Override
+    public long Enredo_2() {
+        try {
+            /*  System.out.println("Fechando seu velho casebre você da uma ultima olhada para a vila de kenka, a fumaça apesar de ter diminuído ainda não se extinguiu.\n"
+            + "Você pensa em dar um enterro digno para seus amigos, grande parte de seus corpos foi consumida pelo fogo\n"
+            + "mas os que restaram ainda estão a céu aberto.\n"
+            + "Ao mesmo tempo que se preocupa com entrar na floresta de Lavitan com o corpo cansado, pode não ser uma boa ideia.\n");*/
+            fase1();
+        } catch (Exception ex) {
+            Logger.getLogger(Ato2.class.getName()).log(Level.SEVERE, null, ex);
+        }
         return 0;
     }
 
-    public long fase1() throws Exception {
+    @Override
+    public long fase1() {
         //comando escolha de acao
         Scanner e = new Scanner(System.in);
         System.out.println("1-POUPAR-SE DO ENTERRO   2-ENTERRAR AMIGOS");
