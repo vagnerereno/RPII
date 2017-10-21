@@ -8,10 +8,13 @@ import ItemJogo.Item;
 import ItemJogo.ItemAtaque;
 import ItemJogo.ItemDeCombate;
 import ItemJogo.Itens;
+import atos.contratos.InterfaceAto1;
 import inimigos.AnaoIA;
 import inimigos.Inimigo;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import motor.EnumEspecialidades;
 import motor.EnumRacas;
 import raca.Anao;
@@ -22,7 +25,7 @@ import rpii.Especialidade;
 import rpii.Guerreiro;
 import rpii.Raca;
 
-public class Ato1 {
+public class Ato1 implements InterfaceAto1 {
 
     private Raca jogador;
     private Raca jogadorTeste;
@@ -60,7 +63,8 @@ public class Ato1 {
         // abrirInventario(getDispensa(), "dispensa");
     }
 
-    public long Enredo_1() throws Exception {
+    @Override
+    public long Enredo_1() {
         System.out.println("");
         System.out.println(getJogador().getNome() + ", vive numa pequena vila hermitao, se exilou, passado obscuro voltando de uma cacada, avista fumaca vindo da vila proxima \n"
                 + "onde estao todos os seus amigos, encontra um sobrevivente nos escombros, que lhe conta quem destruiu, vagamente, e morre() \n"
@@ -73,7 +77,8 @@ public class Ato1 {
         return 0;
     }
 
-    public long fase_1() throws Exception {
+    @Override
+    public long fase_1(){
         Scanner e = new Scanner(System.in);
         System.out.println("."
                 + ".#####...######..##...##..........##..##..######..##..##..#####....####..\n"
@@ -468,7 +473,8 @@ public class Ato1 {
         return 0;
     }
 
-    public long irLeste() throws Exception {
+    @Override
+    public long irLeste() {
         Scanner e = new Scanner(System.in);
         int resp;
         System.out.println("Seguindo adiante neste caminho a vegetação diminui de tamanho, mas nao perdendo em densidade por parte das pequenas vegetações\n"
@@ -549,7 +555,8 @@ public class Ato1 {
         return 1;
     }
 
-    public long irNorte() throws Exception {
+    @Override
+    public long irNorte() {
         Scanner e = new Scanner(System.in);
         int resp;
         System.out.println("\n"
@@ -728,7 +735,8 @@ public class Ato1 {
         return 2;
     }
 
-    public long fase2() throws Exception {
+    @Override
+    public long fase2() {
         Scanner e = new Scanner(System.in);
         int resp;
         System.out.println("ATO 2");
@@ -1395,11 +1403,16 @@ public class Ato1 {
                     + "1-EMPURRAR A PEDRA AO NORTE  2-EMPURRAR A PEDRA AO SUL  3-EMPURRAR A PEDRA AO OESTE  4-EMPURRAR A PEDRA AO LESTE");
             resp = e.nextInt();
         }
-        fase3();
+        try {
+            fase3();
+        } catch (Exception ex) {
+            Logger.getLogger(Ato1.class.getName()).log(Level.SEVERE, null, ex);
+        }
         return 0;
     }
 
-    public void fase3() throws Exception {
+    @Override
+    public void fase3() {
         Scanner e = new Scanner(System.in);
         System.out.println("2-SACAR SUA ADAGA");
         int resp = e.nextInt();
@@ -1637,7 +1650,11 @@ public class Ato1 {
         while (resp != 1 || resp != 2) {
             if (resp == 1) {
                 Ato2 c = new Ato2(this.getJogador());
-                c.Enredo_2();
+                try {
+                    c.Enredo_2();
+                } catch (Exception ex) {
+                    Logger.getLogger(Ato1.class.getName()).log(Level.SEVERE, null, ex);
+                }
                 break;
             }
             if (resp == 2) {
@@ -1686,7 +1703,7 @@ public class Ato1 {
         this.dispensa = dispensa;
     }
 
-    private void abrirInventario(Inventario inventario, String descricao) {
+    public void abrirInventario(Inventario inventario, String descricao) {
         descricao.toUpperCase();
         System.out.println("------------------");
         System.out.println("---" + descricao + "---");
@@ -1740,7 +1757,7 @@ public class Ato1 {
 
     }
 
-    private void abrirMochila(Inventario inventario, String descricao) {
+    public void abrirMochila(Inventario inventario, String descricao) {
         System.out.println("------------------");
         System.out.println("---" + descricao.toUpperCase() + "---");
         System.out.println("------------------");
@@ -1773,7 +1790,7 @@ public class Ato1 {
         }
     }
 
-    private void coletaDeItens(Inventario dispensa) {
+    public void coletaDeItens(Inventario dispensa) {
         int acao = 1;
         while (acao != 0) {
             for (int i = 0; i < dispensa.verTodosItens().size(); i++) {
@@ -1795,7 +1812,7 @@ public class Ato1 {
         }
     }
 
-    private Inventario getRecompensa(Inimigo inimigo, Especialidade classeJogador) {
+    public Inventario getRecompensa(Inimigo inimigo, Especialidade classeJogador) {
         ItemAtaque item;
         Inventario recompensa = new Inventario(3);
         if (inimigo.getNome().equals("Goblin")) {
