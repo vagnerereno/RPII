@@ -36,49 +36,6 @@ public abstract class Raca {
         this.classeJogador = classeJogador;
         this.inventario = new Inventario(30);
     }
-
-    public int atacar() {
-        if (this.getClasseJogador() instanceof Guerreiro) {
-            return (getArma().getDano() * this.getForca()) / 2;
-        } else if (this.getClasseJogador() instanceof Mago) {
-            return (getArma().getDano() * this.getInteligencia()) / 2;
-        } else if (this.getClasseJogador() instanceof Arqueiro) {
-            return (getArma().getDano() * this.getDestreza()) / 2;
-        } else {
-            return 0;
-        }
-    }
-
-    public void defender(int dano) {
-        int x = this.getResistencia() - dano;
-        if (x > 0) {
-            this.setResistencia(x);
-        } else {
-            x = x * -1;
-            this.setbVida(this.getbVida() - x);
-        }
-    }
-
-    public int especial() {
-        if (this.getClasseJogador() instanceof Guerreiro) {
-            return getArma().getDano() * this.getForca();
-        } else if (this.getClasseJogador() instanceof Mago) {
-            return getArma().getDano() * this.getInteligencia();
-        } else if (this.getClasseJogador() instanceof Arqueiro) {
-            return getArma().getDano() * this.getDestreza();
-        } else {
-            return 0;
-        }
-    }
-
-    public boolean desviar() {
-        Random x = new Random();
-        if (x.nextDouble() < 0.25) {
-            return true;
-        }
-        return false;
-    }
-
     public void aumentoVida(int aumento) {
         this.setbVidaAtual(this.getbVidaAtual() + aumento);
     }
