@@ -36,11 +36,11 @@ public class Combate {
             int esc = 0;
             esc = input.nextInt();
             switch(esc){
-                case 1: inimigo.defender(jogador.atacar());
+                case 1: inimigo.defender(jogador.getForca());
                         jogador.defender(inimigo.atacar());
                         System.out.println("Sua vida: " + jogador.getbVida());
                         break;
-                case 2: inimigo.defender(jogador.especial());
+                case 2: inimigo.defender(jogador.getForca());
                         jogador.defender(inimigo.especial());
                         System.out.println("Sua vida: " + jogador.getbVida());
                         break;

@@ -11,7 +11,7 @@ import itens.armas.Armas;
  *
  * @author leonardo
  */
-public abstract class Especialidade {
+public class Especialidade {
     
     public Especialidade(int inteligencia, int resistencia, int forca, int agilidade, int destreza, int bVida, Armas arma, String descricao) {
         this.inteligencia = inteligencia;
