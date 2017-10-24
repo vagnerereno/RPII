@@ -36,6 +36,7 @@ public abstract class Raca {
         this.classeJogador = classeJogador;
         this.inventario = new Inventario(30);
     }
+
     public void aumentoVida(int aumento) {
         this.setbVidaAtual(this.getbVidaAtual() + aumento);
     }
@@ -53,6 +54,24 @@ public abstract class Raca {
                 + "---------------------------------";
 
         return status;
+    }
+
+    public boolean desviar() {
+        Random x = new Random();
+        if (x.nextDouble() < 0.25) {
+            return true;
+        }
+        return false;
+    }
+
+    public void defender(int dano) {
+        int x = this.getResistencia() - dano;
+        if (x > 0) {
+            this.setResistencia(x);
+        } else {
+            x = x * -1;
+            this.setbVida(this.getbVida() - x);
+        }
     }
 
     public boolean adicionarItem(Item item) {
@@ -237,7 +256,7 @@ public abstract class Raca {
         this.classeJogador = classeJogador;
     }
 
-        /**
+    /**
      * @return the itemDaMao
      */
     public ItemDeCombate getItemDaMao() {

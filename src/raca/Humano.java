@@ -24,7 +24,7 @@ public class Humano extends Raca {
     public Humano(String nome, Especialidade classeJogador) {
         super(nome, classeJogador);
     }
-    
+
     public int atacar() {
         if (this.getClasseJogador() instanceof Guerreiro) {
             return (getArma().getDano() * this.getForca()) / 2;
@@ -34,16 +34,6 @@ public class Humano extends Raca {
             return (getArma().getDano() * this.getDestreza()) / 2;
         } else {
             return 0;
-        }
-    }
-
-    public void defender(int dano) {
-        int x = this.getResistencia() - dano;
-        if (x > 0) {
-            this.setResistencia(x);
-        } else {
-            x = x * -1;
-            this.setbVida(this.getbVida() - x);
         }
     }
 
@@ -59,11 +49,4 @@ public class Humano extends Raca {
         }
     }
 
-    public boolean desviar() {
-        Random x = new Random();
-        if (x.nextDouble() < 0.25) {
-            return true;
-        }
-        return false;
-    }
 }

@@ -29,25 +29,8 @@ public class Elfo extends Raca {
         return (getArma().getDano() * this.getDestreza()) / 2;
     }
 
-    public void defender(int dano) {
-        int x = this.getResistencia() - dano;
-        if (x > 0) {
-            this.setResistencia(x);
-        } else {
-            x = x * -1;
-            this.setbVida(this.getbVida() - x);
-        }
-    }
-
     public int especial() {
         return (getArma().getDano() * this.getDestreza());
     }
 
-    public boolean desviar() {
-        Random x = new Random();
-        if (x.nextDouble() < 0.25) {
-            return true;
-        }
-        return false;
-    }
 }
