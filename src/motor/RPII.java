@@ -22,17 +22,17 @@ public class RPII {
                 System.out.println("Olá jogador, qual o seu nome?");
                 String nome = input.next();
                 System.out.println(nome + " Qual especialidade você quer ter?");
-                System.out.println(" 1 - Arqueiro - ");
-                System.out.println(" 2 - Guerreiro - ");
-                System.out.println(" 3 - Mago - ");
+                System.out.println(" 0 - Arqueiro - ");
+                System.out.println(" 1 - Guerreiro - ");
+                System.out.println(" 2 - Mago - ");
                 int especialidade;
                 especialidade = input.nextInt();
                 System.out.println("Então " + nome + " qual raça você gostaria de ser?");
-                System.out.println("1 - Anão -");
-                System.out.println("2 - Elfo - ");
-                System.out.println("3 - Humano - ");
-                System.out.println("4 - Orc - ");
-                System.out.println("5 - Undead - ");
+                System.out.println("0 - Anão -");
+                System.out.println("1 - Elfo - ");
+                System.out.println("2 - Humano - ");
+                System.out.println("3 - Orc - ");
+                System.out.println("4 - Undead - ");
                 int raca;
                 raca = input.nextInt();
 
