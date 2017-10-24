@@ -9,7 +9,7 @@ import motor.EnumEspecialidades;
 public class RPII {
 
     public static void main(String args[]) throws Exception {
-        Tocador.play("audio/musica_fase1.wav");
+        Tocador.play("./audio/musica_fase1.wav");
         Scanner e = new Scanner(System.in);
         int resp = 0;
         System.out.println("Bem vindo ao MUD, O que deseja fazer? ");
